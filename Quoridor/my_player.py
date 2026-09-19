@@ -1,4 +1,4 @@
-# Auteurs : Baptiste ALLAIN - 2555019, <Nom Prenom - matricule>
+# Auteurs : Baptiste ALLAIN 
 # INF8175 - Projet Quoridor - V1
 
 from __future__ import annotations
