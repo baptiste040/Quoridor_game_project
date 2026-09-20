@@ -41,14 +41,30 @@ class MyPlayer(PlayerQuoridor):
 
     # Gestion du temps (en secondes). Le budget total pour toute la partie est
     # transmis via `remaining_time` a chaque appel de compute_action.
-    SAFETY_RESERVE = 3.0     # temps jamais utilise, garde en reserve
-    HARD_CAP_PER_MOVE = 8.0  # temps maximal alloue a un seul coup
+    #
+    # generate_possible_stateless_actions() n'est pas gratuit : chacun des
+    # ~128 murs candidats (plateau 9x9) declenche, via _is_wall_legal, deux
+    # recherches de plus court chemin (BFS) rien que pour verifier la
+    # legalite. Cet appel ne peut pas etre interrompu en cours de route, donc
+    # un seul noeud de recherche a un cout incompressible. SAFETY_RESERVE et
+    # la verification predictive du temps (_check_time_predictive) existent
+    # pour absorber ce cout sans jamais depasser le budget total alloue par
+    # le serveur, meme si le nombre de noeuds visites explose (plateau
+    # different, machine plus lente, etc.).
+    SAFETY_RESERVE = 15.0    # temps jamais utilise, garde en reserve
+    HARD_CAP_PER_MOVE = 6.0  # temps maximal alloue a un seul coup
     MIN_BUDGET = 0.05        # sous ce seuil, on ne lance pas de recherche
     WALL_TIME_BUFFER = 8     # coups de murs supplementaires estimes restants
     MAX_DEPTH = 20           # garde-fou, jamais vraiment atteint en pratique
 
     def __init__(self, piece_type: str, goal_row: int = 0, name: str = "bob", *args, **kwargs) -> None:
         super().__init__(piece_type, goal_row, name)
+        # Prefixe par un tiret bas : n'apparait pas dans le JSON de partie
+        # (voir section 7.1 du sujet). Estimation glissante du cout d'un
+        # noeud de recherche (candidate_actions + rank_actions), utilisee
+        # pour anticiper un depassement avant meme de lancer un nouveau
+        # noeud couteux et non interruptible.
+        self._avg_node_cost = 0.0
 
     # ------------------------------------------------------------------
     # Point d'entree
@@ -72,11 +88,11 @@ class MyPlayer(PlayerQuoridor):
         if not legal_actions:
             raise RuntimeError("No legal action available.")
 
-        # Coup de secours : le meilleur coup a un demi-coup de profondeur,
-        # calcule sur l'ensemble des actions legales (comme l'agent greedy).
-        # Toujours disponible, quasi instantane, sert de filet de securite.
-        fallback_ranking = self._rank_actions(current_state, legal_actions)
-        best_action = fallback_ranking[0][1]
+        # Coup de secours : ne coute quasiment rien (pas d'evaluation
+        # supplementaire de chaque action, donc pas de BFS additionnel).
+        # Toujours disponible, sert de filet de securite absolu si le temps
+        # restant est trop faible pour se permettre la moindre recherche.
+        best_action = self._cheap_fallback_action(current_state, legal_actions)
 
         time_budget = self._compute_time_budget(current_state, remaining_time)
         if time_budget <= self.MIN_BUDGET:
@@ -127,9 +143,56 @@ class MyPlayer(PlayerQuoridor):
 
         return budget
 
-    def _check_time(self, deadline: float) -> None:
-        if time.perf_counter() >= deadline:
+    def _check_time_predictive(self, deadline: float) -> None:
+        """
+        Comme `_check_time`, mais anticipe le cout du prochain noeud de
+        recherche plutot que de constater le depassement une fois qu'il a
+        deja eu lieu.
+
+        `generate_possible_stateless_actions` (appele par
+        `_candidate_actions`) ne peut pas etre interrompu en cours
+        d'execution. On utilise donc le cout observe du dernier noeud comme
+        estimation du prochain, et on refuse de lancer un nouveau noeud si
+        cela risque de depasser l'echeance.
+        """
+        if time.perf_counter() + self._avg_node_cost >= deadline:
             raise _SearchTimeUp()
+
+    def _record_node_cost(self, node_start: float) -> None:
+        cost = time.perf_counter() - node_start
+        if cost >= self._avg_node_cost:
+            # Un noeud plus couteux que prevu : on remonte immediatement
+            # l'estimation pour rester prudent des le prochain appel.
+            self._avg_node_cost = cost
+        else:
+            # Sinon on ne decroit que progressivement (moyenne mobile),
+            # pour ne pas redevenir optimiste trop vite.
+            self._avg_node_cost = 0.9 * self._avg_node_cost + 0.1 * cost
+
+    def _cheap_fallback_action(self, state: GameStateQuoridor, legal_actions: list[StatelessAction]) -> StatelessAction:
+        """
+        Renvoie une action legale a cout quasi nul (aucune evaluation ni
+        recherche de plus court chemin supplementaire), utilisee comme filet
+        de securite absolu quand le temps restant est trop faible pour se
+        permettre la moindre recherche.
+
+        Privilegie un deplacement qui suit le plus court chemin deja calcule
+        par `_compute_time_budget` (une seule BFS, deja necessaire de toute
+        facon) plutot qu'un choix totalement arbitraire.
+        """
+        move_actions = [a for a in legal_actions if a.data["type"] == "move"]
+        if not move_actions:
+            return legal_actions[0]
+
+        agent = self._get_player(state, self.get_id())
+        path = self._shortest_path_cells(state, agent)
+        if len(path) > 1:
+            next_cell = path[1]
+            for action in move_actions:
+                if action.data["destination"] == next_cell:
+                    return action
+
+        return move_actions[0]
 
     # ------------------------------------------------------------------
     # Recherche minimax avec elagage alpha-beta
@@ -140,15 +203,17 @@ class MyPlayer(PlayerQuoridor):
         Lance une recherche alpha-beta complete a la profondeur donnee et
         retourne la meilleure action trouvee a la racine.
         """
+        node_start = time.perf_counter()
         actions = self._candidate_actions(state)
         ranked = self._rank_actions(state, actions)
+        self._record_node_cost(node_start)
 
         alpha, beta = -float("inf"), float("inf")
         best_value = -float("inf")
         best_action = ranked[0][1]
 
         for value, action, child in ranked:
-            self._check_time(deadline)
+            self._check_time_predictive(deadline)
             value = self._alphabeta(child, depth - 1, alpha, beta, deadline)
             if value > best_value:
                 best_value = value
@@ -158,13 +223,15 @@ class MyPlayer(PlayerQuoridor):
         return best_action
 
     def _alphabeta(self, state: GameStateQuoridor, depth: int, alpha: float, beta: float, deadline: float) -> float:
-        self._check_time(deadline)
+        self._check_time_predictive(deadline)
 
         if state.is_done() or depth == 0:
             return self._evaluate(state)
 
+        node_start = time.perf_counter()
         actions = self._candidate_actions(state)
         ranked = self._rank_actions(state, actions)
+        self._record_node_cost(node_start)
         if not ranked:
             return self._evaluate(state)
 
