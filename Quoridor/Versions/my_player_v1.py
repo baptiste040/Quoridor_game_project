@@ -4,7 +4,7 @@ from game_state_quoridor import GameStateQuoridor
 
 class MyPlayer(PlayerQuoridor):
     
-    SEARCH_DEPTH = 2
+    SEARCH_DEPTH = 1
     VICTORY_VALUE = 1000
     DEFEAT_VALUE = -1000
     
