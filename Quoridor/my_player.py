@@ -56,6 +56,14 @@ class MyPlayer(PlayerQuoridor):
     MIN_BUDGET = 0.05        # sous ce seuil, on ne lance pas de recherche
     WALL_TIME_BUFFER = 8     # coups de murs supplementaires estimes restants
     MAX_DEPTH = 20           # garde-fou, jamais vraiment atteint en pratique
+    
+    # Distance à partir de laquelle une position est considérée comme dangereuse :
+    # si un joueur est à deux déplacements ou moins du but, la recherche continue.
+    QUIESCENCE_DISTANCE = 2
+    
+    # Nombre maximal de niveaux supplémentaires autorisés dans une position
+    # dangereuse afin d'éviter une explosion du temps de recherche.
+    MAX_TACTICAL_EXTENSIONS = 1
 
     def __init__(self, piece_type: str, goal_row: int = 0, name: str = "bob", *args, **kwargs) -> None:
         super().__init__(piece_type, goal_row, name)
@@ -214,7 +222,10 @@ class MyPlayer(PlayerQuoridor):
 
         for value, action, child in ranked:
             self._check_time_predictive(deadline)
-            value = self._alphabeta(child, depth - 1, alpha, beta, deadline)
+            
+            # Chaque branche reçoit une extension tactique disponible lorsque la
+            # profondeur limite est atteinte dans une position dangereuse.
+            value = self._alphabeta(child, depth - 1, alpha, beta, deadline, self.MAX_TACTICAL_EXTENSIONS)
             if value > best_value:
                 best_value = value
                 best_action = action
@@ -222,16 +233,40 @@ class MyPlayer(PlayerQuoridor):
 
         return best_action
 
-    def _alphabeta(self, state: GameStateQuoridor, depth: int, alpha: float, beta: float, deadline: float) -> float:
+    def _is_quiescent(self, state: GameStateQuoridor) -> bool:
+            """
+            Retourne True si aucun joueur n'est suffisamment proche de sa
+            ligne d'arrivée pour nécessiter une extension tactique.
+            """
+            agent = self._get_player(state, self.get_id())
+            opponent = self._get_player(state, self._opponent_id(state))
+
+            agent_distance = state._shortest_path(agent)
+            opponent_distance = state._shortest_path(opponent)
+
+            return agent_distance > self.QUIESCENCE_DISTANCE and opponent_distance > self.QUIESCENCE_DISTANCE
+
+    def _alphabeta(self, state: GameStateQuoridor, depth: int, alpha: float, beta: float, deadline: float, extensions_left: int) -> float:
         self._check_time_predictive(deadline)
 
-        if state.is_done() or depth == 0:
+        if state.is_done():
             return self._evaluate(state)
+
+        # À la profondeur limite, on évalue immédiatement une position calme.
+        # Si un joueur est proche de gagner, on poursuit plutôt la recherche
+        # d'un niveau afin de mieux voir la menace ou la victoire.
+        if depth == 0:
+            if extensions_left == 0 or self._is_quiescent(state):
+                return self._evaluate(state)
+
+            depth = 1
+            extensions_left -= 1
 
         node_start = time.perf_counter()
         actions = self._candidate_actions(state)
         ranked = self._rank_actions(state, actions)
         self._record_node_cost(node_start)
+
         if not ranked:
             return self._evaluate(state)
 
@@ -239,20 +274,28 @@ class MyPlayer(PlayerQuoridor):
 
         if maximizing:
             value = -float("inf")
+
             for _, _, child in ranked:
-                value = max(value, self._alphabeta(child, depth - 1, alpha, beta, deadline))
+                child_value = self._alphabeta(child, depth - 1, alpha, beta, deadline, extensions_left)
+                value = max(value, child_value)
                 alpha = max(alpha, value)
+
                 if alpha >= beta:
                     break
+
             return value
-        else:
-            value = float("inf")
-            for _, _, child in ranked:
-                value = min(value, self._alphabeta(child, depth - 1, alpha, beta, deadline))
-                beta = min(beta, value)
-                if alpha >= beta:
-                    break
-            return value
+
+        value = float("inf")
+
+        for _, _, child in ranked:
+            child_value = self._alphabeta(child, depth - 1, alpha, beta, deadline, extensions_left)
+            value = min(value, child_value)
+            beta = min(beta, value)
+
+            if alpha >= beta:
+                break
+
+        return value
 
     # ------------------------------------------------------------------
     # Generation et tri des coups

@@ -56,7 +56,13 @@ class MyPlayer(PlayerQuoridor):
     MIN_BUDGET = 0.05        # sous ce seuil, on ne lance pas de recherche
     WALL_TIME_BUFFER = 8     # coups de murs supplementaires estimes restants
     MAX_DEPTH = 20           # garde-fou, jamais vraiment atteint en pratique
+    
+    # Distance à partir de laquelle une position est considérée comme dangereuse :
+    # si un joueur est à deux déplacements ou moins du but, la recherche continue.
     QUIESCENCE_DISTANCE = 2
+    
+    # Nombre maximal de niveaux supplémentaires autorisés dans une position
+    # dangereuse afin d'éviter une explosion du temps de recherche.
     MAX_TACTICAL_EXTENSIONS = 1
 
     def __init__(self, piece_type: str, goal_row: int = 0, name: str = "bob", *args, **kwargs) -> None:
@@ -216,6 +222,9 @@ class MyPlayer(PlayerQuoridor):
 
         for value, action, child in ranked:
             self._check_time_predictive(deadline)
+            
+            # Chaque branche reçoit une extension tactique disponible lorsque la
+            # profondeur limite est atteinte dans une position dangereuse.
             value = self._alphabeta(child, depth - 1, alpha, beta, deadline, self.MAX_TACTICAL_EXTENSIONS)
             if value > best_value:
                 best_value = value
