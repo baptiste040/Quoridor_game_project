@@ -41,10 +41,26 @@ Testé dans les deux ordres (mon agent en blanc et en noir) pour vérifier que �
 
 
 # V2
-La V2 reprend tout le fonctionnement de la V1 et ajoute le concept d’état sécuritaire (quiescent state) présenté dans le module 3.
 
-À la profondeur maximale, l’agent vérifie si l’un des joueurs se trouve à deux déplacements ou moins de sa ligne d’arrivée. Si c’est le cas, la position est considérée comme dangereuse et la recherche continue pendant un niveau supplémentaire avant d’évaluer l’état.
+La V2 reprend le fonctionnement de la V1 et ajoute deux améliorations.
 
-Cette modification permet à l’agent de mieux détecter une victoire imminente ou une menace adverse qui se trouverait juste après la profondeur limite. L’extension est limitée à un seul niveau afin de ne pas trop augmenter le temps de calcul.
+## Extension tactique
 
-La V2 a été testée localement contre la V1 dans les deux ordres de jeu. Elle réussit à battre la V1, notamment grâce à de meilleures décisions lorsque l’un des joueurs approche de sa ligne d’arrivée.
+Lorsqu’un joueur se trouve à deux déplacements ou moins de sa ligne d’arrivée, l’agent considère la position comme instable et prolonge la recherche d’un niveau.
+
+Cette extension évite d’arrêter la recherche juste avant une menace immédiate ou une victoire. Elle est limitée à un niveau supplémentaire pour contrôler le temps de calcul.
+
+## Stratégie d’ouverture
+
+Pendant ses trois premiers tours, l’agent privilégie un déplacement de pion qui réduit sa distance vers l’arrivée.
+
+L’objectif est de progresser rapidement en début de partie et d’éviter de dépenser immédiatement des murs sur des positions peu importantes. Après ces trois tours, l’agent utilise normalement sa recherche alpha-bêta.
+
+## Comparaison avec la V1
+La V2 améliore la V1 principalement sur deux points.
+
+L’extension tactique permet à l’agent de continuer la recherche lorsqu’un joueur est proche de gagner. La V2 risque donc moins d’arrêter son analyse juste avant une menace ou une victoire immédiate.
+
+La stratégie d’ouverture évite de placer des murs trop tôt. En avançant pendant ses trois premiers tours, l’agent progresse vers son objectif avant de commencer sa recherche alpha-bêta normale.
+
+La V2 conserve donc les avantages de la V1, tout en améliorant les décisions prises au début et à la fin de la partie.
