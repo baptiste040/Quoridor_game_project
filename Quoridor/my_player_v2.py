@@ -64,6 +64,9 @@ class MyPlayer(PlayerQuoridor):
     # Nombre maximal de niveaux supplémentaires autorisés dans une position
     # dangereuse afin d'éviter une explosion du temps de recherche.
     MAX_TACTICAL_EXTENSIONS = 1
+    # Nombre de décisions initiales pendant lesquelles l'agent privilégie
+    # une progression directe vers sa ligne d'arrivée.
+    OPENING_MOVE_COUNT = 3
 
     def __init__(self, piece_type: str, goal_row: int = 0, name: str = "bob", *args, **kwargs) -> None:
         super().__init__(piece_type, goal_row, name)
@@ -73,6 +76,7 @@ class MyPlayer(PlayerQuoridor):
         # pour anticiper un depassement avant meme de lancer un nouveau
         # noeud couteux et non interruptible.
         self._avg_node_cost = 0.0
+        self._moves_played = 0
 
     # ------------------------------------------------------------------
     # Point d'entree
@@ -95,6 +99,16 @@ class MyPlayer(PlayerQuoridor):
         legal_actions = list(current_state.generate_possible_stateless_actions())
         if not legal_actions:
             raise RuntimeError("No legal action available.")
+
+        # Lorsqu'il commence la partie, l'agent conserve l'initiative en
+        # progressant pendant ses premiers tours avant d'utiliser ses murs.
+        if self._moves_played < self.OPENING_MOVE_COUNT:
+            opening_action = self._opening_action(current_state, legal_actions)
+
+            if opening_action is not None:
+                self._moves_played += 1
+                return opening_action
+
 
         # Coup de secours : ne coute quasiment rien (pas d'evaluation
         # supplementaire de chaque action, donc pas de BFS additionnel).
@@ -121,6 +135,7 @@ class MyPlayer(PlayerQuoridor):
             # de la profondeur precedente (deja stocke dans best_action).
             pass
 
+        self._moves_played += 1
         return best_action
 
     # ------------------------------------------------------------------
@@ -420,6 +435,30 @@ class MyPlayer(PlayerQuoridor):
         wall_term = (state.rep.remaining_walls[agent.get_id()] - state.rep.remaining_walls[opponent.get_id()]) * self.WALL_WEIGHT
 
         return path_term + wall_term
+
+    def _opening_action(self, state: GameStateQuoridor, actions: list[StatelessAction]):
+        """
+        Pendant l'ouverture, choisit le déplacement qui réduit le plus
+        la distance restante jusqu'à la ligne d'arrivée.
+        """
+        move_actions = [action for action in actions if action.data["type"] == "move"]
+
+        if not move_actions:
+            return None
+
+        best_action = None
+        best_distance = float("inf")
+
+        for action in move_actions:
+            child = state.apply_action(action)
+            agent = self._get_player(child, self.get_id())
+            distance = child._shortest_path(agent)
+
+            if distance < best_distance:
+                best_distance = distance
+                best_action = action
+
+        return best_action
 
     # ------------------------------------------------------------------
     # Utilitaires

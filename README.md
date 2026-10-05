@@ -2,6 +2,9 @@
 
 Projet INF8175 - agent pour le jeu Quoridor.
 
+
+# V1
+
 ## Structure
 
 - `Quoridor/` : code du jeu fourni (non modifié) + `my_player.py`, notre agent.
@@ -34,3 +37,14 @@ python main_quoridor.py -r -g -t local greedy_player_quoridor.py my_player.py
 ```
 
 Testé dans les deux ordres (mon agent en blanc et en noir) pour vérifier que ça ne dépend pas de la couleur/rangée cible. J'ai regardé les logs de seahorse (`time : ...s` avant chaque coup) pour vérifier le temps consommé par coup et l'absence de `SeahorseTimeoutError`. Résultat : victoire à chaque fois contre random et greedy, ~8s par coup, aucun crash ni dépassement de temps. Le venv de test et les fichiers de replay générés ont été supprimés après coup, rien n'est resté dans le repo.
+
+
+
+# V2
+La V2 reprend tout le fonctionnement de la V1 et ajoute le concept d’état sécuritaire (quiescent state) présenté dans le module 3.
+
+À la profondeur maximale, l’agent vérifie si l’un des joueurs se trouve à deux déplacements ou moins de sa ligne d’arrivée. Si c’est le cas, la position est considérée comme dangereuse et la recherche continue pendant un niveau supplémentaire avant d’évaluer l’état.
+
+Cette modification permet à l’agent de mieux détecter une victoire imminente ou une menace adverse qui se trouverait juste après la profondeur limite. L’extension est limitée à un seul niveau afin de ne pas trop augmenter le temps de calcul.
+
+La V2 a été testée localement contre la V1 dans les deux ordres de jeu. Elle réussit à battre la V1, notamment grâce à de meilleures décisions lorsque l’un des joueurs approche de sa ligne d’arrivée.
