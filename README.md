@@ -64,3 +64,31 @@ L’extension tactique permet à l’agent de continuer la recherche lorsqu’un
 La stratégie d’ouverture évite de placer des murs trop tôt. En avançant pendant ses trois premiers tours, l’agent progresse vers son objectif avant de commencer sa recherche alpha-bêta normale.
 
 La V2 conserve donc les avantages de la V1, tout en améliorant les décisions prises au début et à la fin de la partie.
+
+# V3
+
+Réécriture complète du moteur de recherche (fichier `my_player.py`, copie dans `my_player_v3.py`).
+
+## Pourquoi
+
+La V2 appelait `generate_possible_stateless_actions()` et `apply_action()` du moteur à chaque nœud. Ces appels font deux BFS par mur candidat et ne peuvent pas être interrompus : la recherche plafonnait à 2-3 coups de profondeur et la gestion du temps était fragile (risque de timeout).
+
+## Ce qui change
+
+- **Représentation interne** : les murs sont des bits d'un entier, les déplacements bloqués se testent par un ET binaire. Les cartes de distance au but sont calculées par BFS depuis la ligne d'arrivée et mises en cache par configuration de murs (les déplacements de pion ne changent pas les murs, donc le cache sert énormément). Les règles internes ont été vérifiées contre le moteur officiel sur ~6600 positions aléatoires (déplacements, sauts, distances, légalité des murs) : aucune différence.
+- **Recherche** : negamax alpha-bêta avec PVS, approfondissement itératif, table de transposition, coups killers. ~4000 nœuds/s, soit en général 6 à 15 demi-coups de profondeur selon la position et le temps alloué, au lieu de 2-3.
+- **Murs candidats** : on construit le graphe de tous les plus courts chemins de l'adversaire. Un mur n'est gardé que s'il les coupe tous (donc s'il allonge vraiment l'adversaire), ce qui se vérifie sans BFS complet. Les meilleurs sont gardés (10 par nœud, 40 à la racine).
+- **Heuristique** : `10 * (dist_adv - dist_moi) + 6 * (murs_moi - murs_adv) + 5` (bonus du joueur qui a le trait). Fin de partie exacte : si un joueur n'a plus de murs, la course est tranchée directement (celui qui a le trait gagne s'il est au moins aussi proche).
+- **Anti-attente** : à profondeur fixe, avancer maintenant ou plus tard peut avoir le même score quand l'adversaire a encore des murs, et l'agent tournait en rond. Si le meilleur coup ne fait pas avancer, on vérifie (recherche à fenêtre nulle) si avancer est presque aussi bon, et dans ce cas on avance.
+- **Temps** : budget = (temps restant - réserve de 4 %) / (distance + 12), plafonné à 3,5 % du temps total. Les budgets sont décroissants donc on ne peut pas dépasser le crédit. Vérification de l'échéance tous les 32 nœuds, arrêt propre en gardant le meilleur coup de la dernière profondeur. Pas de recherche quand le résultat est déjà joué (victoire immédiate, course gagnée). Si quoi que ce soit échoue, le coup est vérifié avec le moteur officiel et un coup de secours légal est joué.
+
+## Résultats (arène locale, horloges réduites)
+
+| Match | Score V3 |
+|---|---|
+| V3 vs V2 (90 s, couleurs alternées) | 6 - 0 |
+| V3 vs greedy (60 s) | 4 - 0 |
+| V3 vs random | 2 - 0 |
+| poids murs 6 vs poids murs 3 | 3 - 1 (6 retenu) |
+
+Aucun coup illégal ni dépassement de temps, y compris sur une partie de 274 demi-coups où les deux agents ont fini avec ~4 s.

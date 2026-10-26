@@ -1,10 +1,9 @@
-# Auteurs : Baptiste ALLAIN 
-# INF8175 - Projet Quoridor - V1
+# Auteurs : Baptiste ALLAIN (matricule) - <nom partenaire> (matricule)
+# INF8175 - Projet Quoridor - V3
 
 from __future__ import annotations
 
 import time
-from collections import deque
 
 from actions_quoridor import Orientation, Wall
 from game_state_quoridor import GameStateQuoridor
@@ -12,460 +11,546 @@ from player_quoridor import PlayerQuoridor
 from seahorse.game.action import Action
 from seahorse.game.stateless_action import StatelessAction
 
+FAR = 999
+WIN = 100_000
+RACE = 50_000
+EXACT, LOWER, UPPER = 0, 1, 2
 
-class _SearchTimeUp(Exception):
-    """Raised internally to unwind the search once the time budget is spent."""
+
+class _TimeUp(Exception):
+    pass
+
+
+class _Geometry:
+    """
+    Tables precalculees pour un plateau n x n.
+
+    Cases numerotees r * n + c. Un mur est un bit d'un entier :
+    horizontal (r, c) -> r * n + c, vertical (r, c) -> n * n + r * n + c.
+    Tester si un deplacement est bloque revient donc a un simple ET binaire.
+    """
+
+    DIRS = ((-1, 0), (1, 0), (0, -1), (0, 1))
+    PERP = ((2, 3), (2, 3), (0, 1), (0, 1))
+
+    def __init__(self, n: int) -> None:
+        self.n = n
+        self.nn = n * n
+        self.step = []
+        self.edge_bits = []
+        for cell in range(self.nn):
+            r, c = divmod(cell, n)
+            steps, bits_list = [], []
+            for dr, dc in self.DIRS:
+                bits = self._blocking(r, c, dr, dc)
+                mask = 0
+                for b in bits:
+                    mask |= 1 << b
+                nr, nc = r + dr, c + dc
+                target = nr * n + nc if 0 <= nr < n and 0 <= nc < n else -1
+                steps.append((target, mask))
+                bits_list.append(bits)
+            self.step.append(steps)
+            self.edge_bits.append(bits_list)
+        self.adj = [[(v, m) for v, m in s if v >= 0] for s in self.step]
+
+        self.conflict = {}
+        for r in range(n):
+            for c in range(n - 1):
+                b = self.hbit(r, c)
+                m = 1 << b
+                if c > 0:
+                    m |= 1 << self.hbit(r, c - 1)
+                if c < n - 2:
+                    m |= 1 << self.hbit(r, c + 1)
+                if r > 0:
+                    m |= 1 << self.vbit(r - 1, c + 1)
+                self.conflict[b] = m
+        for r in range(n - 1):
+            for c in range(n):
+                b = self.vbit(r, c)
+                m = 1 << b
+                if r > 0:
+                    m |= 1 << self.vbit(r - 1, c)
+                if r < n - 2:
+                    m |= 1 << self.vbit(r + 1, c)
+                if c > 0:
+                    m |= 1 << self.hbit(r + 1, c - 1)
+                self.conflict[b] = m
+
+    def hbit(self, r: int, c: int) -> int:
+        return r * self.n + c
+
+    def vbit(self, r: int, c: int) -> int:
+        return self.nn + r * self.n + c
+
+    def _blocking(self, r: int, c: int, dr: int, dc: int) -> list[int]:
+        # Memes murs que GameStateQuoridor._candidate_blocking_walls
+        n = self.n
+        bits = []
+        if dr == 1 and r + 1 < n:
+            if c > 0:
+                bits.append(self.hbit(r + 1, c - 1))
+            if c < n - 1:
+                bits.append(self.hbit(r + 1, c))
+        elif dr == -1:
+            if c > 0:
+                bits.append(self.hbit(r, c - 1))
+            if c < n - 1:
+                bits.append(self.hbit(r, c))
+        elif dc == 1 and c + 1 < n:
+            if r > 0:
+                bits.append(self.vbit(r - 1, c + 1))
+            if r < n - 1:
+                bits.append(self.vbit(r, c + 1))
+        elif dc == -1:
+            if r > 0:
+                bits.append(self.vbit(r - 1, c))
+            if r < n - 1:
+                bits.append(self.vbit(r, c))
+        return bits
+
+    def wall_of(self, bit: int) -> tuple[str, tuple[int, int]]:
+        if bit < self.nn:
+            return "horizontal", divmod(bit, self.n)
+        return "vertical", divmod(bit - self.nn, self.n)
 
 
 class MyPlayer(PlayerQuoridor):
     """
-    Agent Quoridor base sur un minimax avec elagage alpha-beta, approfondissement
-    iteratif et gestion explicite du temps de jeu.
-
-    Idee generale : a chaque tour, on cherche le plus loin possible dans l'arbre
-    de jeu tant que le budget de temps alloue au coup n'est pas ecoule, en gardant
-    toujours en memoire la meilleure action trouvee a la derniere profondeur
-    completement explore. Un coup de secours, tres rapide a calculer, garantit
-    qu'une action valide est toujours retournee meme si le temps restant est
-    presque nul.
+    V3 : negamax alpha-beta (PVS) avec approfondissement iteratif, table de
+    transposition et coups killers, sur une representation interne du plateau
+    beaucoup plus rapide que celle du moteur (murs en bits, distances en cache).
     """
 
-    # Valeur attribuee a un etat gagnant / perdant (bien plus grande que tout
-    # score heuristique atteignable, pour qu'une victoire prime toujours).
-    WIN_VALUE = 10_000.0
-
-    # Poids de l'heuristique : H(s) = PATH_WEIGHT * (dist_adv - dist_moi)
-    #                                + WALL_WEIGHT * (murs_moi - murs_adv)
-    PATH_WEIGHT = 10.0
-    WALL_WEIGHT = 1.0
-
-    # Gestion du temps (en secondes). Le budget total pour toute la partie est
-    # transmis via `remaining_time` a chaque appel de compute_action.
-    #
-    # generate_possible_stateless_actions() n'est pas gratuit : chacun des
-    # ~128 murs candidats (plateau 9x9) declenche, via _is_wall_legal, deux
-    # recherches de plus court chemin (BFS) rien que pour verifier la
-    # legalite. Cet appel ne peut pas etre interrompu en cours de route, donc
-    # un seul noeud de recherche a un cout incompressible. SAFETY_RESERVE et
-    # la verification predictive du temps (_check_time_predictive) existent
-    # pour absorber ce cout sans jamais depasser le budget total alloue par
-    # le serveur, meme si le nombre de noeuds visites explose (plateau
-    # different, machine plus lente, etc.).
-    SAFETY_RESERVE = 15.0    # temps jamais utilise, garde en reserve
-    HARD_CAP_PER_MOVE = 6.0  # temps maximal alloue a un seul coup
-    MIN_BUDGET = 0.05        # sous ce seuil, on ne lance pas de recherche
-    WALL_TIME_BUFFER = 8     # coups de murs supplementaires estimes restants
-    MAX_DEPTH = 20           # garde-fou, jamais vraiment atteint en pratique
-    
-    # Distance à partir de laquelle une position est considérée comme dangereuse :
-    # si un joueur est à deux déplacements ou moins du but, la recherche continue.
-    QUIESCENCE_DISTANCE = 2
-    
-    # Nombre maximal de niveaux supplémentaires autorisés dans une position
-    # dangereuse afin d'éviter une explosion du temps de recherche.
-    MAX_TACTICAL_EXTENSIONS = 1
-    # Nombre de décisions initiales pendant lesquelles l'agent privilégie
-    # une progression directe vers sa ligne d'arrivée.
-    OPENING_MOVE_COUNT = 3
+    STEP_W = 10
+    WALL_W = 6
+    TEMPO = 5
+    PROGRESS_MARGIN = 10
+    ROOT_WALLS = 40
+    NODE_WALLS = 10
+    MAX_DEPTH = 40
 
     def __init__(self, piece_type: str, goal_row: int = 0, name: str = "bob", *args, **kwargs) -> None:
-        super().__init__(piece_type, goal_row, name)
-        # Prefixe par un tiret bas : n'apparait pas dans le JSON de partie
-        # (voir section 7.1 du sujet). Estimation glissante du cout d'un
-        # noeud de recherche (candidate_actions + rank_actions), utilisee
-        # pour anticiper un depassement avant meme de lancer un nouveau
-        # noeud couteux et non interruptible.
-        self._avg_node_cost = 0.0
-        self._moves_played = 0
-
-    # ------------------------------------------------------------------
-    # Point d'entree
-    # ------------------------------------------------------------------
+        super().__init__(piece_type, goal_row, name, *args, **kwargs)
+        self._geo = None
+        self._goals = (0, 0)
+        self._dcache = {}
+        self._tt = {}
+        self._killers = []
+        self._total = None
+        self._deadline = 0.0
+        self._nodes = 0
+        self._root_best = None
+        self._fallbacks = 0
+        self._last_depth = 0
 
     def compute_action(self, current_state: GameStateQuoridor, remaining_time: float = 15 * 60, **kwargs) -> Action:
-        """
-        Choisit une action a jouer pour l'etat courant.
-
-        Args:
-            current_state (GameStateQuoridor): Etat courant du jeu.
-            remaining_time (float): Temps total restant pour l'ensemble de la
-                partie (et non pour ce seul coup).
-
-        Returns:
-            Action: L'action choisie.
-        """
         start = time.perf_counter()
+        if self._total is None:
+            self._total = max(remaining_time, 1.0)
 
-        legal_actions = list(current_state.generate_possible_stateless_actions())
-        if not legal_actions:
-            raise RuntimeError("No legal action available.")
-
-        # Lorsqu'il commence la partie, l'agent conserve l'initiative en
-        # progressant pendant ses premiers tours avant d'utiliser ses murs.
-        if self._moves_played < self.OPENING_MOVE_COUNT:
-            opening_action = self._opening_action(current_state, legal_actions)
-
-            if opening_action is not None:
-                self._moves_played += 1
-                return opening_action
-
-
-        # Coup de secours : ne coute quasiment rien (pas d'evaluation
-        # supplementaire de chaque action, donc pas de BFS additionnel).
-        # Toujours disponible, sert de filet de securite absolu si le temps
-        # restant est trop faible pour se permettre la moindre recherche.
-        best_action = self._cheap_fallback_action(current_state, legal_actions)
-
-        time_budget = self._compute_time_budget(current_state, remaining_time)
-        if time_budget <= self.MIN_BUDGET:
-            return best_action
-
-        deadline = start + time_budget
-
-        depth = 1
         try:
-            while depth <= self.MAX_DEPTH:
-                action = self._search_root(current_state, depth, deadline)
-                best_action = action
-                if time.perf_counter() >= deadline:
-                    break
-                depth += 1
-        except _SearchTimeUp:
-            # La derniere profondeur n'a pas termine : on garde le resultat
-            # de la profondeur precedente (deja stocke dans best_action).
+            walls, pos, wl, side = self._load(current_state)
+            move = self._choose(walls, pos, wl, side, start, remaining_time)
+            action = self._to_action(move)
+            if self._is_legal(current_state, action):
+                return action
+        except Exception:
             pass
-
-        self._moves_played += 1
-        return best_action
-
-    # ------------------------------------------------------------------
-    # Gestion du temps
-    # ------------------------------------------------------------------
-
-    def _compute_time_budget(self, state: GameStateQuoridor, remaining_time: float) -> float:
-        """
-        Determine combien de temps consacrer au coup courant.
-
-        On estime grossierement le nombre de coups qu'il nous reste a jouer
-        (notre distance actuelle jusqu'au but, plus une marge pour les murs)
-        et on repartit le temps restant sur ces coups. Le budget est ensuite
-        borne pour ne jamais risquer un depassement du temps total alloue.
-        """
-        if remaining_time <= self.SAFETY_RESERVE:
-            return 0.0
-
-        agent = self._get_player(state, self.get_id())
-        own_distance = state._shortest_path(agent) or 1
-
-        estimated_moves_left = max(own_distance + self.WALL_TIME_BUFFER, 1)
-        budget = remaining_time / estimated_moves_left
-
-        budget = min(budget, remaining_time - self.SAFETY_RESERVE)
-        budget = min(budget, self.HARD_CAP_PER_MOVE)
-        budget = max(budget, 0.0)
-
-        return budget
-
-    def _check_time_predictive(self, deadline: float) -> None:
-        """
-        Comme `_check_time`, mais anticipe le cout du prochain noeud de
-        recherche plutot que de constater le depassement une fois qu'il a
-        deja eu lieu.
-
-        `generate_possible_stateless_actions` (appele par
-        `_candidate_actions`) ne peut pas etre interrompu en cours
-        d'execution. On utilise donc le cout observe du dernier noeud comme
-        estimation du prochain, et on refuse de lancer un nouveau noeud si
-        cela risque de depasser l'echeance.
-        """
-        if time.perf_counter() + self._avg_node_cost >= deadline:
-            raise _SearchTimeUp()
-
-    def _record_node_cost(self, node_start: float) -> None:
-        cost = time.perf_counter() - node_start
-        if cost >= self._avg_node_cost:
-            # Un noeud plus couteux que prevu : on remonte immediatement
-            # l'estimation pour rester prudent des le prochain appel.
-            self._avg_node_cost = cost
-        else:
-            # Sinon on ne decroit que progressivement (moyenne mobile),
-            # pour ne pas redevenir optimiste trop vite.
-            self._avg_node_cost = 0.9 * self._avg_node_cost + 0.1 * cost
-
-    def _cheap_fallback_action(self, state: GameStateQuoridor, legal_actions: list[StatelessAction]) -> StatelessAction:
-        """
-        Renvoie une action legale a cout quasi nul (aucune evaluation ni
-        recherche de plus court chemin supplementaire), utilisee comme filet
-        de securite absolu quand le temps restant est trop faible pour se
-        permettre la moindre recherche.
-
-        Privilegie un deplacement qui suit le plus court chemin deja calcule
-        par `_compute_time_budget` (une seule BFS, deja necessaire de toute
-        facon) plutot qu'un choix totalement arbitraire.
-        """
-        move_actions = [a for a in legal_actions if a.data["type"] == "move"]
-        if not move_actions:
-            return legal_actions[0]
-
-        agent = self._get_player(state, self.get_id())
-        path = self._shortest_path_cells(state, agent)
-        if len(path) > 1:
-            next_cell = path[1]
-            for action in move_actions:
-                if action.data["destination"] == next_cell:
-                    return action
-
-        return move_actions[0]
+        self._fallbacks += 1
+        return self._fallback(current_state)
 
     # ------------------------------------------------------------------
-    # Recherche minimax avec elagage alpha-beta
+    # Conversion etat moteur <-> representation interne
     # ------------------------------------------------------------------
 
-    def _search_root(self, state: GameStateQuoridor, depth: int, deadline: float) -> StatelessAction:
-        """
-        Lance une recherche alpha-beta complete a la profondeur donnee et
-        retourne la meilleure action trouvee a la racine.
-        """
-        node_start = time.perf_counter()
-        actions = self._candidate_actions(state)
-        ranked = self._rank_actions(state, actions)
-        self._record_node_cost(node_start)
+    def _load(self, state: GameStateQuoridor):
+        rep = state.rep
+        n = rep.dimension
+        if self._geo is None or self._geo.n != n:
+            self._geo = _Geometry(n)
+            self._dcache.clear()
+            self._tt.clear()
+        g = self._geo
+        players = state.players
+        ids = [p.get_id() for p in players]
+        self._goals = (players[0].get_goal_row(), players[1].get_goal_row())
 
-        alpha, beta = -float("inf"), float("inf")
-        best_value = -float("inf")
-        best_action = ranked[0][1]
+        pos = tuple(rep.pawn_positions[i][0] * n + rep.pawn_positions[i][1] for i in ids)
+        wl = tuple(rep.remaining_walls[i] for i in ids)
+        walls = 0
+        for w in rep.walls:
+            if w.orientation == Orientation.HORIZONTAL:
+                walls |= 1 << g.hbit(w.row, w.col)
+            else:
+                walls |= 1 << g.vbit(w.row, w.col)
+        side = ids.index(state.active_player.get_id())
+        return walls, pos, wl, side
 
-        for value, action, child in ranked:
-            self._check_time_predictive(deadline)
-            
-            # Chaque branche reçoit une extension tactique disponible lorsque la
-            # profondeur limite est atteinte dans une position dangereuse.
-            value = self._alphabeta(child, depth - 1, alpha, beta, deadline, self.MAX_TACTICAL_EXTENSIONS)
-            if value > best_value:
-                best_value = value
-                best_action = action
-            alpha = max(alpha, best_value)
+    def _to_action(self, move: int) -> StatelessAction:
+        g = self._geo
+        if move >= 0:
+            return StatelessAction({"type": "move", "destination": divmod(move, g.n)})
+        kind, dest = g.wall_of(-1 - move)
+        return StatelessAction({"type": kind, "destination": dest})
 
-        return best_action
+    def _is_legal(self, state: GameStateQuoridor, action: StatelessAction) -> bool:
+        data = action.data
+        if data["type"] == "move":
+            return any(a.data["destination"] == data["destination"] for a in state._legal_moves())
+        r, c = data["destination"]
+        orientation = Orientation.HORIZONTAL if data["type"] == "horizontal" else Orientation.VERTICAL
+        return state._is_wall_legal(Wall(r, c, orientation))
 
-    def _is_quiescent(self, state: GameStateQuoridor) -> bool:
-            """
-            Retourne True si aucun joueur n'est suffisamment proche de sa
-            ligne d'arrivée pour nécessiter une extension tactique.
-            """
-            agent = self._get_player(state, self.get_id())
-            opponent = self._get_player(state, self._opponent_id(state))
+    def _fallback(self, state: GameStateQuoridor) -> StatelessAction:
+        # Filet de securite : deplacement qui rapproche le plus du but (moteur officiel).
+        moves = state._legal_moves()
+        if not moves:
+            return next(iter(state.generate_possible_stateless_actions()))
+        me = next(p for p in state.players if p.get_id() == self.get_id())
 
-            agent_distance = state._shortest_path(agent)
-            opponent_distance = state._shortest_path(opponent)
+        def dist(a):
+            d = state.apply_action(a)._shortest_path(me)
+            return FAR if d is None else d
 
-            return agent_distance > self.QUIESCENCE_DISTANCE and opponent_distance > self.QUIESCENCE_DISTANCE
+        return min(moves, key=dist)
 
-    def _alphabeta(self, state: GameStateQuoridor, depth: int, alpha: float, beta: float, deadline: float, extensions_left: int) -> float:
-        self._check_time_predictive(deadline)
+    # ------------------------------------------------------------------
+    # Choix du coup et gestion du temps
+    # ------------------------------------------------------------------
 
-        if state.is_done():
-            return self._evaluate(state)
+    def _choose(self, walls, pos, wl, side, start, remaining_time) -> int:
+        g = self._geo
+        s, o = side, 1 - side
+        dm_s = self._dist(walls, s)
+        ds, do = dm_s[pos[s]], self._dist(walls, o)[pos[o]]
+        moves = self._pawn_moves(walls, pos[s], pos[o])
+        best = min(moves, key=lambda m: dm_s[m])
 
-        # À la profondeur limite, on évalue immédiatement une position calme.
-        # Si un joueur est proche de gagner, on poursuit plutôt la recherche
-        # d'un niveau afin de mieux voir la menace ou la victoire.
-        if depth == 0:
-            if extensions_left == 0 or self._is_quiescent(state):
-                return self._evaluate(state)
+        if dm_s[best] == 0:
+            return best
+        # Course gagnee d'avance : l'adversaire n'a plus de murs et on arrive avant lui
+        if wl[o] == 0 and ds <= do:
+            return best
 
-            depth = 1
-            extensions_left -= 1
+        budget = self._budget(remaining_time, ds)
+        self._deadline = start + budget
+        soft = start + 0.45 * budget
 
-        node_start = time.perf_counter()
-        actions = self._candidate_actions(state)
-        ranked = self._rank_actions(state, actions)
-        self._record_node_cost(node_start)
+        if len(self._tt) > 1_000_000:
+            self._tt.clear()
+        if len(self._dcache) > 250_000:
+            self._dcache.clear()
 
-        if not ranked:
-            return self._evaluate(state)
+        children = self._children(walls, pos, wl, s, self.ROOT_WALLS)
+        children.sort(key=lambda t: t[0], reverse=True)
+        best = children[0][1]
+        self._killers = [[None, None] for _ in range(self.MAX_DEPTH + 2)]
+        self._nodes = 0
 
-        maximizing = state.active_player.get_id() == self.get_id()
-
-        if maximizing:
-            value = -float("inf")
-
-            for _, _, child in ranked:
-                child_value = self._alphabeta(child, depth - 1, alpha, beta, deadline, extensions_left)
-                value = max(value, child_value)
-                alpha = max(alpha, value)
-
-                if alpha >= beta:
-                    break
-
-            return value
-
-        value = float("inf")
-
-        for _, _, child in ranked:
-            child_value = self._alphabeta(child, depth - 1, alpha, beta, deadline, extensions_left)
-            value = min(value, child_value)
-            beta = min(beta, value)
-
-            if alpha >= beta:
+        value, done = None, 0
+        for depth in range(1, self.MAX_DEPTH + 1):
+            self._root_best = None
+            try:
+                value, move = self._root_search(children, s, depth)
+            except _TimeUp:
+                if self._root_best is not None:
+                    best = self._root_best
+                break
+            best, done = move, depth
+            self._last_depth = depth
+            children.sort(key=lambda t: t[1] != move)
+            if abs(value) >= WIN - 1000 or time.perf_counter() > soft:
                 break
 
-        return value
+        if done >= 2 and (best < 0 or dm_s[best] >= ds):
+            best = self._prefer_progress(children, s, done, value, best, dm_s, ds)
+        return best
+
+    def _prefer_progress(self, children, side, depth, value, best, dm_s, ds):
+        """
+        Effet d'horizon : quand l'adversaire a encore des murs, avancer maintenant
+        ou plus tard donne souvent le meme score a profondeur fixe, et l'agent
+        peut tourner en rond. Si le meilleur deplacement vers le but est presque
+        aussi bon que le coup trouve, on le prefere.
+        """
+        if value is None or abs(value) >= RACE:
+            return best
+        forward = [t for t in children if t[1] >= 0 and t[2] is not None and dm_s[t[1]] < ds]
+        if not forward:
+            return best
+        _, move, (w2, p2, wl2) = forward[0]
+        target = value - self.PROGRESS_MARGIN
+        if best < 0:
+            target = value - self.PROGRESS_MARGIN // 2
+        try:
+            val = -self._negamax(w2, p2, wl2, 1 - side, depth - 1, -target, -target + 1, 1)
+        except _TimeUp:
+            return best
+        return move if val >= target else best
+
+    def _budget(self, remaining: float, own_distance: int) -> float:
+        """
+        Temps alloue au coup. Le credit est global (15 min pour la partie, sans
+        tolerance), donc on repartit le temps restant hors reserve sur une
+        estimation des coups restants. La suite des budgets est decroissante,
+        ce qui garantit qu'on ne depasse jamais le credit total.
+        """
+        total = self._total
+        reserve = max(2.0, 0.04 * total)
+        if remaining <= reserve:
+            return max(0.01, remaining / 60)
+        moves_left = max(10, own_distance + 12)
+        return min((remaining - reserve) / moves_left, 0.035 * total)
 
     # ------------------------------------------------------------------
-    # Generation et tri des coups
+    # Recherche
     # ------------------------------------------------------------------
 
-    def _candidate_actions(self, state: GameStateQuoridor) -> list[StatelessAction]:
+    def _root_search(self, children, side, depth):
+        alpha, beta = -WIN - 1, WIN + 1
+        best_val, best_move = -WIN - 1, children[0][1]
+        for i, (_, move, child) in enumerate(children):
+            if child is None:
+                val = WIN
+            else:
+                w2, p2, wl2 = child
+                if i == 0:
+                    val = -self._negamax(w2, p2, wl2, 1 - side, depth - 1, -beta, -alpha, 1)
+                else:
+                    val = -self._negamax(w2, p2, wl2, 1 - side, depth - 1, -alpha - 1, -alpha, 1)
+                    if alpha < val < beta:
+                        val = -self._negamax(w2, p2, wl2, 1 - side, depth - 1, -beta, -alpha, 1)
+            if val > best_val:
+                best_val, best_move = val, move
+            alpha = max(alpha, val)
+            self._root_best = best_move
+        return best_val, best_move
+
+    def _negamax(self, walls, pos, wl, side, depth, alpha, beta, ply) -> int:
+        self._nodes += 1
+        if not self._nodes & 31 and time.perf_counter() > self._deadline:
+            raise _TimeUp()
+
+        if depth <= 0:
+            return self._evaluate(walls, pos, wl, side)
+
+        if wl[0] == 0 or wl[1] == 0:
+            static = self._evaluate(walls, pos, wl, side)
+            if abs(static) >= RACE:
+                return static
+
+        key = (walls, pos, wl, side)
+        entry = self._tt.get(key)
+        tt_move = None
+        if entry is not None:
+            e_depth, flag, val, tt_move = entry
+            if e_depth >= depth:
+                if flag == EXACT:
+                    return val
+                if flag == LOWER and val >= beta:
+                    return val
+                if flag == UPPER and val <= alpha:
+                    return val
+
+        children = self._children(walls, pos, wl, side, self.NODE_WALLS)
+
+        # Profondeur 1 : la valeur de chaque enfant est deja son score statique
+        if depth == 1:
+            best = max(t[0] for t in children)
+            return WIN - ply if best >= WIN else best
+
+        killers = self._killers[ply]
+        children.sort(key=lambda t: (t[1] == tt_move, t[1] in killers, t[0]), reverse=True)
+
+        alpha0 = alpha
+        best, best_move = -WIN - 1, None
+        for score, move, child in children:
+            if child is None:
+                val = WIN - ply
+            else:
+                w2, p2, wl2 = child
+                val = -self._negamax(w2, p2, wl2, 1 - side, depth - 1, -beta, -alpha, ply + 1)
+            if val > best:
+                best, best_move = val, move
+                if val > alpha:
+                    alpha = val
+                    if alpha >= beta:
+                        if move != killers[0]:
+                            killers[1] = killers[0]
+                            killers[0] = move
+                        break
+
+        if best <= alpha0:
+            flag = UPPER
+        elif best >= beta:
+            flag = LOWER
+        else:
+            flag = EXACT
+        self._tt[key] = (depth, flag, best, best_move)
+        return best
+
+    def _children(self, walls, pos, wl, side, wall_limit):
         """
-        Restreint les actions considerees par la recherche pour limiter le
-        facteur de branchement (le nombre de murs legaux peut depasser la
-        centaine). Tous les deplacements de pion sont conserves. Seuls les
-        murs qui touchent le plus court chemin d'un des deux joueurs sont
-        conserves, car ce sont les seuls murs susceptibles de vraiment
-        changer la distance de l'un des joueurs a court terme.
+        Coups candidats avec leur score statique (point de vue du joueur actif).
+        Tous les deplacements sont gardes. Pour les murs, seuls ceux qui coupent
+        tous les plus courts chemins adverses (donc qui l'allongent vraiment) sont
+        consideres, puis on garde les wall_limit meilleurs.
         """
-        actions = list(state.generate_possible_stateless_actions())
+        g = self._geo
+        o = 1 - side
+        goal = self._goals[side]
+        dm_s = self._dist(walls, side)
+        dm_o = self._dist(walls, o)
+        ds, do = dm_s[pos[side]], dm_o[pos[o]]
+        out = []
 
-        move_actions = [a for a in actions if a.data["type"] == "move"]
-        wall_actions = [a for a in actions if a.data["type"] != "move"]
+        for cell in self._pawn_moves(walls, pos[side], pos[o]):
+            if cell // g.n == goal:
+                out.append((WIN, cell, None))
+                continue
+            np = (cell, pos[1]) if side == 0 else (pos[0], cell)
+            out.append((-self._score(do, dm_s[cell], wl[o], wl[side]), cell, (walls, np, wl)))
 
-        if not wall_actions:
-            return move_actions
+        if wl[side] > 0:
+            nwl = (wl[0] - 1, wl[1]) if side == 0 else (wl[0], wl[1] - 1)
+            own_edges, own_bits = self._dag(walls, pos[side], dm_s)
+            opp_edges, opp_bits = self._dag(walls, pos[o], dm_o)
+            cand = []
+            for bit in opp_bits:
+                if walls & g.conflict[bit]:
+                    continue
+                mask = 1 << bit
+                if self._still_short(opp_edges, pos[o], mask):
+                    continue
+                nw = walls | mask
+                d_o2 = self._dist(nw, o)[pos[o]]
+                if d_o2 >= FAR:
+                    continue
+                if bit in own_bits and not self._still_short(own_edges, pos[side], mask):
+                    d_s2 = self._dist(nw, side)[pos[side]]
+                else:
+                    d_s2 = ds
+                if d_s2 >= FAR:
+                    continue
+                cand.append((-self._score(d_o2, d_s2, wl[o], nwl[side]), -1 - bit, (nw, pos, nwl)))
+            if len(cand) > wall_limit:
+                cand.sort(key=lambda t: t[0], reverse=True)
+                cand = cand[:wall_limit]
+            out.extend(cand)
 
-        relevant_walls = self._relevant_walls(state)
-        pruned_walls = [a for a in wall_actions if self._to_wall(a) in relevant_walls]
+        return out
 
-        return move_actions + pruned_walls
-
-    def _relevant_walls(self, state: GameStateQuoridor) -> set[Wall]:
+    def _evaluate(self, walls, pos, wl, side) -> int:
         """
-        Calcule l'ensemble des murs pouvant bloquer une case du plus court
-        chemin (ignorant les pions) de l'un ou l'autre des deux joueurs.
+        Score du point de vue du joueur qui doit jouer.
+
+        Si un des deux joueurs n'a plus de murs, la course peut etre tranchee
+        exactement : celui qui joue gagne s'il est au moins aussi proche.
+        Sinon : ecart de distance, murs restants et un bonus de trait.
         """
-        relevant = set()
-        for player in state.players:
-            path = self._shortest_path_cells(state, player)
-            for a, b in zip(path, path[1:]):
-                relevant.update(state._candidate_blocking_walls(a, b))
-        return relevant
+        o = 1 - side
+        ds = self._dist(walls, side)[pos[side]]
+        do = self._dist(walls, o)[pos[o]]
+        return self._score(ds, do, wl[side], wl[o])
 
-    def _shortest_path_cells(self, state: GameStateQuoridor, player) -> list[tuple[int, int]]:
-        """
-        Reconstruit un plus court chemin (liste de cases) entre le pion du
-        joueur et sa rangee cible, en ignorant l'autre pion (memes regles que
-        GameStateQuoridor._shortest_path, mais avec reconstruction du chemin).
-        """
-        start = state.rep.pawn_positions[player.id]
-        if start[0] == player.get_goal_row():
-            return [start]
-
-        previous = {start: None}
-        queue = deque([start])
-
-        while queue:
-            position = queue.popleft()
-            if position[0] == player.get_goal_row():
-                path = []
-                current = position
-                while current is not None:
-                    path.append(current)
-                    current = previous[current]
-                path.reverse()
-                return path
-
-            for neighbour in state._reachable_neighbours(position):
-                if neighbour not in previous:
-                    previous[neighbour] = position
-                    queue.append(neighbour)
-
-        # Ne devrait pas arriver : la legalite des murs garantit un chemin.
-        return [start]
-
-    def _to_wall(self, action: StatelessAction) -> Wall:
-        row, col = action.data["destination"]
-        orientation = Orientation.VERTICAL if action.data["type"] == "vertical" else Orientation.HORIZONTAL
-        return Wall(row=row, col=col, orientation=orientation)
-
-    def _rank_actions(self, state: GameStateQuoridor, actions: list[StatelessAction]):
-        """
-        Applique chaque action, evalue l'etat resultant et trie les actions
-        du meilleur au pire coup pour le joueur actif de `state`.
-
-        Sert a la fois de tri pour ameliorer l'elagage alpha-beta (jouer
-        d'abord les coups prometteurs coupe davantage de branches) et de
-        base pour le coup de secours retourne quand le temps manque.
-
-        Returns:
-            list[tuple[float, StatelessAction, GameStateQuoridor]]: triplets
-            (valeur, action, etat resultant) tries du meilleur au pire coup.
-        """
-        maximizing = state.active_player.get_id() == self.get_id()
-
-        scored = []
-        for action in actions:
-            child = state.apply_action(action)
-            value = self._evaluate(child)
-            scored.append((value, action, child))
-
-        scored.sort(key=lambda triplet: triplet[0], reverse=maximizing)
-        return scored
+    def _score(self, ds, do, ws, wo) -> int:
+        if wo == 0 and ds <= do:
+            return RACE + do - ds
+        if ws == 0 and do < ds:
+            return -RACE - ds + do
+        return self.STEP_W * (do - ds) + self.WALL_W * (ws - wo) + self.TEMPO
 
     # ------------------------------------------------------------------
-    # Heuristique
+    # Regles et plus courts chemins sur la representation interne
     # ------------------------------------------------------------------
 
-    def _evaluate(self, state: GameStateQuoridor) -> float:
+    def _pawn_moves(self, walls, me, opp) -> list[int]:
+        # Reprend exactement GameStateQuoridor._try_direction (sauts et diagonales)
+        step = self._geo.step
+        res = []
+        for d in range(4):
+            v, m = step[me][d]
+            if v < 0 or walls & m:
+                continue
+            if v != opp:
+                res.append(v)
+                continue
+            w, m2 = step[opp][d]
+            if m2 and walls & m2:
+                for pd in _Geometry.PERP[d]:
+                    x, m3 = step[opp][pd]
+                    if x >= 0 and not walls & m3:
+                        res.append(x)
+            elif w >= 0:
+                res.append(w)
+        return res
+
+    def _dag(self, walls, start, dm):
         """
-        Evalue un etat du point de vue de l'agent (valeurs positives = bon
-        pour l'agent). Combine deux criteres :
-            - l'avance en distance (plus courts chemins) sur l'adversaire,
-            - le nombre de murs qu'il nous reste par rapport a l'adversaire.
+        Graphe de tous les plus courts chemins depuis start (aretes ou la
+        distance au but baisse de 1) et ensemble des murs qui touchent une arete.
         """
-        agent = self._get_player(state, self.get_id())
-        opponent = self._get_player(state, self._opponent_id(state))
+        g = self._geo
+        edges, bits = {}, set()
+        stack = [start]
+        while stack:
+            u = stack.pop()
+            if u in edges:
+                continue
+            out = []
+            du = dm[u]
+            if du:
+                for d in range(4):
+                    v, m = g.step[u][d]
+                    if v >= 0 and not walls & m and dm[v] == du - 1:
+                        out.append((v, m))
+                        bits.update(g.edge_bits[u][d])
+                        stack.append(v)
+            edges[u] = out
+        return edges, bits
 
-        if state.is_done():
-            return self.WIN_VALUE if state.scores.get(agent.get_id(), 0.0) == 1.0 else -self.WIN_VALUE
+    @staticmethod
+    def _still_short(edges, start, wall_mask) -> bool:
+        # Vrai si un plus court chemin survit au nouveau mur (distance inchangee)
+        stack, seen = [start], {start}
+        while stack:
+            out = edges[stack.pop()]
+            if not out:
+                return True
+            for v, m in out:
+                if not m & wall_mask and v not in seen:
+                    seen.add(v)
+                    stack.append(v)
+        return False
 
-        agent_distance = state._shortest_path(agent)
-        opponent_distance = state._shortest_path(opponent)
+    def _dist(self, walls, who) -> list[int]:
+        goal = self._goals[who]
+        key = (walls, goal)
+        dm = self._dcache.get(key)
+        if dm is None:
+            if len(self._dcache) > 400_000:
+                self._dcache.clear()
+            dm = self._bfs(walls, goal)
+            self._dcache[key] = dm
+        return dm
 
-        path_term = (opponent_distance - agent_distance) * self.PATH_WEIGHT
-        wall_term = (state.rep.remaining_walls[agent.get_id()] - state.rep.remaining_walls[opponent.get_id()]) * self.WALL_WEIGHT
-
-        return path_term + wall_term
-
-    def _opening_action(self, state: GameStateQuoridor, actions: list[StatelessAction]):
-        """
-        Pendant l'ouverture, choisit le déplacement qui réduit le plus
-        la distance restante jusqu'à la ligne d'arrivée.
-        """
-        move_actions = [action for action in actions if action.data["type"] == "move"]
-
-        if not move_actions:
-            return None
-
-        best_action = None
-        best_distance = float("inf")
-
-        for action in move_actions:
-            child = state.apply_action(action)
-            agent = self._get_player(child, self.get_id())
-            distance = child._shortest_path(agent)
-
-            if distance < best_distance:
-                best_distance = distance
-                best_action = action
-
-        return best_action
-
-    # ------------------------------------------------------------------
-    # Utilitaires
-    # ------------------------------------------------------------------
-
-    def _get_player(self, state: GameStateQuoridor, player_id: int):
-        return next(p for p in state.players if p.get_id() == player_id)
-
-    def _opponent_id(self, state: GameStateQuoridor) -> int:
-        return next(p.get_id() for p in state.players if p.get_id() != self.get_id())
+    def _bfs(self, walls, goal_row) -> list[int]:
+        g = self._geo
+        adj = g.adj
+        dist = [FAR] * g.nn
+        frontier = list(range(goal_row * g.n, goal_row * g.n + g.n))
+        for cell in frontier:
+            dist[cell] = 0
+        k = 0
+        while frontier:
+            k += 1
+            nxt = []
+            for u in frontier:
+                for v, m in adj[u]:
+                    if dist[v] == FAR and not walls & m:
+                        dist[v] = k
+                        nxt.append(v)
+            frontier = nxt
+        return dist
