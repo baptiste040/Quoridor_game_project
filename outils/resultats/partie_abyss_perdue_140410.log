@@ -1,0 +1,2590 @@
+2026-11-22 17:34:24.799 +00:00 | INFO     | seahorse.game.io_stream:stop:494 - Waiting for listeners 0 out of 1 are connected.
+2026-11-22 17:34:24.808 +00:00 | INFO     | seahorse.game.io_stream:connect:271 - Waiting for listeners 1                     out of 1 are connected.
+2026-11-22 17:34:24.809 +00:00 | INFO     | seahorse.game.io_stream:stop:504 - Starting match
+2026-11-22 17:34:24.810 +00:00 | INFO     | seahorse.game.master:play_game:214 - Player : agent_2110_1 - 140031473645088
+2026-11-22 17:34:24.810 +00:00 | INFO     | seahorse.game.master:play_game:214 - Player : agent_2107_2 - 140031472795728
+2026-11-22 17:34:24.810 +00:00 | INFO     | seahorse.game.master:play_game:218 - Player now playing : agent_2110_1 - 140031473645088
+2026-11-22 17:34:24.811 +00:00 | INFO     | seahorse.game.master:step:154 - time : 900s
+2026-11-22 17:34:24.811 +00:00 | INFO     | seahorse.game.io_stream:handle_identify:335 - Identifying a listener
+2026-11-22 17:34:24.812 +00:00 | INFO     | seahorse.game.io_stream:handle_identify:336 - __REC__1795368863922597
+2026-11-22 17:35:16.728 +00:00 | INFO     | seahorse.game.master:play_game:272 - Current game state: 
+    a b c d e f g h i
+ 1   .  .  .  . 28  .  .  .  .
+ 2   .  .  .  .  .  .  .  .  .
+ 3   .  .  .  .  .  .  .  .  .
+ 4   .  .  .  .  .  .  .  .  .
+ 5   .  .  .  .  .  .  .  .  .
+ 6   .  .  .  .  .  .  .  .  .
+ 7   .  .  .  .  .  .  .  .  .
+ 8   .  .  .  . 88  .  .  .  .
+ 9   .  .  .  .  .  .  .  .  .
+
+Horizontal walls:
+  (none)
+
+Vertical walls:
+  (none)
+
+Remaining walls:
+  Player 140031472795728: 10
+  Player 140031473645088: 10
+2026-11-22 17:35:16.729 +00:00 | INFO     | seahorse.game.master:play_game:218 - Player now playing : agent_2107_2 - 140031472795728
+2026-11-22 17:35:16.729 +00:00 | INFO     | seahorse.game.master:step:154 - time : 900s
+2026-11-22 17:35:17.207 +00:00 | INFO     | seahorse.game.master:play_game:272 - Current game state: 
+    a b c d e f g h i
+ 1   .  .  .  .  .  .  .  .  .
+ 2   .  .  .  . 28  .  .  .  .
+ 3   .  .  .  .  .  .  .  .  .
+ 4   .  .  .  .  .  .  .  .  .
+ 5   .  .  .  .  .  .  .  .  .
+ 6   .  .  .  .  .  .  .  .  .
+ 7   .  .  .  .  .  .  .  .  .
+ 8   .  .  .  . 88  .  .  .  .
+ 9   .  .  .  .  .  .  .  .  .
+
+Horizontal walls:
+  (none)
+
+Vertical walls:
+  (none)
+
+Remaining walls:
+  Player 140031472795728: 10
+  Player 140031473645088: 10
+2026-11-22 17:35:17.208 +00:00 | INFO     | seahorse.game.master:play_game:218 - Player now playing : agent_2110_1 - 140031473645088
+2026-11-22 17:35:17.208 +00:00 | INFO     | seahorse.game.master:step:154 - time : 848.5575959682465s
+2026-11-22 17:35:56.961 +00:00 | INFO     | seahorse.game.master:play_game:272 - Current game state: 
+    a b c d e f g h i
+ 1   .  .  .  .  .  .  .  .  .
+ 2   .  .  .  . 28  .  .  .  .
+ 3   .  .  .  .  .  .  .  .  .
+ 4   .  .  .  .  .  .  .  .  .
+ 5   .  .  .  .  .  .  .  .  .
+ 6   .  .  .  .  .  .  .  .  .
+ 7   .  .  .  . 88  .  .  .  .
+ 8   .  .  .  .  .  .  .  .  .
+ 9   .  .  .  .  .  .  .  .  .
+
+Horizontal walls:
+  (none)
+
+Vertical walls:
+  (none)
+
+Remaining walls:
+  Player 140031472795728: 10
+  Player 140031473645088: 10
+2026-11-22 17:35:56.962 +00:00 | INFO     | seahorse.game.master:play_game:218 - Player now playing : agent_2107_2 - 140031472795728
+2026-11-22 17:35:56.962 +00:00 | INFO     | seahorse.game.master:step:154 - time : 899.9984834194183s
+2026-11-22 17:35:57.420 +00:00 | INFO     | seahorse.game.master:play_game:272 - Current game state: 
+    a b c d e f g h i
+ 1   .  .  .  .  .  .  .  .  .
+ 2   .  .  .  .  .  .  .  .  .
+ 3   .  .  .  . 28  .  .  .  .
+ 4   .  .  .  .  .  .  .  .  .
+ 5   .  .  .  .  .  .  .  .  .
+ 6   .  .  .  .  .  .  .  .  .
+ 7   .  .  .  . 88  .  .  .  .
+ 8   .  .  .  .  .  .  .  .  .
+ 9   .  .  .  .  .  .  .  .  .
+
+Horizontal walls:
+  (none)
+
+Vertical walls:
+  (none)
+
+Remaining walls:
+  Player 140031472795728: 10
+  Player 140031473645088: 10
+2026-11-22 17:35:57.421 +00:00 | INFO     | seahorse.game.master:play_game:218 - Player now playing : agent_2110_1 - 140031473645088
+2026-11-22 17:35:57.421 +00:00 | INFO     | seahorse.game.master:step:154 - time : 809.2645072937012s
+2026-11-22 17:36:26.182 +00:00 | INFO     | seahorse.game.master:play_game:272 - Current game state: 
+    a b c d e f g h i
+ 1   .  .  .  .  .  .  .  .  .
+ 2   .  .  .  .  .  .  .  .  .
+ 3   .  .  .  . 28  .  .  .  .
+ 4   .  .  .  .  .  .  .  .  .
+ 5   .  .  .  .  .  .  .  .  .
+ 6   .  .  .  .  .  .  .  .  .
+ 7   .  .  .  . 88  .  .  .  .
+ 8   .  .  .  .  .  .  .  .  .
+ 9   .  .  .  .  .  .  .  .  .
+
+Horizontal walls:
+  (d, 4)
+
+Vertical walls:
+  (none)
+
+Remaining walls:
+  Player 140031472795728: 10
+  Player 140031473645088: 9
+2026-11-22 17:36:26.182 +00:00 | INFO     | seahorse.game.master:play_game:218 - Player now playing : agent_2107_2 - 140031472795728
+2026-11-22 17:36:26.183 +00:00 | INFO     | seahorse.game.master:step:154 - time : 899.9983484745026s
+2026-11-22 17:36:34.312 +00:00 | INFO     | seahorse.game.master:play_game:272 - Current game state: 
+    a b c d e f g h i
+ 1   .  .  .  .  .  .  .  .  .
+ 2   .  .  .  .  .  .  .  .  .
+ 3   .  .  .  .  . 28  .  .  .
+ 4   .  .  .  .  .  .  .  .  .
+ 5   .  .  .  .  .  .  .  .  .
+ 6   .  .  .  .  .  .  .  .  .
+ 7   .  .  .  . 88  .  .  .  .
+ 8   .  .  .  .  .  .  .  .  .
+ 9   .  .  .  .  .  .  .  .  .
+
+Horizontal walls:
+  (d, 4)
+
+Vertical walls:
+  (none)
+
+Remaining walls:
+  Player 140031472795728: 10
+  Player 140031473645088: 9
+2026-11-22 17:36:34.314 +00:00 | INFO     | seahorse.game.master:play_game:218 - Player now playing : agent_2110_1 - 140031473645088
+2026-11-22 17:36:34.314 +00:00 | INFO     | seahorse.game.master:step:154 - time : 780.9608130455017s
+2026-11-22 17:37:13.249 +00:00 | INFO     | seahorse.game.master:play_game:272 - Current game state: 
+    a b c d e f g h i
+ 1   .  .  .  .  .  .  .  .  .
+ 2   .  .  .  .  .  .  .  .  .
+ 3   .  .  .  .  . 28  .  .  .
+ 4   .  .  .  .  .  .  .  .  .
+ 5   .  .  .  .  .  .  .  .  .
+ 6   .  .  .  .  .  .  .  .  .
+ 7   .  .  .  . 88  .  .  .  .
+ 8   .  .  .  .  .  .  .  .  .
+ 9   .  .  .  .  .  .  .  .  .
+
+Horizontal walls:
+  (d, 4)
+  (f, 4)
+
+Vertical walls:
+  (none)
+
+Remaining walls:
+  Player 140031472795728: 10
+  Player 140031473645088: 8
+2026-11-22 17:37:13.250 +00:00 | INFO     | seahorse.game.master:play_game:218 - Player now playing : agent_2107_2 - 140031472795728
+2026-11-22 17:37:13.250 +00:00 | INFO     | seahorse.game.master:step:154 - time : 892.3891339302063s
+2026-11-22 17:37:23.020 +00:00 | INFO     | seahorse.game.master:play_game:272 - Current game state: 
+    a b c d e f g h i
+ 1   .  .  .  .  .  .  .  .  .
+ 2   .  .  .  .  .  .  .  .  .
+ 3   .  .  .  .  .  . 28  .  .
+ 4   .  .  .  .  .  .  .  .  .
+ 5   .  .  .  .  .  .  .  .  .
+ 6   .  .  .  .  .  .  .  .  .
+ 7   .  .  .  . 88  .  .  .  .
+ 8   .  .  .  .  .  .  .  .  .
+ 9   .  .  .  .  .  .  .  .  .
+
+Horizontal walls:
+  (d, 4)
+  (f, 4)
+
+Vertical walls:
+  (none)
+
+Remaining walls:
+  Player 140031472795728: 10
+  Player 140031473645088: 8
+2026-11-22 17:37:23.021 +00:00 | INFO     | seahorse.game.master:play_game:218 - Player now playing : agent_2110_1 - 140031473645088
+2026-11-22 17:37:23.021 +00:00 | INFO     | seahorse.game.master:step:154 - time : 742.5037009716034s
+2026-11-22 17:37:53.276 +00:00 | INFO     | seahorse.game.master:play_game:272 - Current game state: 
+    a b c d e f g h i
+ 1   .  .  .  .  .  .  .  .  .
+ 2   .  .  .  .  .  .  .  .  .
+ 3   .  .  .  .  .  . 28  .  .
+ 4   .  .  .  .  .  .  .  .  .
+ 5   .  .  .  .  .  .  .  .  .
+ 6   .  .  .  .  .  .  .  .  .
+ 7   .  .  .  . 88  .  .  .  .
+ 8   .  .  .  .  .  .  .  .  .
+ 9   .  .  .  .  .  .  .  .  .
+
+Horizontal walls:
+  (d, 4)
+  (f, 4)
+  (h, 4)
+
+Vertical walls:
+  (none)
+
+Remaining walls:
+  Player 140031472795728: 10
+  Player 140031473645088: 7
+2026-11-22 17:37:53.277 +00:00 | INFO     | seahorse.game.master:play_game:218 - Player now playing : agent_2107_2 - 140031472795728
+2026-11-22 17:37:53.277 +00:00 | INFO     | seahorse.game.master:step:154 - time : 883.3221800327301s
+2026-11-22 17:37:58.566 +00:00 | INFO     | seahorse.game.master:play_game:272 - Current game state: 
+    a b c d e f g h i
+ 1   .  .  .  .  .  .  .  .  .
+ 2   .  .  .  .  .  .  .  .  .
+ 3   .  .  .  .  . 28  .  .  .
+ 4   .  .  .  .  .  .  .  .  .
+ 5   .  .  .  .  .  .  .  .  .
+ 6   .  .  .  .  .  .  .  .  .
+ 7   .  .  .  . 88  .  .  .  .
+ 8   .  .  .  .  .  .  .  .  .
+ 9   .  .  .  .  .  .  .  .  .
+
+Horizontal walls:
+  (d, 4)
+  (f, 4)
+  (h, 4)
+
+Vertical walls:
+  (none)
+
+Remaining walls:
+  Player 140031472795728: 10
+  Player 140031473645088: 7
+2026-11-22 17:37:58.567 +00:00 | INFO     | seahorse.game.master:play_game:218 - Player now playing : agent_2110_1 - 140031473645088
+2026-11-22 17:37:58.567 +00:00 | INFO     | seahorse.game.master:step:154 - time : 712.7062363624573s
+2026-11-22 17:38:46.580 +00:00 | INFO     | seahorse.game.master:play_game:272 - Current game state: 
+    a b c d e f g h i
+ 1   .  .  .  .  .  .  .  .  .
+ 2   .  .  .  .  .  .  .  .  .
+ 3   .  .  .  .  . 28  .  .  .
+ 4   .  .  .  .  .  .  .  .  .
+ 5   .  .  .  .  .  .  .  .  .
+ 6   .  .  .  .  .  .  .  .  .
+ 7   .  .  . 88  .  .  .  .  .
+ 8   .  .  .  .  .  .  .  .  .
+ 9   .  .  .  .  .  .  .  .  .
+
+Horizontal walls:
+  (d, 4)
+  (f, 4)
+  (h, 4)
+
+Vertical walls:
+  (none)
+
+Remaining walls:
+  Player 140031472795728: 10
+  Player 140031473645088: 7
+2026-11-22 17:38:46.582 +00:00 | INFO     | seahorse.game.master:play_game:218 - Player now playing : agent_2107_2 - 140031472795728
+2026-11-22 17:38:46.582 +00:00 | INFO     | seahorse.game.master:step:154 - time : 878.4741156101227s
+2026-11-22 17:38:56.855 +00:00 | INFO     | seahorse.game.master:play_game:272 - Current game state: 
+    a b c d e f g h i
+ 1   .  .  .  .  .  .  .  .  .
+ 2   .  .  .  .  .  .  .  .  .
+ 3   .  .  .  .  . 28  .  .  .
+ 4   .  .  .  .  .  .  .  .  .
+ 5   .  .  .  .  .  .  .  .  .
+ 6   .  .  .  .  .  .  .  .  .
+ 7   .  .  . 88  .  .  .  .  .
+ 8   .  .  .  .  .  .  .  .  .
+ 9   .  .  .  .  .  .  .  .  .
+
+Horizontal walls:
+  (d, 4)
+  (f, 4)
+  (h, 4)
+  (c, 6)
+
+Vertical walls:
+  (none)
+
+Remaining walls:
+  Player 140031472795728: 9
+  Player 140031473645088: 7
+2026-11-22 17:38:56.856 +00:00 | INFO     | seahorse.game.master:play_game:218 - Player now playing : agent_2110_1 - 140031473645088
+2026-11-22 17:38:56.856 +00:00 | INFO     | seahorse.game.master:step:154 - time : 665.1301875114441s
+2026-11-22 17:39:25.146 +00:00 | INFO     | seahorse.game.master:play_game:272 - Current game state: 
+    a b c d e f g h i
+ 1   .  .  .  .  .  .  .  .  .
+ 2   .  .  .  .  .  .  .  .  .
+ 3   .  .  .  .  . 28  .  .  .
+ 4   .  .  .  .  .  .  .  .  .
+ 5   .  .  .  .  .  .  .  .  .
+ 6   .  .  .  .  .  .  .  .  .
+ 7   .  .  .  . 88  .  .  .  .
+ 8   .  .  .  .  .  .  .  .  .
+ 9   .  .  .  .  .  .  .  .  .
+
+Horizontal walls:
+  (d, 4)
+  (f, 4)
+  (h, 4)
+  (c, 6)
+
+Vertical walls:
+  (none)
+
+Remaining walls:
+  Player 140031472795728: 9
+  Player 140031473645088: 7
+2026-11-22 17:39:25.146 +00:00 | INFO     | seahorse.game.master:play_game:218 - Player now playing : agent_2107_2 - 140031472795728
+2026-11-22 17:39:25.147 +00:00 | INFO     | seahorse.game.master:step:154 - time : 868.65647149086s
+2026-11-22 17:39:30.309 +00:00 | INFO     | seahorse.game.master:play_game:272 - Current game state: 
+    a b c d e f g h i
+ 1   .  .  .  .  .  .  .  .  .
+ 2   .  .  .  .  .  .  .  .  .
+ 3   .  .  .  . 28  .  .  .  .
+ 4   .  .  .  .  .  .  .  .  .
+ 5   .  .  .  .  .  .  .  .  .
+ 6   .  .  .  .  .  .  .  .  .
+ 7   .  .  .  . 88  .  .  .  .
+ 8   .  .  .  .  .  .  .  .  .
+ 9   .  .  .  .  .  .  .  .  .
+
+Horizontal walls:
+  (d, 4)
+  (f, 4)
+  (h, 4)
+  (c, 6)
+
+Vertical walls:
+  (none)
+
+Remaining walls:
+  Player 140031472795728: 9
+  Player 140031473645088: 7
+2026-11-22 17:39:30.309 +00:00 | INFO     | seahorse.game.master:play_game:218 - Player now playing : agent_2110_1 - 140031473645088
+2026-11-22 17:39:30.309 +00:00 | INFO     | seahorse.game.master:step:154 - time : 637.2699987888336s
+2026-11-22 17:40:13.151 +00:00 | INFO     | seahorse.game.master:play_game:272 - Current game state: 
+    a b c d e f g h i
+ 1   .  .  .  .  .  .  .  .  .
+ 2   .  .  .  .  .  .  .  .  .
+ 3   .  .  .  . 28  .  .  .  .
+ 4   .  .  .  .  .  .  .  .  .
+ 5   .  .  .  .  .  .  .  .  .
+ 6   .  .  .  .  .  .  .  .  .
+ 7   .  .  .  . 88  .  .  .  .
+ 8   .  .  .  .  .  .  .  .  .
+ 9   .  .  .  .  .  .  .  .  .
+
+Horizontal walls:
+  (d, 4)
+  (f, 4)
+  (h, 4)
+  (c, 6)
+
+Vertical walls:
+  (e, 2)
+
+Remaining walls:
+  Player 140031472795728: 9
+  Player 140031473645088: 6
+2026-11-22 17:40:13.152 +00:00 | INFO     | seahorse.game.master:play_game:218 - Player now playing : agent_2107_2 - 140031472795728
+2026-11-22 17:40:13.152 +00:00 | INFO     | seahorse.game.master:step:154 - time : 863.9272141456604s
+2026-11-22 17:40:18.215 +00:00 | INFO     | seahorse.game.master:play_game:272 - Current game state: 
+    a b c d e f g h i
+ 1   .  .  .  .  .  .  .  .  .
+ 2   .  .  .  . 28  .  .  .  .
+ 3   .  .  .  .  .  .  .  .  .
+ 4   .  .  .  .  .  .  .  .  .
+ 5   .  .  .  .  .  .  .  .  .
+ 6   .  .  .  .  .  .  .  .  .
+ 7   .  .  .  . 88  .  .  .  .
+ 8   .  .  .  .  .  .  .  .  .
+ 9   .  .  .  .  .  .  .  .  .
+
+Horizontal walls:
+  (d, 4)
+  (f, 4)
+  (h, 4)
+  (c, 6)
+
+Vertical walls:
+  (e, 2)
+
+Remaining walls:
+  Player 140031472795728: 9
+  Player 140031473645088: 6
+2026-11-22 17:40:18.215 +00:00 | INFO     | seahorse.game.master:play_game:218 - Player now playing : agent_2110_1 - 140031473645088
+2026-11-22 17:40:18.215 +00:00 | INFO     | seahorse.game.master:step:154 - time : 594.8736424446106s
+2026-11-22 17:41:00.341 +00:00 | INFO     | seahorse.game.master:play_game:272 - Current game state: 
+    a b c d e f g h i
+ 1   .  .  .  .  .  .  .  .  .
+ 2   .  .  .  . 28  .  .  .  .
+ 3   .  .  .  .  .  .  .  .  .
+ 4   .  .  .  .  .  .  .  .  .
+ 5   .  .  .  .  .  .  .  .  .
+ 6   .  .  .  .  .  .  .  .  .
+ 7   .  .  .  . 88  .  .  .  .
+ 8   .  .  .  .  .  .  .  .  .
+ 9   .  .  .  .  .  .  .  .  .
+
+Horizontal walls:
+  (e, 2)
+  (d, 4)
+  (f, 4)
+  (h, 4)
+  (c, 6)
+
+Vertical walls:
+  (e, 2)
+
+Remaining walls:
+  Player 140031472795728: 9
+  Player 140031473645088: 5
+2026-11-22 17:41:00.341 +00:00 | INFO     | seahorse.game.master:play_game:218 - Player now playing : agent_2107_2 - 140031472795728
+2026-11-22 17:41:00.342 +00:00 | INFO     | seahorse.game.master:step:154 - time : 859.2968981266022s
+2026-11-22 17:41:05.116 +00:00 | INFO     | seahorse.game.master:play_game:272 - Current game state: 
+    a b c d e f g h i
+ 1   .  .  .  .  .  .  .  .  .
+ 2   .  .  .  .  . 28  .  .  .
+ 3   .  .  .  .  .  .  .  .  .
+ 4   .  .  .  .  .  .  .  .  .
+ 5   .  .  .  .  .  .  .  .  .
+ 6   .  .  .  .  .  .  .  .  .
+ 7   .  .  .  . 88  .  .  .  .
+ 8   .  .  .  .  .  .  .  .  .
+ 9   .  .  .  .  .  .  .  .  .
+
+Horizontal walls:
+  (e, 2)
+  (d, 4)
+  (f, 4)
+  (h, 4)
+  (c, 6)
+
+Vertical walls:
+  (e, 2)
+
+Remaining walls:
+  Player 140031472795728: 9
+  Player 140031473645088: 5
+2026-11-22 17:41:05.117 +00:00 | INFO     | seahorse.game.master:play_game:218 - Player now playing : agent_2110_1 - 140031473645088
+2026-11-22 17:41:05.117 +00:00 | INFO     | seahorse.game.master:step:154 - time : 553.1802389621735s
+2026-11-22 17:41:34.317 +00:00 | INFO     | seahorse.game.master:play_game:272 - Current game state: 
+    a b c d e f g h i
+ 1   .  .  .  .  .  .  .  .  .
+ 2   .  .  .  .  . 28  .  .  .
+ 3   .  .  .  .  .  .  .  .  .
+ 4   .  .  .  .  .  .  .  .  .
+ 5   .  .  .  .  .  .  .  .  .
+ 6   .  .  .  .  .  .  .  .  .
+ 7   .  .  .  . 88  .  .  .  .
+ 8   .  .  .  .  .  .  .  .  .
+ 9   .  .  .  .  .  .  .  .  .
+
+Horizontal walls:
+  (e, 2)
+  (g, 2)
+  (d, 4)
+  (f, 4)
+  (h, 4)
+  (c, 6)
+
+Vertical walls:
+  (e, 2)
+
+Remaining walls:
+  Player 140031472795728: 9
+  Player 140031473645088: 4
+2026-11-22 17:41:34.318 +00:00 | INFO     | seahorse.game.master:play_game:218 - Player now playing : agent_2107_2 - 140031472795728
+2026-11-22 17:41:34.318 +00:00 | INFO     | seahorse.game.master:step:154 - time : 854.9354267120361s
+2026-11-22 17:41:42.400 +00:00 | INFO     | seahorse.game.master:play_game:272 - Current game state: 
+    a b c d e f g h i
+ 1   .  .  .  .  .  .  .  .  .
+ 2   .  .  .  .  .  . 28  .  .
+ 3   .  .  .  .  .  .  .  .  .
+ 4   .  .  .  .  .  .  .  .  .
+ 5   .  .  .  .  .  .  .  .  .
+ 6   .  .  .  .  .  .  .  .  .
+ 7   .  .  .  . 88  .  .  .  .
+ 8   .  .  .  .  .  .  .  .  .
+ 9   .  .  .  .  .  .  .  .  .
+
+Horizontal walls:
+  (e, 2)
+  (g, 2)
+  (d, 4)
+  (f, 4)
+  (h, 4)
+  (c, 6)
+
+Vertical walls:
+  (e, 2)
+
+Remaining walls:
+  Player 140031472795728: 9
+  Player 140031473645088: 4
+2026-11-22 17:41:42.401 +00:00 | INFO     | seahorse.game.master:play_game:218 - Player now playing : agent_2110_1 - 140031473645088
+2026-11-22 17:41:42.401 +00:00 | INFO     | seahorse.game.master:step:154 - time : 524.3966598510742s
+2026-11-22 17:42:52.802 +00:00 | INFO     | seahorse.game.master:play_game:272 - Current game state: 
+    a b c d e f g h i
+ 1   .  .  .  .  .  .  .  .  .
+ 2   .  .  .  .  .  . 28  .  .
+ 3   .  .  .  .  .  .  .  .  .
+ 4   .  .  .  .  .  .  .  .  .
+ 5   .  .  .  .  .  .  .  .  .
+ 6   .  .  .  .  .  .  .  .  .
+ 7   .  .  .  . 88  .  .  .  .
+ 8   .  .  .  .  .  .  .  .  .
+ 9   .  .  .  .  .  .  .  .  .
+
+Horizontal walls:
+  (e, 2)
+  (g, 2)
+  (d, 4)
+  (f, 4)
+  (h, 4)
+  (c, 6)
+  (a, 7)
+
+Vertical walls:
+  (e, 2)
+
+Remaining walls:
+  Player 140031472795728: 9
+  Player 140031473645088: 3
+2026-11-22 17:42:52.803 +00:00 | INFO     | seahorse.game.master:play_game:218 - Player now playing : agent_2107_2 - 140031472795728
+2026-11-22 17:42:52.803 +00:00 | INFO     | seahorse.game.master:step:154 - time : 847.2531192302704s
+2026-11-22 17:42:57.234 +00:00 | INFO     | seahorse.game.master:play_game:272 - Current game state: 
+    a b c d e f g h i
+ 1   .  .  .  .  .  .  .  .  .
+ 2   .  .  .  .  .  .  . 28  .
+ 3   .  .  .  .  .  .  .  .  .
+ 4   .  .  .  .  .  .  .  .  .
+ 5   .  .  .  .  .  .  .  .  .
+ 6   .  .  .  .  .  .  .  .  .
+ 7   .  .  .  . 88  .  .  .  .
+ 8   .  .  .  .  .  .  .  .  .
+ 9   .  .  .  .  .  .  .  .  .
+
+Horizontal walls:
+  (e, 2)
+  (g, 2)
+  (d, 4)
+  (f, 4)
+  (h, 4)
+  (c, 6)
+  (a, 7)
+
+Vertical walls:
+  (e, 2)
+
+Remaining walls:
+  Player 140031472795728: 9
+  Player 140031473645088: 3
+2026-11-22 17:42:57.235 +00:00 | INFO     | seahorse.game.master:play_game:218 - Player now playing : agent_2110_1 - 140031473645088
+2026-11-22 17:42:57.235 +00:00 | INFO     | seahorse.game.master:step:154 - time : 454.3959000110626s
+2026-11-22 17:43:39.372 +00:00 | INFO     | seahorse.game.master:play_game:272 - Current game state: 
+    a b c d e f g h i
+ 1   .  .  .  .  .  .  .  .  .
+ 2   .  .  .  .  .  .  . 28  .
+ 3   .  .  .  .  .  .  .  .  .
+ 4   .  .  .  .  .  .  .  .  .
+ 5   .  .  .  .  .  .  .  .  .
+ 6   .  .  .  .  .  .  .  .  .
+ 7   .  .  . 88  .  .  .  .  .
+ 8   .  .  .  .  .  .  .  .  .
+ 9   .  .  .  .  .  .  .  .  .
+
+Horizontal walls:
+  (e, 2)
+  (g, 2)
+  (d, 4)
+  (f, 4)
+  (h, 4)
+  (c, 6)
+  (a, 7)
+
+Vertical walls:
+  (e, 2)
+
+Remaining walls:
+  Player 140031472795728: 9
+  Player 140031473645088: 3
+2026-11-22 17:43:39.372 +00:00 | INFO     | seahorse.game.master:play_game:218 - Player now playing : agent_2107_2 - 140031472795728
+2026-11-22 17:43:39.373 +00:00 | INFO     | seahorse.game.master:step:154 - time : 843.227744102478s
+2026-11-22 17:43:43.812 +00:00 | INFO     | seahorse.game.master:play_game:272 - Current game state: 
+    a b c d e f g h i
+ 1   .  .  .  .  .  .  .  .  .
+ 2   .  .  .  .  .  .  .  . 28
+ 3   .  .  .  .  .  .  .  .  .
+ 4   .  .  .  .  .  .  .  .  .
+ 5   .  .  .  .  .  .  .  .  .
+ 6   .  .  .  .  .  .  .  .  .
+ 7   .  .  . 88  .  .  .  .  .
+ 8   .  .  .  .  .  .  .  .  .
+ 9   .  .  .  .  .  .  .  .  .
+
+Horizontal walls:
+  (e, 2)
+  (g, 2)
+  (d, 4)
+  (f, 4)
+  (h, 4)
+  (c, 6)
+  (a, 7)
+
+Vertical walls:
+  (e, 2)
+
+Remaining walls:
+  Player 140031472795728: 9
+  Player 140031473645088: 3
+2026-11-22 17:43:43.813 +00:00 | INFO     | seahorse.game.master:play_game:218 - Player now playing : agent_2110_1 - 140031473645088
+2026-11-22 17:43:43.813 +00:00 | INFO     | seahorse.game.master:step:154 - time : 412.6607255935669s
+2026-11-22 17:44:20.013 +00:00 | INFO     | seahorse.game.master:play_game:272 - Current game state: 
+    a b c d e f g h i
+ 1   .  .  .  .  .  .  .  .  .
+ 2   .  .  .  .  .  .  .  . 28
+ 3   .  .  .  .  .  .  .  .  .
+ 4   .  .  .  .  .  .  .  .  .
+ 5   .  .  .  .  .  .  .  .  .
+ 6   .  .  .  .  .  .  .  .  .
+ 7   .  .  .  . 88  .  .  .  .
+ 8   .  .  .  .  .  .  .  .  .
+ 9   .  .  .  .  .  .  .  .  .
+
+Horizontal walls:
+  (e, 2)
+  (g, 2)
+  (d, 4)
+  (f, 4)
+  (h, 4)
+  (c, 6)
+  (a, 7)
+
+Vertical walls:
+  (e, 2)
+
+Remaining walls:
+  Player 140031472795728: 9
+  Player 140031473645088: 3
+2026-11-22 17:44:20.014 +00:00 | INFO     | seahorse.game.master:play_game:218 - Player now playing : agent_2107_2 - 140031472795728
+2026-11-22 17:44:20.014 +00:00 | INFO     | seahorse.game.master:step:154 - time : 839.2409722805023s
+2026-11-22 17:44:26.553 +00:00 | INFO     | seahorse.game.master:play_game:272 - Current game state: 
+    a b c d e f g h i
+ 1   .  .  .  .  .  .  .  . 28
+ 2   .  .  .  .  .  .  .  .  .
+ 3   .  .  .  .  .  .  .  .  .
+ 4   .  .  .  .  .  .  .  .  .
+ 5   .  .  .  .  .  .  .  .  .
+ 6   .  .  .  .  .  .  .  .  .
+ 7   .  .  .  . 88  .  .  .  .
+ 8   .  .  .  .  .  .  .  .  .
+ 9   .  .  .  .  .  .  .  .  .
+
+Horizontal walls:
+  (e, 2)
+  (g, 2)
+  (d, 4)
+  (f, 4)
+  (h, 4)
+  (c, 6)
+  (a, 7)
+
+Vertical walls:
+  (e, 2)
+
+Remaining walls:
+  Player 140031472795728: 9
+  Player 140031473645088: 3
+2026-11-22 17:44:26.553 +00:00 | INFO     | seahorse.game.master:play_game:218 - Player now playing : agent_2110_1 - 140031473645088
+2026-11-22 17:44:26.553 +00:00 | INFO     | seahorse.game.master:step:154 - time : 376.876544713974s
+2026-11-22 17:44:48.636 +00:00 | INFO     | seahorse.game.master:play_game:272 - Current game state: 
+    a b c d e f g h i
+ 1   .  .  .  .  .  .  .  . 28
+ 2   .  .  .  .  .  .  .  .  .
+ 3   .  .  .  .  .  .  .  .  .
+ 4   .  .  .  .  .  .  .  .  .
+ 5   .  .  .  .  .  .  .  .  .
+ 6   .  .  .  . 88  .  .  .  .
+ 7   .  .  .  .  .  .  .  .  .
+ 8   .  .  .  .  .  .  .  .  .
+ 9   .  .  .  .  .  .  .  .  .
+
+Horizontal walls:
+  (e, 2)
+  (g, 2)
+  (d, 4)
+  (f, 4)
+  (h, 4)
+  (c, 6)
+  (a, 7)
+
+Vertical walls:
+  (e, 2)
+
+Remaining walls:
+  Player 140031472795728: 9
+  Player 140031473645088: 3
+2026-11-22 17:44:48.637 +00:00 | INFO     | seahorse.game.master:play_game:218 - Player now playing : agent_2107_2 - 140031472795728
+2026-11-22 17:44:48.637 +00:00 | INFO     | seahorse.game.master:step:154 - time : 833.1111879348755s
+2026-11-22 17:44:58.776 +00:00 | INFO     | seahorse.game.master:play_game:272 - Current game state: 
+    a b c d e f g h i
+ 1   .  .  .  .  .  .  . 28  .
+ 2   .  .  .  .  .  .  .  .  .
+ 3   .  .  .  .  .  .  .  .  .
+ 4   .  .  .  .  .  .  .  .  .
+ 5   .  .  .  .  .  .  .  .  .
+ 6   .  .  .  . 88  .  .  .  .
+ 7   .  .  .  .  .  .  .  .  .
+ 8   .  .  .  .  .  .  .  .  .
+ 9   .  .  .  .  .  .  .  .  .
+
+Horizontal walls:
+  (e, 2)
+  (g, 2)
+  (d, 4)
+  (f, 4)
+  (h, 4)
+  (c, 6)
+  (a, 7)
+
+Vertical walls:
+  (e, 2)
+
+Remaining walls:
+  Player 140031472795728: 9
+  Player 140031473645088: 3
+2026-11-22 17:44:58.776 +00:00 | INFO     | seahorse.game.master:play_game:218 - Player now playing : agent_2110_1 - 140031473645088
+2026-11-22 17:44:58.777 +00:00 | INFO     | seahorse.game.master:step:154 - time : 355.1929714679718s
+2026-11-22 17:45:12.052 +00:00 | INFO     | seahorse.game.master:play_game:272 - Current game state: 
+    a b c d e f g h i
+ 1   .  .  .  .  .  .  . 28  .
+ 2   .  .  .  .  .  .  .  .  .
+ 3   .  .  .  .  .  .  .  .  .
+ 4   .  .  .  .  .  .  .  .  .
+ 5   .  .  .  .  .  .  .  .  .
+ 6   .  .  .  . 88  .  .  .  .
+ 7   .  .  .  .  .  .  .  .  .
+ 8   .  .  .  .  .  .  .  .  .
+ 9   .  .  .  .  .  .  .  .  .
+
+Horizontal walls:
+  (e, 2)
+  (g, 2)
+  (d, 4)
+  (f, 4)
+  (h, 4)
+  (c, 6)
+  (a, 7)
+  (c, 7)
+
+Vertical walls:
+  (e, 2)
+
+Remaining walls:
+  Player 140031472795728: 9
+  Player 140031473645088: 2
+2026-11-22 17:45:12.053 +00:00 | INFO     | seahorse.game.master:play_game:218 - Player now playing : agent_2107_2 - 140031472795728
+2026-11-22 17:45:12.053 +00:00 | INFO     | seahorse.game.master:step:154 - time : 823.3623356819153s
+2026-11-22 17:45:17.212 +00:00 | INFO     | seahorse.game.master:play_game:272 - Current game state: 
+    a b c d e f g h i
+ 1   .  .  .  .  .  . 28  .  .
+ 2   .  .  .  .  .  .  .  .  .
+ 3   .  .  .  .  .  .  .  .  .
+ 4   .  .  .  .  .  .  .  .  .
+ 5   .  .  .  .  .  .  .  .  .
+ 6   .  .  .  . 88  .  .  .  .
+ 7   .  .  .  .  .  .  .  .  .
+ 8   .  .  .  .  .  .  .  .  .
+ 9   .  .  .  .  .  .  .  .  .
+
+Horizontal walls:
+  (e, 2)
+  (g, 2)
+  (d, 4)
+  (f, 4)
+  (h, 4)
+  (c, 6)
+  (a, 7)
+  (c, 7)
+
+Vertical walls:
+  (e, 2)
+
+Remaining walls:
+  Player 140031472795728: 9
+  Player 140031473645088: 2
+2026-11-22 17:45:17.212 +00:00 | INFO     | seahorse.game.master:play_game:218 - Player now playing : agent_2110_1 - 140031473645088
+2026-11-22 17:45:17.212 +00:00 | INFO     | seahorse.game.master:step:154 - time : 342.3249320983887s
+2026-11-22 17:45:37.021 +00:00 | INFO     | seahorse.game.master:play_game:272 - Current game state: 
+    a b c d e f g h i
+ 1   .  .  .  .  .  . 28  .  .
+ 2   .  .  .  .  .  .  .  .  .
+ 3   .  .  .  .  .  .  .  .  .
+ 4   .  .  .  .  .  .  .  .  .
+ 5   .  .  .  .  .  .  .  .  .
+ 6   .  .  .  . 88  .  .  .  .
+ 7   .  .  .  .  .  .  .  .  .
+ 8   .  .  .  .  .  .  .  .  .
+ 9   .  .  .  .  .  .  .  .  .
+
+Horizontal walls:
+  (e, 2)
+  (g, 2)
+  (d, 4)
+  (f, 4)
+  (h, 4)
+  (c, 6)
+  (a, 7)
+  (c, 7)
+  (e, 7)
+
+Vertical walls:
+  (e, 2)
+
+Remaining walls:
+  Player 140031472795728: 9
+  Player 140031473645088: 1
+2026-11-22 17:45:37.022 +00:00 | INFO     | seahorse.game.master:play_game:218 - Player now playing : agent_2107_2 - 140031472795728
+2026-11-22 17:45:37.022 +00:00 | INFO     | seahorse.game.master:step:154 - time : 818.5915467739105s
+2026-11-22 17:45:43.362 +00:00 | INFO     | seahorse.game.master:play_game:272 - Current game state: 
+    a b c d e f g h i
+ 1   .  .  .  .  . 28  .  .  .
+ 2   .  .  .  .  .  .  .  .  .
+ 3   .  .  .  .  .  .  .  .  .
+ 4   .  .  .  .  .  .  .  .  .
+ 5   .  .  .  .  .  .  .  .  .
+ 6   .  .  .  . 88  .  .  .  .
+ 7   .  .  .  .  .  .  .  .  .
+ 8   .  .  .  .  .  .  .  .  .
+ 9   .  .  .  .  .  .  .  .  .
+
+Horizontal walls:
+  (e, 2)
+  (g, 2)
+  (d, 4)
+  (f, 4)
+  (h, 4)
+  (c, 6)
+  (a, 7)
+  (c, 7)
+  (e, 7)
+
+Vertical walls:
+  (e, 2)
+
+Remaining walls:
+  Player 140031472795728: 9
+  Player 140031473645088: 1
+2026-11-22 17:45:43.363 +00:00 | INFO     | seahorse.game.master:play_game:218 - Player now playing : agent_2110_1 - 140031473645088
+2026-11-22 17:45:43.363 +00:00 | INFO     | seahorse.game.master:step:154 - time : 322.9336531162262s
+2026-11-22 17:45:59.025 +00:00 | INFO     | seahorse.game.master:play_game:272 - Current game state: 
+    a b c d e f g h i
+ 1   .  .  .  .  . 28  .  .  .
+ 2   .  .  .  .  .  .  .  .  .
+ 3   .  .  .  .  .  .  .  .  .
+ 4   .  .  .  .  .  .  .  .  .
+ 5   .  .  .  . 88  .  .  .  .
+ 6   .  .  .  .  .  .  .  .  .
+ 7   .  .  .  .  .  .  .  .  .
+ 8   .  .  .  .  .  .  .  .  .
+ 9   .  .  .  .  .  .  .  .  .
+
+Horizontal walls:
+  (e, 2)
+  (g, 2)
+  (d, 4)
+  (f, 4)
+  (h, 4)
+  (c, 6)
+  (a, 7)
+  (c, 7)
+  (e, 7)
+
+Vertical walls:
+  (e, 2)
+
+Remaining walls:
+  Player 140031472795728: 9
+  Player 140031473645088: 1
+2026-11-22 17:45:59.026 +00:00 | INFO     | seahorse.game.master:play_game:218 - Player now playing : agent_2107_2 - 140031472795728
+2026-11-22 17:45:59.026 +00:00 | INFO     | seahorse.game.master:step:154 - time : 812.6013579368591s
+2026-11-22 17:46:04.445 +00:00 | INFO     | seahorse.game.master:play_game:272 - Current game state: 
+    a b c d e f g h i
+ 1   .  .  .  . 28  .  .  .  .
+ 2   .  .  .  .  .  .  .  .  .
+ 3   .  .  .  .  .  .  .  .  .
+ 4   .  .  .  .  .  .  .  .  .
+ 5   .  .  .  . 88  .  .  .  .
+ 6   .  .  .  .  .  .  .  .  .
+ 7   .  .  .  .  .  .  .  .  .
+ 8   .  .  .  .  .  .  .  .  .
+ 9   .  .  .  .  .  .  .  .  .
+
+Horizontal walls:
+  (e, 2)
+  (g, 2)
+  (d, 4)
+  (f, 4)
+  (h, 4)
+  (c, 6)
+  (a, 7)
+  (c, 7)
+  (e, 7)
+
+Vertical walls:
+  (e, 2)
+
+Remaining walls:
+  Player 140031472795728: 9
+  Player 140031473645088: 1
+2026-11-22 17:46:04.446 +00:00 | INFO     | seahorse.game.master:play_game:218 - Player now playing : agent_2110_1 - 140031473645088
+2026-11-22 17:46:04.446 +00:00 | INFO     | seahorse.game.master:step:154 - time : 307.62522888183594s
+2026-11-22 17:46:18.740 +00:00 | INFO     | seahorse.game.master:play_game:272 - Current game state: 
+    a b c d e f g h i
+ 1   .  .  .  . 28  .  .  .  .
+ 2   .  .  .  .  .  .  .  .  .
+ 3   .  .  .  .  .  .  .  .  .
+ 4   .  .  .  .  .  .  .  .  .
+ 5   .  .  . 88  .  .  .  .  .
+ 6   .  .  .  .  .  .  .  .  .
+ 7   .  .  .  .  .  .  .  .  .
+ 8   .  .  .  .  .  .  .  .  .
+ 9   .  .  .  .  .  .  .  .  .
+
+Horizontal walls:
+  (e, 2)
+  (g, 2)
+  (d, 4)
+  (f, 4)
+  (h, 4)
+  (c, 6)
+  (a, 7)
+  (c, 7)
+  (e, 7)
+
+Vertical walls:
+  (e, 2)
+
+Remaining walls:
+  Player 140031472795728: 9
+  Player 140031473645088: 1
+2026-11-22 17:46:18.741 +00:00 | INFO     | seahorse.game.master:play_game:218 - Player now playing : agent_2107_2 - 140031472795728
+2026-11-22 17:46:18.741 +00:00 | INFO     | seahorse.game.master:step:154 - time : 807.502813577652s
+2026-11-22 17:46:23.429 +00:00 | INFO     | seahorse.game.master:play_game:272 - Current game state: 
+    a b c d e f g h i
+ 1   .  .  .  . 28  .  .  .  .
+ 2   .  .  .  .  .  .  .  .  .
+ 3   .  .  .  .  .  .  .  .  .
+ 4   .  .  .  .  .  .  .  .  .
+ 5   .  .  . 88  .  .  .  .  .
+ 6   .  .  .  .  .  .  .  .  .
+ 7   .  .  .  .  .  .  .  .  .
+ 8   .  .  .  .  .  .  .  .  .
+ 9   .  .  .  .  .  .  .  .  .
+
+Horizontal walls:
+  (e, 2)
+  (g, 2)
+  (d, 4)
+  (f, 4)
+  (h, 4)
+  (c, 6)
+  (a, 7)
+  (c, 7)
+  (e, 7)
+
+Vertical walls:
+  (e, 2)
+  (d, 4)
+
+Remaining walls:
+  Player 140031472795728: 8
+  Player 140031473645088: 1
+2026-11-22 17:46:23.430 +00:00 | INFO     | seahorse.game.master:play_game:218 - Player now playing : agent_2110_1 - 140031473645088
+2026-11-22 17:46:23.430 +00:00 | INFO     | seahorse.game.master:step:154 - time : 293.6516156196594s
+2026-11-22 17:46:39.321 +00:00 | INFO     | seahorse.game.master:play_game:272 - Current game state: 
+    a b c d e f g h i
+ 1   .  .  .  . 28  .  .  .  .
+ 2   .  .  .  .  .  .  .  .  .
+ 3   .  .  .  .  .  .  .  .  .
+ 4   .  .  .  .  .  .  .  .  .
+ 5   .  .  . 88  .  .  .  .  .
+ 6   .  .  .  .  .  .  .  .  .
+ 7   .  .  .  .  .  .  .  .  .
+ 8   .  .  .  .  .  .  .  .  .
+ 9   .  .  .  .  .  .  .  .  .
+
+Horizontal walls:
+  (e, 2)
+  (g, 2)
+  (d, 4)
+  (f, 4)
+  (h, 4)
+  (c, 6)
+  (a, 7)
+  (c, 7)
+  (e, 7)
+
+Vertical walls:
+  (e, 2)
+  (d, 4)
+  (f, 5)
+
+Remaining walls:
+  Player 140031472795728: 8
+  Player 140031473645088: 0
+2026-11-22 17:46:39.322 +00:00 | INFO     | seahorse.game.master:play_game:218 - Player now playing : agent_2107_2 - 140031472795728
+2026-11-22 17:46:39.322 +00:00 | INFO     | seahorse.game.master:step:154 - time : 803.1150200366974s
+2026-11-22 17:46:43.017 +00:00 | INFO     | seahorse.game.master:play_game:272 - Current game state: 
+    a b c d e f g h i
+ 1   .  .  . 28  .  .  .  .  .
+ 2   .  .  .  .  .  .  .  .  .
+ 3   .  .  .  .  .  .  .  .  .
+ 4   .  .  .  .  .  .  .  .  .
+ 5   .  .  . 88  .  .  .  .  .
+ 6   .  .  .  .  .  .  .  .  .
+ 7   .  .  .  .  .  .  .  .  .
+ 8   .  .  .  .  .  .  .  .  .
+ 9   .  .  .  .  .  .  .  .  .
+
+Horizontal walls:
+  (e, 2)
+  (g, 2)
+  (d, 4)
+  (f, 4)
+  (h, 4)
+  (c, 6)
+  (a, 7)
+  (c, 7)
+  (e, 7)
+
+Vertical walls:
+  (e, 2)
+  (d, 4)
+  (f, 5)
+
+Remaining walls:
+  Player 140031472795728: 8
+  Player 140031473645088: 0
+2026-11-22 17:46:43.018 +00:00 | INFO     | seahorse.game.master:play_game:218 - Player now playing : agent_2110_1 - 140031473645088
+2026-11-22 17:46:43.018 +00:00 | INFO     | seahorse.game.master:step:154 - time : 278.0933427810669s
+2026-11-22 17:47:01.434 +00:00 | INFO     | seahorse.game.master:play_game:272 - Current game state: 
+    a b c d e f g h i
+ 1   .  .  . 28  .  .  .  .  .
+ 2   .  .  .  .  .  .  .  .  .
+ 3   .  .  .  .  .  .  .  .  .
+ 4   .  .  .  .  .  .  .  .  .
+ 5   .  .  .  . 88  .  .  .  .
+ 6   .  .  .  .  .  .  .  .  .
+ 7   .  .  .  .  .  .  .  .  .
+ 8   .  .  .  .  .  .  .  .  .
+ 9   .  .  .  .  .  .  .  .  .
+
+Horizontal walls:
+  (e, 2)
+  (g, 2)
+  (d, 4)
+  (f, 4)
+  (h, 4)
+  (c, 6)
+  (a, 7)
+  (c, 7)
+  (e, 7)
+
+Vertical walls:
+  (e, 2)
+  (d, 4)
+  (f, 5)
+
+Remaining walls:
+  Player 140031472795728: 8
+  Player 140031473645088: 0
+2026-11-22 17:47:01.435 +00:00 | INFO     | seahorse.game.master:play_game:218 - Player now playing : agent_2107_2 - 140031472795728
+2026-11-22 17:47:01.435 +00:00 | INFO     | seahorse.game.master:step:154 - time : 799.7365119457245s
+2026-11-22 17:47:05.531 +00:00 | INFO     | seahorse.game.master:play_game:272 - Current game state: 
+    a b c d e f g h i
+ 1   .  .  .  .  .  .  .  .  .
+ 2   .  .  . 28  .  .  .  .  .
+ 3   .  .  .  .  .  .  .  .  .
+ 4   .  .  .  .  .  .  .  .  .
+ 5   .  .  .  . 88  .  .  .  .
+ 6   .  .  .  .  .  .  .  .  .
+ 7   .  .  .  .  .  .  .  .  .
+ 8   .  .  .  .  .  .  .  .  .
+ 9   .  .  .  .  .  .  .  .  .
+
+Horizontal walls:
+  (e, 2)
+  (g, 2)
+  (d, 4)
+  (f, 4)
+  (h, 4)
+  (c, 6)
+  (a, 7)
+  (c, 7)
+  (e, 7)
+
+Vertical walls:
+  (e, 2)
+  (d, 4)
+  (f, 5)
+
+Remaining walls:
+  Player 140031472795728: 8
+  Player 140031473645088: 0
+2026-11-22 17:47:05.531 +00:00 | INFO     | seahorse.game.master:play_game:218 - Player now playing : agent_2110_1 - 140031473645088
+2026-11-22 17:47:05.532 +00:00 | INFO     | seahorse.game.master:step:154 - time : 259.6810393333435s
+2026-11-22 17:47:16.397 +00:00 | INFO     | seahorse.game.master:play_game:272 - Current game state: 
+    a b c d e f g h i
+ 1   .  .  .  .  .  .  .  .  .
+ 2   .  .  . 28  .  .  .  .  .
+ 3   .  .  .  .  .  .  .  .  .
+ 4   .  .  .  .  .  .  .  .  .
+ 5   .  .  .  .  .  .  .  .  .
+ 6   .  .  .  . 88  .  .  .  .
+ 7   .  .  .  .  .  .  .  .  .
+ 8   .  .  .  .  .  .  .  .  .
+ 9   .  .  .  .  .  .  .  .  .
+
+Horizontal walls:
+  (e, 2)
+  (g, 2)
+  (d, 4)
+  (f, 4)
+  (h, 4)
+  (c, 6)
+  (a, 7)
+  (c, 7)
+  (e, 7)
+
+Vertical walls:
+  (e, 2)
+  (d, 4)
+  (f, 5)
+
+Remaining walls:
+  Player 140031472795728: 8
+  Player 140031473645088: 0
+2026-11-22 17:47:16.397 +00:00 | INFO     | seahorse.game.master:play_game:218 - Player now playing : agent_2107_2 - 140031472795728
+2026-11-22 17:47:16.398 +00:00 | INFO     | seahorse.game.master:step:154 - time : 795.9607384204865s
+2026-11-22 17:47:20.499 +00:00 | INFO     | seahorse.game.master:play_game:272 - Current game state: 
+    a b c d e f g h i
+ 1   .  .  .  .  .  .  .  .  .
+ 2   .  .  .  .  .  .  .  .  .
+ 3   .  .  . 28  .  .  .  .  .
+ 4   .  .  .  .  .  .  .  .  .
+ 5   .  .  .  .  .  .  .  .  .
+ 6   .  .  .  . 88  .  .  .  .
+ 7   .  .  .  .  .  .  .  .  .
+ 8   .  .  .  .  .  .  .  .  .
+ 9   .  .  .  .  .  .  .  .  .
+
+Horizontal walls:
+  (e, 2)
+  (g, 2)
+  (d, 4)
+  (f, 4)
+  (h, 4)
+  (c, 6)
+  (a, 7)
+  (c, 7)
+  (e, 7)
+
+Vertical walls:
+  (e, 2)
+  (d, 4)
+  (f, 5)
+
+Remaining walls:
+  Player 140031472795728: 8
+  Player 140031473645088: 0
+2026-11-22 17:47:20.499 +00:00 | INFO     | seahorse.game.master:play_game:218 - Player now playing : agent_2110_1 - 140031473645088
+2026-11-22 17:47:20.500 +00:00 | INFO     | seahorse.game.master:step:154 - time : 248.8195173740387s
+2026-11-22 17:47:34.094 +00:00 | INFO     | seahorse.game.master:play_game:272 - Current game state: 
+    a b c d e f g h i
+ 1   .  .  .  .  .  .  .  .  .
+ 2   .  .  .  .  .  .  .  .  .
+ 3   .  .  . 28  .  .  .  .  .
+ 4   .  .  .  .  .  .  .  .  .
+ 5   .  .  .  .  .  .  .  .  .
+ 6   .  .  . 88  .  .  .  .  .
+ 7   .  .  .  .  .  .  .  .  .
+ 8   .  .  .  .  .  .  .  .  .
+ 9   .  .  .  .  .  .  .  .  .
+
+Horizontal walls:
+  (e, 2)
+  (g, 2)
+  (d, 4)
+  (f, 4)
+  (h, 4)
+  (c, 6)
+  (a, 7)
+  (c, 7)
+  (e, 7)
+
+Vertical walls:
+  (e, 2)
+  (d, 4)
+  (f, 5)
+
+Remaining walls:
+  Player 140031472795728: 8
+  Player 140031473645088: 0
+2026-11-22 17:47:34.094 +00:00 | INFO     | seahorse.game.master:play_game:218 - Player now playing : agent_2107_2 - 140031472795728
+2026-11-22 17:47:34.094 +00:00 | INFO     | seahorse.game.master:step:154 - time : 792.1569826602936s
+2026-11-22 17:47:39.757 +00:00 | INFO     | seahorse.game.master:play_game:272 - Current game state: 
+    a b c d e f g h i
+ 1   .  .  .  .  .  .  .  .  .
+ 2   .  .  .  .  .  .  .  .  .
+ 3   .  . 28  .  .  .  .  .  .
+ 4   .  .  .  .  .  .  .  .  .
+ 5   .  .  .  .  .  .  .  .  .
+ 6   .  .  . 88  .  .  .  .  .
+ 7   .  .  .  .  .  .  .  .  .
+ 8   .  .  .  .  .  .  .  .  .
+ 9   .  .  .  .  .  .  .  .  .
+
+Horizontal walls:
+  (e, 2)
+  (g, 2)
+  (d, 4)
+  (f, 4)
+  (h, 4)
+  (c, 6)
+  (a, 7)
+  (c, 7)
+  (e, 7)
+
+Vertical walls:
+  (e, 2)
+  (d, 4)
+  (f, 5)
+
+Remaining walls:
+  Player 140031472795728: 8
+  Player 140031473645088: 0
+2026-11-22 17:47:39.758 +00:00 | INFO     | seahorse.game.master:play_game:218 - Player now playing : agent_2110_1 - 140031473645088
+2026-11-22 17:47:39.758 +00:00 | INFO     | seahorse.game.master:step:154 - time : 235.2292778491974s
+2026-11-22 17:47:50.726 +00:00 | INFO     | seahorse.game.master:play_game:272 - Current game state: 
+    a b c d e f g h i
+ 1   .  .  .  .  .  .  .  .  .
+ 2   .  .  .  .  .  .  .  .  .
+ 3   .  . 28  .  .  .  .  .  .
+ 4   .  .  .  .  .  .  .  .  .
+ 5   .  .  .  .  .  .  .  .  .
+ 6   .  . 88  .  .  .  .  .  .
+ 7   .  .  .  .  .  .  .  .  .
+ 8   .  .  .  .  .  .  .  .  .
+ 9   .  .  .  .  .  .  .  .  .
+
+Horizontal walls:
+  (e, 2)
+  (g, 2)
+  (d, 4)
+  (f, 4)
+  (h, 4)
+  (c, 6)
+  (a, 7)
+  (c, 7)
+  (e, 7)
+
+Vertical walls:
+  (e, 2)
+  (d, 4)
+  (f, 5)
+
+Remaining walls:
+  Player 140031472795728: 8
+  Player 140031473645088: 0
+2026-11-22 17:47:50.727 +00:00 | INFO     | seahorse.game.master:play_game:218 - Player now playing : agent_2107_2 - 140031472795728
+2026-11-22 17:47:50.727 +00:00 | INFO     | seahorse.game.master:step:154 - time : 786.7600138187408s
+2026-11-22 17:47:54.630 +00:00 | INFO     | seahorse.game.master:play_game:272 - Current game state: 
+    a b c d e f g h i
+ 1   .  .  .  .  .  .  .  .  .
+ 2   .  .  .  .  .  .  .  .  .
+ 3   .  .  .  .  .  .  .  .  .
+ 4   .  . 28  .  .  .  .  .  .
+ 5   .  .  .  .  .  .  .  .  .
+ 6   .  . 88  .  .  .  .  .  .
+ 7   .  .  .  .  .  .  .  .  .
+ 8   .  .  .  .  .  .  .  .  .
+ 9   .  .  .  .  .  .  .  .  .
+
+Horizontal walls:
+  (e, 2)
+  (g, 2)
+  (d, 4)
+  (f, 4)
+  (h, 4)
+  (c, 6)
+  (a, 7)
+  (c, 7)
+  (e, 7)
+
+Vertical walls:
+  (e, 2)
+  (d, 4)
+  (f, 5)
+
+Remaining walls:
+  Player 140031472795728: 8
+  Player 140031473645088: 0
+2026-11-22 17:47:54.631 +00:00 | INFO     | seahorse.game.master:play_game:218 - Player now playing : agent_2110_1 - 140031473645088
+2026-11-22 17:47:54.631 +00:00 | INFO     | seahorse.game.master:step:154 - time : 224.2651801109314s
+2026-11-22 17:48:05.180 +00:00 | INFO     | seahorse.game.master:play_game:272 - Current game state: 
+    a b c d e f g h i
+ 1   .  .  .  .  .  .  .  .  .
+ 2   .  .  .  .  .  .  .  .  .
+ 3   .  .  .  .  .  .  .  .  .
+ 4   .  . 28  .  .  .  .  .  .
+ 5   .  .  .  .  .  .  .  .  .
+ 6   . 88  .  .  .  .  .  .  .
+ 7   .  .  .  .  .  .  .  .  .
+ 8   .  .  .  .  .  .  .  .  .
+ 9   .  .  .  .  .  .  .  .  .
+
+Horizontal walls:
+  (e, 2)
+  (g, 2)
+  (d, 4)
+  (f, 4)
+  (h, 4)
+  (c, 6)
+  (a, 7)
+  (c, 7)
+  (e, 7)
+
+Vertical walls:
+  (e, 2)
+  (d, 4)
+  (f, 5)
+
+Remaining walls:
+  Player 140031472795728: 8
+  Player 140031473645088: 0
+2026-11-22 17:48:05.181 +00:00 | INFO     | seahorse.game.master:play_game:218 - Player now playing : agent_2107_2 - 140031472795728
+2026-11-22 17:48:05.181 +00:00 | INFO     | seahorse.game.master:step:154 - time : 783.1043827533722s
+2026-11-22 17:48:18.473 +00:00 | INFO     | seahorse.game.master:play_game:272 - Current game state: 
+    a b c d e f g h i
+ 1   .  .  .  .  .  .  .  .  .
+ 2   .  .  .  .  .  .  .  .  .
+ 3   .  .  .  .  .  .  .  .  .
+ 4   .  . 28  .  .  .  .  .  .
+ 5   .  .  .  .  .  .  .  .  .
+ 6   . 88  .  .  .  .  .  .  .
+ 7   .  .  .  .  .  .  .  .  .
+ 8   .  .  .  .  .  .  .  .  .
+ 9   .  .  .  .  .  .  .  .  .
+
+Horizontal walls:
+  (e, 2)
+  (g, 2)
+  (b, 3)
+  (d, 4)
+  (f, 4)
+  (h, 4)
+  (c, 6)
+  (a, 7)
+  (c, 7)
+  (e, 7)
+
+Vertical walls:
+  (e, 2)
+  (d, 4)
+  (f, 5)
+
+Remaining walls:
+  Player 140031472795728: 7
+  Player 140031473645088: 0
+2026-11-22 17:48:18.474 +00:00 | INFO     | seahorse.game.master:play_game:218 - Player now playing : agent_2110_1 - 140031473645088
+2026-11-22 17:48:18.474 +00:00 | INFO     | seahorse.game.master:step:154 - time : 213.71956133842468s
+2026-11-22 17:48:29.180 +00:00 | INFO     | seahorse.game.master:play_game:272 - Current game state: 
+    a b c d e f g h i
+ 1   .  .  .  .  .  .  .  .  .
+ 2   .  .  .  .  .  .  .  .  .
+ 3   .  .  .  .  .  .  .  .  .
+ 4   .  . 28  .  .  .  .  .  .
+ 5   . 88  .  .  .  .  .  .  .
+ 6   .  .  .  .  .  .  .  .  .
+ 7   .  .  .  .  .  .  .  .  .
+ 8   .  .  .  .  .  .  .  .  .
+ 9   .  .  .  .  .  .  .  .  .
+
+Horizontal walls:
+  (e, 2)
+  (g, 2)
+  (b, 3)
+  (d, 4)
+  (f, 4)
+  (h, 4)
+  (c, 6)
+  (a, 7)
+  (c, 7)
+  (e, 7)
+
+Vertical walls:
+  (e, 2)
+  (d, 4)
+  (f, 5)
+
+Remaining walls:
+  Player 140031472795728: 7
+  Player 140031473645088: 0
+2026-11-22 17:48:29.181 +00:00 | INFO     | seahorse.game.master:play_game:218 - Player now playing : agent_2107_2 - 140031472795728
+2026-11-22 17:48:29.181 +00:00 | INFO     | seahorse.game.master:step:154 - time : 770.0487112998962s
+2026-11-22 17:48:35.537 +00:00 | INFO     | seahorse.game.master:play_game:272 - Current game state: 
+    a b c d e f g h i
+ 1   .  .  .  .  .  .  .  .  .
+ 2   .  .  .  .  .  .  .  .  .
+ 3   .  .  .  .  .  .  .  .  .
+ 4   . 28  .  .  .  .  .  .  .
+ 5   . 88  .  .  .  .  .  .  .
+ 6   .  .  .  .  .  .  .  .  .
+ 7   .  .  .  .  .  .  .  .  .
+ 8   .  .  .  .  .  .  .  .  .
+ 9   .  .  .  .  .  .  .  .  .
+
+Horizontal walls:
+  (e, 2)
+  (g, 2)
+  (b, 3)
+  (d, 4)
+  (f, 4)
+  (h, 4)
+  (c, 6)
+  (a, 7)
+  (c, 7)
+  (e, 7)
+
+Vertical walls:
+  (e, 2)
+  (d, 4)
+  (f, 5)
+
+Remaining walls:
+  Player 140031472795728: 7
+  Player 140031473645088: 0
+2026-11-22 17:48:35.537 +00:00 | INFO     | seahorse.game.master:play_game:218 - Player now playing : agent_2110_1 - 140031473645088
+2026-11-22 17:48:35.538 +00:00 | INFO     | seahorse.game.master:step:154 - time : 203.01718735694885s
+2026-11-22 17:48:46.832 +00:00 | INFO     | seahorse.game.master:play_game:272 - Current game state: 
+    a b c d e f g h i
+ 1   .  .  .  .  .  .  .  .  .
+ 2   .  .  .  .  .  .  .  .  .
+ 3   . 88  .  .  .  .  .  .  .
+ 4   . 28  .  .  .  .  .  .  .
+ 5   .  .  .  .  .  .  .  .  .
+ 6   .  .  .  .  .  .  .  .  .
+ 7   .  .  .  .  .  .  .  .  .
+ 8   .  .  .  .  .  .  .  .  .
+ 9   .  .  .  .  .  .  .  .  .
+
+Horizontal walls:
+  (e, 2)
+  (g, 2)
+  (b, 3)
+  (d, 4)
+  (f, 4)
+  (h, 4)
+  (c, 6)
+  (a, 7)
+  (c, 7)
+  (e, 7)
+
+Vertical walls:
+  (e, 2)
+  (d, 4)
+  (f, 5)
+
+Remaining walls:
+  Player 140031472795728: 7
+  Player 140031473645088: 0
+2026-11-22 17:48:46.832 +00:00 | INFO     | seahorse.game.master:play_game:218 - Player now playing : agent_2107_2 - 140031472795728
+2026-11-22 17:48:46.833 +00:00 | INFO     | seahorse.game.master:step:154 - time : 763.9171450138092s
+2026-11-22 17:48:50.773 +00:00 | INFO     | seahorse.game.master:play_game:272 - Current game state: 
+    a b c d e f g h i
+ 1   .  .  .  .  .  .  .  .  .
+ 2   .  .  .  .  .  .  .  .  .
+ 3   . 88  .  .  .  .  .  .  .
+ 4   . 28  .  .  .  .  .  .  .
+ 5   .  .  .  .  .  .  .  .  .
+ 6   .  .  .  .  .  .  .  .  .
+ 7   .  .  .  .  .  .  .  .  .
+ 8   .  .  .  .  .  .  .  .  .
+ 9   .  .  .  .  .  .  .  .  .
+
+Horizontal walls:
+  (e, 2)
+  (g, 2)
+  (b, 3)
+  (d, 4)
+  (f, 4)
+  (h, 4)
+  (c, 6)
+  (a, 7)
+  (c, 7)
+  (e, 7)
+
+Vertical walls:
+  (e, 2)
+  (b, 3)
+  (d, 4)
+  (f, 5)
+
+Remaining walls:
+  Player 140031472795728: 6
+  Player 140031473645088: 0
+2026-11-22 17:48:50.774 +00:00 | INFO     | seahorse.game.master:play_game:218 - Player now playing : agent_2110_1 - 140031473645088
+2026-11-22 17:48:50.774 +00:00 | INFO     | seahorse.game.master:step:154 - time : 191.72668170928955s
+2026-11-22 17:48:52.890 +00:00 | INFO     | seahorse.game.master:play_game:272 - Current game state: 
+    a b c d e f g h i
+ 1   .  .  .  .  .  .  .  .  .
+ 2   .  .  .  .  .  .  .  .  .
+ 3   .  . 88  .  .  .  .  .  .
+ 4   . 28  .  .  .  .  .  .  .
+ 5   .  .  .  .  .  .  .  .  .
+ 6   .  .  .  .  .  .  .  .  .
+ 7   .  .  .  .  .  .  .  .  .
+ 8   .  .  .  .  .  .  .  .  .
+ 9   .  .  .  .  .  .  .  .  .
+
+Horizontal walls:
+  (e, 2)
+  (g, 2)
+  (b, 3)
+  (d, 4)
+  (f, 4)
+  (h, 4)
+  (c, 6)
+  (a, 7)
+  (c, 7)
+  (e, 7)
+
+Vertical walls:
+  (e, 2)
+  (b, 3)
+  (d, 4)
+  (f, 5)
+
+Remaining walls:
+  Player 140031472795728: 6
+  Player 140031473645088: 0
+2026-11-22 17:48:52.891 +00:00 | INFO     | seahorse.game.master:play_game:218 - Player now playing : agent_2107_2 - 140031472795728
+2026-11-22 17:48:52.891 +00:00 | INFO     | seahorse.game.master:step:154 - time : 760.1796095371246s
+2026-11-22 17:48:56.492 +00:00 | INFO     | seahorse.game.master:play_game:272 - Current game state: 
+    a b c d e f g h i
+ 1   .  .  .  .  .  .  .  .  .
+ 2   .  .  .  .  .  .  .  .  .
+ 3   .  . 88  .  .  .  .  .  .
+ 4   .  .  .  .  .  .  .  .  .
+ 5   . 28  .  .  .  .  .  .  .
+ 6   .  .  .  .  .  .  .  .  .
+ 7   .  .  .  .  .  .  .  .  .
+ 8   .  .  .  .  .  .  .  .  .
+ 9   .  .  .  .  .  .  .  .  .
+
+Horizontal walls:
+  (e, 2)
+  (g, 2)
+  (b, 3)
+  (d, 4)
+  (f, 4)
+  (h, 4)
+  (c, 6)
+  (a, 7)
+  (c, 7)
+  (e, 7)
+
+Vertical walls:
+  (e, 2)
+  (b, 3)
+  (d, 4)
+  (f, 5)
+
+Remaining walls:
+  Player 140031472795728: 6
+  Player 140031473645088: 0
+2026-11-22 17:48:56.493 +00:00 | INFO     | seahorse.game.master:play_game:218 - Player now playing : agent_2110_1 - 140031473645088
+2026-11-22 17:48:56.493 +00:00 | INFO     | seahorse.game.master:step:154 - time : 189.61397624015808s
+2026-11-22 17:48:57.206 +00:00 | INFO     | seahorse.game.master:play_game:272 - Current game state: 
+    a b c d e f g h i
+ 1   .  .  .  .  .  .  .  .  .
+ 2   .  .  .  .  .  .  .  .  .
+ 3   .  .  . 88  .  .  .  .  .
+ 4   .  .  .  .  .  .  .  .  .
+ 5   . 28  .  .  .  .  .  .  .
+ 6   .  .  .  .  .  .  .  .  .
+ 7   .  .  .  .  .  .  .  .  .
+ 8   .  .  .  .  .  .  .  .  .
+ 9   .  .  .  .  .  .  .  .  .
+
+Horizontal walls:
+  (e, 2)
+  (g, 2)
+  (b, 3)
+  (d, 4)
+  (f, 4)
+  (h, 4)
+  (c, 6)
+  (a, 7)
+  (c, 7)
+  (e, 7)
+
+Vertical walls:
+  (e, 2)
+  (b, 3)
+  (d, 4)
+  (f, 5)
+
+Remaining walls:
+  Player 140031472795728: 6
+  Player 140031473645088: 0
+2026-11-22 17:48:57.207 +00:00 | INFO     | seahorse.game.master:play_game:218 - Player now playing : agent_2107_2 - 140031472795728
+2026-11-22 17:48:57.207 +00:00 | INFO     | seahorse.game.master:step:154 - time : 756.7643990516663s
+2026-11-22 17:48:57.380 +00:00 | INFO     | seahorse.game.master:play_game:272 - Current game state: 
+    a b c d e f g h i
+ 1   .  .  .  .  .  .  .  .  .
+ 2   .  .  .  .  .  .  .  .  .
+ 3   .  .  . 88  .  .  .  .  .
+ 4   .  .  .  .  .  .  .  .  .
+ 5   . 28  .  .  .  .  .  .  .
+ 6   .  .  .  .  .  .  .  .  .
+ 7   .  .  .  .  .  .  .  .  .
+ 8   .  .  .  .  .  .  .  .  .
+ 9   .  .  .  .  .  .  .  .  .
+
+Horizontal walls:
+  (c, 2)
+  (e, 2)
+  (g, 2)
+  (b, 3)
+  (d, 4)
+  (f, 4)
+  (h, 4)
+  (c, 6)
+  (a, 7)
+  (c, 7)
+  (e, 7)
+
+Vertical walls:
+  (e, 2)
+  (b, 3)
+  (d, 4)
+  (f, 5)
+
+Remaining walls:
+  Player 140031472795728: 5
+  Player 140031473645088: 0
+2026-11-22 17:48:57.381 +00:00 | INFO     | seahorse.game.master:play_game:218 - Player now playing : agent_2110_1 - 140031473645088
+2026-11-22 17:48:57.381 +00:00 | INFO     | seahorse.game.master:step:154 - time : 188.90475463867188s
+2026-11-22 17:48:58.030 +00:00 | INFO     | seahorse.game.master:play_game:272 - Current game state: 
+    a b c d e f g h i
+ 1   .  .  .  .  .  .  .  .  .
+ 2   .  .  . 88  .  .  .  .  .
+ 3   .  .  .  .  .  .  .  .  .
+ 4   .  .  .  .  .  .  .  .  .
+ 5   . 28  .  .  .  .  .  .  .
+ 6   .  .  .  .  .  .  .  .  .
+ 7   .  .  .  .  .  .  .  .  .
+ 8   .  .  .  .  .  .  .  .  .
+ 9   .  .  .  .  .  .  .  .  .
+
+Horizontal walls:
+  (c, 2)
+  (e, 2)
+  (g, 2)
+  (b, 3)
+  (d, 4)
+  (f, 4)
+  (h, 4)
+  (c, 6)
+  (a, 7)
+  (c, 7)
+  (e, 7)
+
+Vertical walls:
+  (e, 2)
+  (b, 3)
+  (d, 4)
+  (f, 5)
+
+Remaining walls:
+  Player 140031472795728: 5
+  Player 140031473645088: 0
+2026-11-22 17:48:58.031 +00:00 | INFO     | seahorse.game.master:play_game:218 - Player now playing : agent_2107_2 - 140031472795728
+2026-11-22 17:48:58.031 +00:00 | INFO     | seahorse.game.master:step:154 - time : 756.7618138790131s
+2026-11-22 17:48:58.249 +00:00 | INFO     | seahorse.game.master:play_game:272 - Current game state: 
+    a b c d e f g h i
+ 1   .  .  .  .  .  .  .  .  .
+ 2   .  .  . 88  .  .  .  .  .
+ 3   .  .  .  .  .  .  .  .  .
+ 4   .  .  .  .  .  .  .  .  .
+ 5   .  .  .  .  .  .  .  .  .
+ 6   . 28  .  .  .  .  .  .  .
+ 7   .  .  .  .  .  .  .  .  .
+ 8   .  .  .  .  .  .  .  .  .
+ 9   .  .  .  .  .  .  .  .  .
+
+Horizontal walls:
+  (c, 2)
+  (e, 2)
+  (g, 2)
+  (b, 3)
+  (d, 4)
+  (f, 4)
+  (h, 4)
+  (c, 6)
+  (a, 7)
+  (c, 7)
+  (e, 7)
+
+Vertical walls:
+  (e, 2)
+  (b, 3)
+  (d, 4)
+  (f, 5)
+
+Remaining walls:
+  Player 140031472795728: 5
+  Player 140031473645088: 0
+2026-11-22 17:48:58.249 +00:00 | INFO     | seahorse.game.master:play_game:218 - Player now playing : agent_2110_1 - 140031473645088
+2026-11-22 17:48:58.250 +00:00 | INFO     | seahorse.game.master:step:154 - time : 188.25941729545593s
+2026-11-22 17:48:58.704 +00:00 | INFO     | seahorse.game.master:play_game:272 - Current game state: 
+    a b c d e f g h i
+ 1   .  .  .  .  .  .  .  .  .
+ 2   .  . 88  .  .  .  .  .  .
+ 3   .  .  .  .  .  .  .  .  .
+ 4   .  .  .  .  .  .  .  .  .
+ 5   .  .  .  .  .  .  .  .  .
+ 6   . 28  .  .  .  .  .  .  .
+ 7   .  .  .  .  .  .  .  .  .
+ 8   .  .  .  .  .  .  .  .  .
+ 9   .  .  .  .  .  .  .  .  .
+
+Horizontal walls:
+  (c, 2)
+  (e, 2)
+  (g, 2)
+  (b, 3)
+  (d, 4)
+  (f, 4)
+  (h, 4)
+  (c, 6)
+  (a, 7)
+  (c, 7)
+  (e, 7)
+
+Vertical walls:
+  (e, 2)
+  (b, 3)
+  (d, 4)
+  (f, 5)
+
+Remaining walls:
+  Player 140031472795728: 5
+  Player 140031473645088: 0
+2026-11-22 17:48:58.705 +00:00 | INFO     | seahorse.game.master:play_game:218 - Player now playing : agent_2107_2 - 140031472795728
+2026-11-22 17:48:58.705 +00:00 | INFO     | seahorse.game.master:step:154 - time : 756.6996512413025s
+2026-11-22 17:48:58.865 +00:00 | INFO     | seahorse.game.master:play_game:272 - Current game state: 
+    a b c d e f g h i
+ 1   .  .  .  .  .  .  .  .  .
+ 2   .  . 88  .  .  .  .  .  .
+ 3   .  .  .  .  .  .  .  .  .
+ 4   .  .  .  .  .  .  .  .  .
+ 5   .  .  .  .  .  .  .  .  .
+ 6   . 28  .  .  .  .  .  .  .
+ 7   .  .  .  .  .  .  .  .  .
+ 8   .  .  .  .  .  .  .  .  .
+ 9   .  .  .  .  .  .  .  .  .
+
+Horizontal walls:
+  (c, 2)
+  (e, 2)
+  (g, 2)
+  (b, 3)
+  (d, 4)
+  (f, 4)
+  (h, 4)
+  (c, 6)
+  (a, 7)
+  (c, 7)
+  (e, 7)
+
+Vertical walls:
+  (c, 1)
+  (e, 2)
+  (b, 3)
+  (d, 4)
+  (f, 5)
+
+Remaining walls:
+  Player 140031472795728: 4
+  Player 140031473645088: 0
+2026-11-22 17:48:58.865 +00:00 | INFO     | seahorse.game.master:play_game:218 - Player now playing : agent_2110_1 - 140031473645088
+2026-11-22 17:48:58.866 +00:00 | INFO     | seahorse.game.master:step:154 - time : 187.80845189094543s
+2026-11-22 17:48:58.888 +00:00 | INFO     | seahorse.game.master:play_game:272 - Current game state: 
+    a b c d e f g h i
+ 1   .  .  .  .  .  .  .  .  .
+ 2   .  .  . 88  .  .  .  .  .
+ 3   .  .  .  .  .  .  .  .  .
+ 4   .  .  .  .  .  .  .  .  .
+ 5   .  .  .  .  .  .  .  .  .
+ 6   . 28  .  .  .  .  .  .  .
+ 7   .  .  .  .  .  .  .  .  .
+ 8   .  .  .  .  .  .  .  .  .
+ 9   .  .  .  .  .  .  .  .  .
+
+Horizontal walls:
+  (c, 2)
+  (e, 2)
+  (g, 2)
+  (b, 3)
+  (d, 4)
+  (f, 4)
+  (h, 4)
+  (c, 6)
+  (a, 7)
+  (c, 7)
+  (e, 7)
+
+Vertical walls:
+  (c, 1)
+  (e, 2)
+  (b, 3)
+  (d, 4)
+  (f, 5)
+
+Remaining walls:
+  Player 140031472795728: 4
+  Player 140031473645088: 0
+2026-11-22 17:48:58.889 +00:00 | INFO     | seahorse.game.master:play_game:218 - Player now playing : agent_2107_2 - 140031472795728
+2026-11-22 17:48:58.889 +00:00 | INFO     | seahorse.game.master:step:154 - time : 756.6975622177124s
+2026-11-22 17:48:59.069 +00:00 | INFO     | seahorse.game.master:play_game:272 - Current game state: 
+    a b c d e f g h i
+ 1   .  .  .  .  .  .  .  .  .
+ 2   .  .  . 88  .  .  .  .  .
+ 3   .  .  .  .  .  .  .  .  .
+ 4   .  .  .  .  .  .  .  .  .
+ 5   .  .  .  .  .  .  .  .  .
+ 6   .  . 28  .  .  .  .  .  .
+ 7   .  .  .  .  .  .  .  .  .
+ 8   .  .  .  .  .  .  .  .  .
+ 9   .  .  .  .  .  .  .  .  .
+
+Horizontal walls:
+  (c, 2)
+  (e, 2)
+  (g, 2)
+  (b, 3)
+  (d, 4)
+  (f, 4)
+  (h, 4)
+  (c, 6)
+  (a, 7)
+  (c, 7)
+  (e, 7)
+
+Vertical walls:
+  (c, 1)
+  (e, 2)
+  (b, 3)
+  (d, 4)
+  (f, 5)
+
+Remaining walls:
+  Player 140031472795728: 4
+  Player 140031473645088: 0
+2026-11-22 17:48:59.070 +00:00 | INFO     | seahorse.game.master:play_game:218 - Player now playing : agent_2110_1 - 140031473645088
+2026-11-22 17:48:59.070 +00:00 | INFO     | seahorse.game.master:step:154 - time : 187.8076241016388s
+2026-11-22 17:48:59.339 +00:00 | INFO     | seahorse.game.master:play_game:272 - Current game state: 
+    a b c d e f g h i
+ 1   .  .  .  .  .  .  .  .  .
+ 2   .  .  .  .  .  .  .  .  .
+ 3   .  .  . 88  .  .  .  .  .
+ 4   .  .  .  .  .  .  .  .  .
+ 5   .  .  .  .  .  .  .  .  .
+ 6   .  . 28  .  .  .  .  .  .
+ 7   .  .  .  .  .  .  .  .  .
+ 8   .  .  .  .  .  .  .  .  .
+ 9   .  .  .  .  .  .  .  .  .
+
+Horizontal walls:
+  (c, 2)
+  (e, 2)
+  (g, 2)
+  (b, 3)
+  (d, 4)
+  (f, 4)
+  (h, 4)
+  (c, 6)
+  (a, 7)
+  (c, 7)
+  (e, 7)
+
+Vertical walls:
+  (c, 1)
+  (e, 2)
+  (b, 3)
+  (d, 4)
+  (f, 5)
+
+Remaining walls:
+  Player 140031472795728: 4
+  Player 140031473645088: 0
+2026-11-22 17:48:59.339 +00:00 | INFO     | seahorse.game.master:play_game:218 - Player now playing : agent_2107_2 - 140031472795728
+2026-11-22 17:48:59.340 +00:00 | INFO     | seahorse.game.master:step:154 - time : 756.6970131397247s
+2026-11-22 17:48:59.523 +00:00 | INFO     | seahorse.game.master:play_game:272 - Current game state: 
+    a b c d e f g h i
+ 1   .  .  .  .  .  .  .  .  .
+ 2   .  .  .  .  .  .  .  .  .
+ 3   .  .  . 88  .  .  .  .  .
+ 4   .  .  .  .  .  .  .  .  .
+ 5   .  .  .  .  .  .  .  .  .
+ 6   .  .  . 28  .  .  .  .  .
+ 7   .  .  .  .  .  .  .  .  .
+ 8   .  .  .  .  .  .  .  .  .
+ 9   .  .  .  .  .  .  .  .  .
+
+Horizontal walls:
+  (c, 2)
+  (e, 2)
+  (g, 2)
+  (b, 3)
+  (d, 4)
+  (f, 4)
+  (h, 4)
+  (c, 6)
+  (a, 7)
+  (c, 7)
+  (e, 7)
+
+Vertical walls:
+  (c, 1)
+  (e, 2)
+  (b, 3)
+  (d, 4)
+  (f, 5)
+
+Remaining walls:
+  Player 140031472795728: 4
+  Player 140031473645088: 0
+2026-11-22 17:48:59.524 +00:00 | INFO     | seahorse.game.master:play_game:218 - Player now playing : agent_2110_1 - 140031473645088
+2026-11-22 17:48:59.524 +00:00 | INFO     | seahorse.game.master:step:154 - time : 187.5457398891449s
+2026-11-22 17:48:59.723 +00:00 | INFO     | seahorse.game.master:play_game:272 - Current game state: 
+    a b c d e f g h i
+ 1   .  .  .  .  .  .  .  .  .
+ 2   .  .  .  .  .  .  .  .  .
+ 3   .  . 88  .  .  .  .  .  .
+ 4   .  .  .  .  .  .  .  .  .
+ 5   .  .  .  .  .  .  .  .  .
+ 6   .  .  . 28  .  .  .  .  .
+ 7   .  .  .  .  .  .  .  .  .
+ 8   .  .  .  .  .  .  .  .  .
+ 9   .  .  .  .  .  .  .  .  .
+
+Horizontal walls:
+  (c, 2)
+  (e, 2)
+  (g, 2)
+  (b, 3)
+  (d, 4)
+  (f, 4)
+  (h, 4)
+  (c, 6)
+  (a, 7)
+  (c, 7)
+  (e, 7)
+
+Vertical walls:
+  (c, 1)
+  (e, 2)
+  (b, 3)
+  (d, 4)
+  (f, 5)
+
+Remaining walls:
+  Player 140031472795728: 4
+  Player 140031473645088: 0
+2026-11-22 17:48:59.723 +00:00 | INFO     | seahorse.game.master:play_game:218 - Player now playing : agent_2107_2 - 140031472795728
+2026-11-22 17:48:59.723 +00:00 | INFO     | seahorse.game.master:step:154 - time : 756.6966636180878s
+2026-11-22 17:48:59.926 +00:00 | INFO     | seahorse.game.master:play_game:272 - Current game state: 
+    a b c d e f g h i
+ 1   .  .  .  .  .  .  .  .  .
+ 2   .  .  .  .  .  .  .  .  .
+ 3   .  . 88  .  .  .  .  .  .
+ 4   .  .  .  .  .  .  .  .  .
+ 5   .  .  .  .  .  .  .  .  .
+ 6   .  . 28  .  .  .  .  .  .
+ 7   .  .  .  .  .  .  .  .  .
+ 8   .  .  .  .  .  .  .  .  .
+ 9   .  .  .  .  .  .  .  .  .
+
+Horizontal walls:
+  (c, 2)
+  (e, 2)
+  (g, 2)
+  (b, 3)
+  (d, 4)
+  (f, 4)
+  (h, 4)
+  (c, 6)
+  (a, 7)
+  (c, 7)
+  (e, 7)
+
+Vertical walls:
+  (c, 1)
+  (e, 2)
+  (b, 3)
+  (d, 4)
+  (f, 5)
+
+Remaining walls:
+  Player 140031472795728: 4
+  Player 140031473645088: 0
+2026-11-22 17:48:59.927 +00:00 | INFO     | seahorse.game.master:play_game:218 - Player now playing : agent_2110_1 - 140031473645088
+2026-11-22 17:48:59.927 +00:00 | INFO     | seahorse.game.master:step:154 - time : 187.3551962375641s
+2026-11-22 17:48:59.985 +00:00 | INFO     | seahorse.game.master:play_game:272 - Current game state: 
+    a b c d e f g h i
+ 1   .  .  .  .  .  .  .  .  .
+ 2   .  .  .  .  .  .  .  .  .
+ 3   . 88  .  .  .  .  .  .  .
+ 4   .  .  .  .  .  .  .  .  .
+ 5   .  .  .  .  .  .  .  .  .
+ 6   .  . 28  .  .  .  .  .  .
+ 7   .  .  .  .  .  .  .  .  .
+ 8   .  .  .  .  .  .  .  .  .
+ 9   .  .  .  .  .  .  .  .  .
+
+Horizontal walls:
+  (c, 2)
+  (e, 2)
+  (g, 2)
+  (b, 3)
+  (d, 4)
+  (f, 4)
+  (h, 4)
+  (c, 6)
+  (a, 7)
+  (c, 7)
+  (e, 7)
+
+Vertical walls:
+  (c, 1)
+  (e, 2)
+  (b, 3)
+  (d, 4)
+  (f, 5)
+
+Remaining walls:
+  Player 140031472795728: 4
+  Player 140031473645088: 0
+2026-11-22 17:48:59.986 +00:00 | INFO     | seahorse.game.master:play_game:218 - Player now playing : agent_2107_2 - 140031472795728
+2026-11-22 17:48:59.986 +00:00 | INFO     | seahorse.game.master:step:154 - time : 756.6638379096985s
+2026-11-22 17:49:00.172 +00:00 | INFO     | seahorse.game.master:play_game:272 - Current game state: 
+    a b c d e f g h i
+ 1   .  .  .  .  .  .  .  .  .
+ 2   .  .  .  .  .  .  .  .  .
+ 3   . 88  .  .  .  .  .  .  .
+ 4   .  .  .  .  .  .  .  .  .
+ 5   .  .  .  .  .  .  .  .  .
+ 6   .  .  . 28  .  .  .  .  .
+ 7   .  .  .  .  .  .  .  .  .
+ 8   .  .  .  .  .  .  .  .  .
+ 9   .  .  .  .  .  .  .  .  .
+
+Horizontal walls:
+  (c, 2)
+  (e, 2)
+  (g, 2)
+  (b, 3)
+  (d, 4)
+  (f, 4)
+  (h, 4)
+  (c, 6)
+  (a, 7)
+  (c, 7)
+  (e, 7)
+
+Vertical walls:
+  (c, 1)
+  (e, 2)
+  (b, 3)
+  (d, 4)
+  (f, 5)
+
+Remaining walls:
+  Player 140031472795728: 4
+  Player 140031473645088: 0
+2026-11-22 17:49:00.173 +00:00 | INFO     | seahorse.game.master:play_game:218 - Player now playing : agent_2110_1 - 140031473645088
+2026-11-22 17:49:00.173 +00:00 | INFO     | seahorse.game.master:step:154 - time : 187.30125451087952s
+2026-11-22 17:49:00.222 +00:00 | INFO     | seahorse.game.master:play_game:272 - Current game state: 
+    a b c d e f g h i
+ 1   .  .  .  .  .  .  .  .  .
+ 2   .  .  .  .  .  .  .  .  .
+ 3   .  .  .  .  .  .  .  .  .
+ 4   . 88  .  .  .  .  .  .  .
+ 5   .  .  .  .  .  .  .  .  .
+ 6   .  .  . 28  .  .  .  .  .
+ 7   .  .  .  .  .  .  .  .  .
+ 8   .  .  .  .  .  .  .  .  .
+ 9   .  .  .  .  .  .  .  .  .
+
+Horizontal walls:
+  (c, 2)
+  (e, 2)
+  (g, 2)
+  (b, 3)
+  (d, 4)
+  (f, 4)
+  (h, 4)
+  (c, 6)
+  (a, 7)
+  (c, 7)
+  (e, 7)
+
+Vertical walls:
+  (c, 1)
+  (e, 2)
+  (b, 3)
+  (d, 4)
+  (f, 5)
+
+Remaining walls:
+  Player 140031472795728: 4
+  Player 140031473645088: 0
+2026-11-22 17:49:00.223 +00:00 | INFO     | seahorse.game.master:play_game:218 - Player now playing : agent_2107_2 - 140031472795728
+2026-11-22 17:49:00.223 +00:00 | INFO     | seahorse.game.master:step:154 - time : 756.6633887290955s
+2026-11-22 17:49:00.411 +00:00 | INFO     | seahorse.game.master:play_game:272 - Current game state: 
+    a b c d e f g h i
+ 1   .  .  .  .  .  .  .  .  .
+ 2   .  .  .  .  .  .  .  .  .
+ 3   .  .  .  .  .  .  .  .  .
+ 4   . 88  .  .  .  .  .  .  .
+ 5   .  .  .  .  .  .  .  .  .
+ 6   .  .  .  . 28  .  .  .  .
+ 7   .  .  .  .  .  .  .  .  .
+ 8   .  .  .  .  .  .  .  .  .
+ 9   .  .  .  .  .  .  .  .  .
+
+Horizontal walls:
+  (c, 2)
+  (e, 2)
+  (g, 2)
+  (b, 3)
+  (d, 4)
+  (f, 4)
+  (h, 4)
+  (c, 6)
+  (a, 7)
+  (c, 7)
+  (e, 7)
+
+Vertical walls:
+  (c, 1)
+  (e, 2)
+  (b, 3)
+  (d, 4)
+  (f, 5)
+
+Remaining walls:
+  Player 140031472795728: 4
+  Player 140031473645088: 0
+2026-11-22 17:49:00.412 +00:00 | INFO     | seahorse.game.master:play_game:218 - Player now playing : agent_2110_1 - 140031473645088
+2026-11-22 17:49:00.412 +00:00 | INFO     | seahorse.game.master:step:154 - time : 187.2570562362671s
+2026-11-22 17:49:00.451 +00:00 | INFO     | seahorse.game.master:play_game:272 - Current game state: 
+    a b c d e f g h i
+ 1   .  .  .  .  .  .  .  .  .
+ 2   .  .  .  .  .  .  .  .  .
+ 3   .  .  .  .  .  .  .  .  .
+ 4   .  .  .  .  .  .  .  .  .
+ 5   . 88  .  .  .  .  .  .  .
+ 6   .  .  .  . 28  .  .  .  .
+ 7   .  .  .  .  .  .  .  .  .
+ 8   .  .  .  .  .  .  .  .  .
+ 9   .  .  .  .  .  .  .  .  .
+
+Horizontal walls:
+  (c, 2)
+  (e, 2)
+  (g, 2)
+  (b, 3)
+  (d, 4)
+  (f, 4)
+  (h, 4)
+  (c, 6)
+  (a, 7)
+  (c, 7)
+  (e, 7)
+
+Vertical walls:
+  (c, 1)
+  (e, 2)
+  (b, 3)
+  (d, 4)
+  (f, 5)
+
+Remaining walls:
+  Player 140031472795728: 4
+  Player 140031473645088: 0
+2026-11-22 17:49:00.452 +00:00 | INFO     | seahorse.game.master:play_game:218 - Player now playing : agent_2107_2 - 140031472795728
+2026-11-22 17:49:00.452 +00:00 | INFO     | seahorse.game.master:step:154 - time : 756.662971496582s
+2026-11-22 17:49:00.630 +00:00 | INFO     | seahorse.game.master:play_game:272 - Current game state: 
+    a b c d e f g h i
+ 1   .  .  .  .  .  .  .  .  .
+ 2   .  .  .  .  .  .  .  .  .
+ 3   .  .  .  .  .  .  .  .  .
+ 4   .  .  .  .  .  .  .  .  .
+ 5   . 88  .  . 28  .  .  .  .
+ 6   .  .  .  .  .  .  .  .  .
+ 7   .  .  .  .  .  .  .  .  .
+ 8   .  .  .  .  .  .  .  .  .
+ 9   .  .  .  .  .  .  .  .  .
+
+Horizontal walls:
+  (c, 2)
+  (e, 2)
+  (g, 2)
+  (b, 3)
+  (d, 4)
+  (f, 4)
+  (h, 4)
+  (c, 6)
+  (a, 7)
+  (c, 7)
+  (e, 7)
+
+Vertical walls:
+  (c, 1)
+  (e, 2)
+  (b, 3)
+  (d, 4)
+  (f, 5)
+
+Remaining walls:
+  Player 140031472795728: 4
+  Player 140031473645088: 0
+2026-11-22 17:49:00.631 +00:00 | INFO     | seahorse.game.master:play_game:218 - Player now playing : agent_2110_1 - 140031473645088
+2026-11-22 17:49:00.631 +00:00 | INFO     | seahorse.game.master:step:154 - time : 187.2321949005127s
+2026-11-22 17:49:00.666 +00:00 | INFO     | seahorse.game.master:play_game:272 - Current game state: 
+    a b c d e f g h i
+ 1   .  .  .  .  .  .  .  .  .
+ 2   .  .  .  .  .  .  .  .  .
+ 3   .  .  .  .  .  .  .  .  .
+ 4   .  .  .  .  .  .  .  .  .
+ 5  88  .  .  . 28  .  .  .  .
+ 6   .  .  .  .  .  .  .  .  .
+ 7   .  .  .  .  .  .  .  .  .
+ 8   .  .  .  .  .  .  .  .  .
+ 9   .  .  .  .  .  .  .  .  .
+
+Horizontal walls:
+  (c, 2)
+  (e, 2)
+  (g, 2)
+  (b, 3)
+  (d, 4)
+  (f, 4)
+  (h, 4)
+  (c, 6)
+  (a, 7)
+  (c, 7)
+  (e, 7)
+
+Vertical walls:
+  (c, 1)
+  (e, 2)
+  (b, 3)
+  (d, 4)
+  (f, 5)
+
+Remaining walls:
+  Player 140031472795728: 4
+  Player 140031473645088: 0
+2026-11-22 17:49:00.667 +00:00 | INFO     | seahorse.game.master:play_game:218 - Player now playing : agent_2107_2 - 140031472795728
+2026-11-22 17:49:00.667 +00:00 | INFO     | seahorse.game.master:step:154 - time : 756.6624619960785s
+2026-11-22 17:49:00.820 +00:00 | INFO     | seahorse.game.master:play_game:272 - Current game state: 
+    a b c d e f g h i
+ 1   .  .  .  .  .  .  .  .  .
+ 2   .  .  .  .  .  .  .  .  .
+ 3   .  .  .  .  .  .  .  .  .
+ 4   .  .  .  . 28  .  .  .  .
+ 5  88  .  .  .  .  .  .  .  .
+ 6   .  .  .  .  .  .  .  .  .
+ 7   .  .  .  .  .  .  .  .  .
+ 8   .  .  .  .  .  .  .  .  .
+ 9   .  .  .  .  .  .  .  .  .
+
+Horizontal walls:
+  (c, 2)
+  (e, 2)
+  (g, 2)
+  (b, 3)
+  (d, 4)
+  (f, 4)
+  (h, 4)
+  (c, 6)
+  (a, 7)
+  (c, 7)
+  (e, 7)
+
+Vertical walls:
+  (c, 1)
+  (e, 2)
+  (b, 3)
+  (d, 4)
+  (f, 5)
+
+Remaining walls:
+  Player 140031472795728: 4
+  Player 140031473645088: 0
+2026-11-22 17:49:00.820 +00:00 | INFO     | seahorse.game.master:play_game:218 - Player now playing : agent_2110_1 - 140031473645088
+2026-11-22 17:49:00.821 +00:00 | INFO     | seahorse.game.master:step:154 - time : 187.22454476356506s
+2026-11-22 17:49:00.851 +00:00 | INFO     | seahorse.game.master:play_game:272 - Current game state: 
+    a b c d e f g h i
+ 1   .  .  .  .  .  .  .  .  .
+ 2   .  .  .  .  .  .  .  .  .
+ 3   .  .  .  .  .  .  .  .  .
+ 4  88  .  .  . 28  .  .  .  .
+ 5   .  .  .  .  .  .  .  .  .
+ 6   .  .  .  .  .  .  .  .  .
+ 7   .  .  .  .  .  .  .  .  .
+ 8   .  .  .  .  .  .  .  .  .
+ 9   .  .  .  .  .  .  .  .  .
+
+Horizontal walls:
+  (c, 2)
+  (e, 2)
+  (g, 2)
+  (b, 3)
+  (d, 4)
+  (f, 4)
+  (h, 4)
+  (c, 6)
+  (a, 7)
+  (c, 7)
+  (e, 7)
+
+Vertical walls:
+  (c, 1)
+  (e, 2)
+  (b, 3)
+  (d, 4)
+  (f, 5)
+
+Remaining walls:
+  Player 140031472795728: 4
+  Player 140031473645088: 0
+2026-11-22 17:49:00.852 +00:00 | INFO     | seahorse.game.master:play_game:218 - Player now playing : agent_2107_2 - 140031472795728
+2026-11-22 17:49:00.852 +00:00 | INFO     | seahorse.game.master:step:154 - time : 756.6619758605957s
+2026-11-22 17:49:00.981 +00:00 | INFO     | seahorse.game.master:play_game:272 - Current game state: 
+    a b c d e f g h i
+ 1   .  .  .  .  .  .  .  .  .
+ 2   .  .  .  .  .  .  .  .  .
+ 3   .  .  .  .  .  .  .  .  .
+ 4  88  .  .  .  . 28  .  .  .
+ 5   .  .  .  .  .  .  .  .  .
+ 6   .  .  .  .  .  .  .  .  .
+ 7   .  .  .  .  .  .  .  .  .
+ 8   .  .  .  .  .  .  .  .  .
+ 9   .  .  .  .  .  .  .  .  .
+
+Horizontal walls:
+  (c, 2)
+  (e, 2)
+  (g, 2)
+  (b, 3)
+  (d, 4)
+  (f, 4)
+  (h, 4)
+  (c, 6)
+  (a, 7)
+  (c, 7)
+  (e, 7)
+
+Vertical walls:
+  (c, 1)
+  (e, 2)
+  (b, 3)
+  (d, 4)
+  (f, 5)
+
+Remaining walls:
+  Player 140031472795728: 4
+  Player 140031473645088: 0
+2026-11-22 17:49:00.982 +00:00 | INFO     | seahorse.game.master:play_game:218 - Player now playing : agent_2110_1 - 140031473645088
+2026-11-22 17:49:00.982 +00:00 | INFO     | seahorse.game.master:step:154 - time : 187.22164058685303s
+2026-11-22 17:49:01.012 +00:00 | INFO     | seahorse.game.master:play_game:272 - Current game state: 
+    a b c d e f g h i
+ 1   .  .  .  .  .  .  .  .  .
+ 2   .  .  .  .  .  .  .  .  .
+ 3  88  .  .  .  .  .  .  .  .
+ 4   .  .  .  .  . 28  .  .  .
+ 5   .  .  .  .  .  .  .  .  .
+ 6   .  .  .  .  .  .  .  .  .
+ 7   .  .  .  .  .  .  .  .  .
+ 8   .  .  .  .  .  .  .  .  .
+ 9   .  .  .  .  .  .  .  .  .
+
+Horizontal walls:
+  (c, 2)
+  (e, 2)
+  (g, 2)
+  (b, 3)
+  (d, 4)
+  (f, 4)
+  (h, 4)
+  (c, 6)
+  (a, 7)
+  (c, 7)
+  (e, 7)
+
+Vertical walls:
+  (c, 1)
+  (e, 2)
+  (b, 3)
+  (d, 4)
+  (f, 5)
+
+Remaining walls:
+  Player 140031472795728: 4
+  Player 140031473645088: 0
+2026-11-22 17:49:01.013 +00:00 | INFO     | seahorse.game.master:play_game:218 - Player now playing : agent_2107_2 - 140031472795728
+2026-11-22 17:49:01.013 +00:00 | INFO     | seahorse.game.master:step:154 - time : 756.6615674495697s
+2026-11-22 17:49:01.122 +00:00 | INFO     | seahorse.game.master:play_game:272 - Current game state: 
+    a b c d e f g h i
+ 1   .  .  .  .  .  .  .  .  .
+ 2   .  .  .  .  .  .  .  .  .
+ 3  88  .  .  .  .  .  .  .  .
+ 4   .  .  .  .  .  .  .  .  .
+ 5   .  .  .  .  . 28  .  .  .
+ 6   .  .  .  .  .  .  .  .  .
+ 7   .  .  .  .  .  .  .  .  .
+ 8   .  .  .  .  .  .  .  .  .
+ 9   .  .  .  .  .  .  .  .  .
+
+Horizontal walls:
+  (c, 2)
+  (e, 2)
+  (g, 2)
+  (b, 3)
+  (d, 4)
+  (f, 4)
+  (h, 4)
+  (c, 6)
+  (a, 7)
+  (c, 7)
+  (e, 7)
+
+Vertical walls:
+  (c, 1)
+  (e, 2)
+  (b, 3)
+  (d, 4)
+  (f, 5)
+
+Remaining walls:
+  Player 140031472795728: 4
+  Player 140031473645088: 0
+2026-11-22 17:49:01.123 +00:00 | INFO     | seahorse.game.master:play_game:218 - Player now playing : agent_2110_1 - 140031473645088
+2026-11-22 17:49:01.123 +00:00 | INFO     | seahorse.game.master:step:154 - time : 187.22027683258057s
+2026-11-22 17:49:01.154 +00:00 | INFO     | seahorse.game.master:play_game:272 - Current game state: 
+    a b c d e f g h i
+ 1   .  .  .  .  .  .  .  .  .
+ 2  88  .  .  .  .  .  .  .  .
+ 3   .  .  .  .  .  .  .  .  .
+ 4   .  .  .  .  .  .  .  .  .
+ 5   .  .  .  .  . 28  .  .  .
+ 6   .  .  .  .  .  .  .  .  .
+ 7   .  .  .  .  .  .  .  .  .
+ 8   .  .  .  .  .  .  .  .  .
+ 9   .  .  .  .  .  .  .  .  .
+
+Horizontal walls:
+  (c, 2)
+  (e, 2)
+  (g, 2)
+  (b, 3)
+  (d, 4)
+  (f, 4)
+  (h, 4)
+  (c, 6)
+  (a, 7)
+  (c, 7)
+  (e, 7)
+
+Vertical walls:
+  (c, 1)
+  (e, 2)
+  (b, 3)
+  (d, 4)
+  (f, 5)
+
+Remaining walls:
+  Player 140031472795728: 4
+  Player 140031473645088: 0
+2026-11-22 17:49:01.154 +00:00 | INFO     | seahorse.game.master:play_game:218 - Player now playing : agent_2107_2 - 140031472795728
+2026-11-22 17:49:01.155 +00:00 | INFO     | seahorse.game.master:step:154 - time : 756.6611709594727s
+2026-11-22 17:49:01.256 +00:00 | INFO     | seahorse.game.master:play_game:272 - Current game state: 
+    a b c d e f g h i
+ 1   .  .  .  .  .  .  .  .  .
+ 2  88  .  .  .  .  .  .  .  .
+ 3   .  .  .  .  .  .  .  .  .
+ 4   .  .  .  .  .  .  .  .  .
+ 5   .  .  .  .  .  .  .  .  .
+ 6   .  .  .  .  . 28  .  .  .
+ 7   .  .  .  .  .  .  .  .  .
+ 8   .  .  .  .  .  .  .  .  .
+ 9   .  .  .  .  .  .  .  .  .
+
+Horizontal walls:
+  (c, 2)
+  (e, 2)
+  (g, 2)
+  (b, 3)
+  (d, 4)
+  (f, 4)
+  (h, 4)
+  (c, 6)
+  (a, 7)
+  (c, 7)
+  (e, 7)
+
+Vertical walls:
+  (c, 1)
+  (e, 2)
+  (b, 3)
+  (d, 4)
+  (f, 5)
+
+Remaining walls:
+  Player 140031472795728: 4
+  Player 140031473645088: 0
+2026-11-22 17:49:01.257 +00:00 | INFO     | seahorse.game.master:play_game:218 - Player now playing : agent_2110_1 - 140031473645088
+2026-11-22 17:49:01.257 +00:00 | INFO     | seahorse.game.master:step:154 - time : 187.21954703330994s
+2026-11-22 17:49:01.287 +00:00 | INFO     | seahorse.game.master:play_game:272 - Current game state: 
+    a b c d e f g h i
+ 1  88  .  .  .  .  .  .  .  .
+ 2   .  .  .  .  .  .  .  .  .
+ 3   .  .  .  .  .  .  .  .  .
+ 4   .  .  .  .  .  .  .  .  .
+ 5   .  .  .  .  .  .  .  .  .
+ 6   .  .  .  .  . 28  .  .  .
+ 7   .  .  .  .  .  .  .  .  .
+ 8   .  .  .  .  .  .  .  .  .
+ 9   .  .  .  .  .  .  .  .  .
+
+Horizontal walls:
+  (c, 2)
+  (e, 2)
+  (g, 2)
+  (b, 3)
+  (d, 4)
+  (f, 4)
+  (h, 4)
+  (c, 6)
+  (a, 7)
+  (c, 7)
+  (e, 7)
+
+Vertical walls:
+  (c, 1)
+  (e, 2)
+  (b, 3)
+  (d, 4)
+  (f, 5)
+
+Remaining walls:
+  Player 140031472795728: 4
+  Player 140031473645088: 0
+2026-11-22 17:49:01.288 +00:00 | INFO     | seahorse.game.master:play_game:280 - Player agent_2110_1(140031473645088):1.0
+2026-11-22 17:49:01.288 +00:00 | INFO     | seahorse.game.master:play_game:280 - Player agent_2107_2(140031472795728):0.0
+2026-11-22 17:49:01.288 +00:00 | INFO     | seahorse.game.master:play_game:283 - Winner - agent_2110_1
+2026-11-22 17:49:01.314 +00:00 | VERDICT  | seahorse.game.master:play_game:295 - agent_2110_1 has won the game
+2026-11-22 17:49:01.415 +00:00 | WARNING  | seahorse.game.io_stream:disconnect:283 - Lost connection: fyav3gq3JxaAgyNQAAAB
+2026-11-22 17:49:01.415 +00:00 | WARNING  | seahorse.game.io_stream:disconnect:288 - Client identified as                         __REC__1795368863922597 was lost.

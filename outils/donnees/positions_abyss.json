@@ -1,0 +1,6331 @@
+[
+{
+"source": "V5/fight_140410.json",
+"step": 11,
+"opp": "Crabe géant des Récifs coralliens #Skew",
+"me_goal": 8,
+"me_pos": [
+2,
+5
+],
+"op_pos": [
+6,
+3
+],
+"me_walls": 10,
+"op_walls": 7,
+"walls": [
+[
+3,
+5,
+"H"
+],
+[
+3,
+3,
+"H"
+],
+[
+3,
+7,
+"H"
+]
+]
+},
+{
+"source": "V5/fight_140580.json",
+"step": 11,
+"opp": "Crabe géant des Océans #final_v1",
+"me_goal": 8,
+"me_pos": [
+3,
+3
+],
+"op_pos": [
+5,
+4
+],
+"me_walls": 9,
+"op_walls": 7,
+"walls": [
+[
+6,
+0,
+"H"
+],
+[
+5,
+4,
+"H"
+],
+[
+6,
+4,
+"H"
+],
+[
+6,
+2,
+"H"
+]
+]
+},
+{
+"source": "V5/fight_140765.json",
+"step": 35,
+"opp": "Anguille Tranchées #2301761_v4",
+"me_goal": 8,
+"me_pos": [
+7,
+1
+],
+"op_pos": [
+6,
+4
+],
+"me_walls": 6,
+"op_walls": 6,
+"walls": [
+[
+7,
+5,
+"H"
+],
+[
+7,
+3,
+"H"
+],
+[
+2,
+5,
+"H"
+],
+[
+8,
+2,
+"H"
+],
+[
+2,
+7,
+"H"
+],
+[
+8,
+0,
+"H"
+],
+[
+2,
+3,
+"H"
+],
+[
+2,
+5,
+"V"
+]
+]
+},
+{
+"source": "V5/fight_140880.json",
+"step": 10,
+"opp": "Tortue de mer des Caraïbes #Agent_V5",
+"me_goal": 0,
+"me_pos": [
+5,
+3
+],
+"op_pos": [
+3,
+4
+],
+"me_walls": 9,
+"op_walls": 8,
+"walls": [
+[
+5,
+4,
+"H"
+],
+[
+8,
+3,
+"H"
+],
+[
+5,
+2,
+"H"
+]
+]
+},
+{
+"source": "V5/fight_141030.json",
+"step": 13,
+"opp": "CORAIL-Lab 6 #Minimax_v7",
+"me_goal": 8,
+"me_pos": [
+4,
+5
+],
+"op_pos": [
+3,
+4
+],
+"me_walls": 9,
+"op_walls": 8,
+"walls": [
+[
+5,
+5,
+"H"
+],
+[
+6,
+3,
+"H"
+],
+[
+3,
+3,
+"H"
+]
+]
+},
+{
+"source": "V5/fight_141129.json",
+"step": 17,
+"opp": "Raie Manta Tranchées #2139805_2204177_v4",
+"me_goal": 8,
+"me_pos": [
+7,
+3
+],
+"op_pos": [
+2,
+4
+],
+"me_walls": 9,
+"op_walls": 7,
+"walls": [
+[
+8,
+5,
+"H"
+],
+[
+6,
+3,
+"V"
+],
+[
+2,
+3,
+"H"
+],
+[
+8,
+3,
+"H"
+]
+]
+},
+{
+"source": "V5/fight_141338.json",
+"step": 22,
+"opp": "Kraken des Océans #V5",
+"me_goal": 0,
+"me_pos": [
+2,
+2
+],
+"op_pos": [
+5,
+6
+],
+"me_walls": 7,
+"op_walls": 6,
+"walls": [
+[
+8,
+3,
+"H"
+],
+[
+2,
+1,
+"H"
+],
+[
+6,
+6,
+"H"
+],
+[
+2,
+5,
+"V"
+],
+[
+2,
+3,
+"H"
+],
+[
+6,
+4,
+"H"
+],
+[
+2,
+2,
+"V"
+]
+]
+},
+{
+"source": "V5/fight_141692.json",
+"step": 13,
+"opp": "CORAIL-Lab 6 #Minimax_v7",
+"me_goal": 8,
+"me_pos": [
+4,
+5
+],
+"op_pos": [
+3,
+4
+],
+"me_walls": 9,
+"op_walls": 8,
+"walls": [
+[
+3,
+3,
+"H"
+],
+[
+6,
+3,
+"H"
+],
+[
+5,
+5,
+"H"
+]
+]
+},
+{
+"source": "V5/fight_142386.json",
+"step": 17,
+"opp": "Thon Tranchées #2130794_2178966_v5_beta3",
+"me_goal": 8,
+"me_pos": [
+5,
+3
+],
+"op_pos": [
+3,
+4
+],
+"me_walls": 9,
+"op_walls": 6,
+"walls": [
+[
+3,
+3,
+"H"
+],
+[
+6,
+3,
+"V"
+],
+[
+7,
+3,
+"H"
+],
+[
+6,
+2,
+"H"
+],
+[
+5,
+5,
+"V"
+]
+]
+},
+{
+"source": "V5/fight_142713.json",
+"step": 14,
+"opp": "Mégalodon des Océans #NoBouclePls",
+"me_goal": 0,
+"me_pos": [
+3,
+3
+],
+"op_pos": [
+4,
+5
+],
+"me_walls": 9,
+"op_walls": 8,
+"walls": [
+[
+3,
+4,
+"H"
+],
+[
+3,
+2,
+"H"
+],
+[
+8,
+3,
+"H"
+]
+]
+},
+{
+"source": "V5/fight_142759.json",
+"step": 11,
+"opp": "Nessie des Récifs coralliens #V5",
+"me_goal": 8,
+"me_pos": [
+3,
+5
+],
+"op_pos": [
+5,
+4
+],
+"me_walls": 9,
+"op_walls": 7,
+"walls": [
+[
+6,
+7,
+"H"
+],
+[
+5,
+3,
+"H"
+],
+[
+6,
+5,
+"H"
+],
+[
+6,
+3,
+"H"
+]
+]
+},
+{
+"source": "V5/fight_143031.json",
+"step": 15,
+"opp": "Anguille Tranchées #2301761_v5",
+"me_goal": 8,
+"me_pos": [
+3,
+3
+],
+"op_pos": [
+4,
+3
+],
+"me_walls": 9,
+"op_walls": 7,
+"walls": [
+[
+6,
+3,
+"H"
+],
+[
+4,
+4,
+"H"
+],
+[
+4,
+3,
+"V"
+],
+[
+6,
+5,
+"H"
+]
+]
+},
+{
+"source": "V5/fight_143108.json",
+"step": 15,
+"opp": "Tortue de mer des Abysses #Agent_v5_bis",
+"me_goal": 8,
+"me_pos": [
+4,
+4
+],
+"op_pos": [
+3,
+4
+],
+"me_walls": 9,
+"op_walls": 7,
+"walls": [
+[
+4,
+3,
+"V"
+],
+[
+6,
+3,
+"H"
+],
+[
+3,
+3,
+"H"
+],
+[
+6,
+5,
+"H"
+]
+]
+},
+{
+"source": "V5/fight_143403.json",
+"step": 13,
+"opp": "Mégalodon Tranchées #Wall-E_V5",
+"me_goal": 8,
+"me_pos": [
+4,
+4
+],
+"op_pos": [
+5,
+3
+],
+"me_walls": 8,
+"op_walls": 7,
+"walls": [
+[
+6,
+3,
+"H"
+],
+[
+5,
+2,
+"H"
+],
+[
+6,
+5,
+"H"
+],
+[
+4,
+4,
+"V"
+],
+[
+6,
+7,
+"H"
+]
+]
+},
+{
+"source": "V5/fight_143510.json",
+"step": 16,
+"opp": "Hippocampe des Marais #StopCryingV3",
+"me_goal": 0,
+"me_pos": [
+3,
+4
+],
+"op_pos": [
+5,
+5
+],
+"me_walls": 9,
+"op_walls": 7,
+"walls": [
+[
+3,
+5,
+"H"
+],
+[
+4,
+3,
+"H"
+],
+[
+8,
+3,
+"H"
+],
+[
+3,
+3,
+"H"
+]
+]
+},
+{
+"source": "V5/fight_143857.json",
+"step": 13,
+"opp": "Mégalodon des Caraïbes #The Radiance 3 Pus ??",
+"me_goal": 8,
+"me_pos": [
+4,
+5
+],
+"op_pos": [
+3,
+4
+],
+"me_walls": 9,
+"op_walls": 8,
+"walls": [
+[
+3,
+3,
+"H"
+],
+[
+6,
+5,
+"H"
+],
+[
+6,
+3,
+"H"
+]
+]
+},
+{
+"source": "V5/fight_144165.json",
+"step": 11,
+"opp": "Nessie des Récifs coralliens #V5",
+"me_goal": 8,
+"me_pos": [
+3,
+5
+],
+"op_pos": [
+5,
+4
+],
+"me_walls": 9,
+"op_walls": 7,
+"walls": [
+[
+5,
+3,
+"H"
+],
+[
+6,
+5,
+"H"
+],
+[
+6,
+3,
+"H"
+],
+[
+6,
+7,
+"H"
+]
+]
+},
+{
+"source": "V5/fight_144210.json",
+"step": 9,
+"opp": "Serpent de l'Atlantide #Agent_V5_light",
+"me_goal": 8,
+"me_pos": [
+2,
+6
+],
+"op_pos": [
+6,
+4
+],
+"me_walls": 10,
+"op_walls": 7,
+"walls": [
+[
+3,
+5,
+"H"
+],
+[
+3,
+3,
+"H"
+],
+[
+3,
+7,
+"H"
+]
+]
+},
+{
+"source": "V5/fight_144343.json",
+"step": 14,
+"opp": "Serpent des Abysses #Her_Ros_V5",
+"me_goal": 0,
+"me_pos": [
+3,
+3
+],
+"op_pos": [
+4,
+5
+],
+"me_walls": 9,
+"op_walls": 8,
+"walls": [
+[
+3,
+2,
+"H"
+],
+[
+8,
+3,
+"H"
+],
+[
+3,
+4,
+"H"
+]
+]
+},
+{
+"source": "V5/fight_144414.json",
+"step": 23,
+"opp": "Cachalot des Marais #MonsieurFuté_V5_Final",
+"me_goal": 8,
+"me_pos": [
+4,
+5
+],
+"op_pos": [
+4,
+4
+],
+"me_walls": 8,
+"op_walls": 4,
+"walls": [
+[
+3,
+3,
+"H"
+],
+[
+3,
+3,
+"V"
+],
+[
+5,
+5,
+"H"
+],
+[
+7,
+3,
+"H"
+],
+[
+5,
+5,
+"V"
+],
+[
+7,
+3,
+"V"
+],
+[
+5,
+3,
+"V"
+],
+[
+3,
+5,
+"H"
+]
+]
+},
+{
+"source": "V5/fight_144738.json",
+"step": 20,
+"opp": "Thon Tranchées #2130794_2178966_v5",
+"me_goal": 0,
+"me_pos": [
+2,
+4
+],
+"op_pos": [
+6,
+5
+],
+"me_walls": 8,
+"op_walls": 7,
+"walls": [
+[
+1,
+4,
+"H"
+],
+[
+8,
+5,
+"H"
+],
+[
+1,
+5,
+"V"
+],
+[
+1,
+2,
+"H"
+],
+[
+8,
+3,
+"H"
+]
+]
+},
+{
+"source": "V5/fight_144785.json",
+"step": 25,
+"opp": "Nessie des Récifs coralliens #v5_overnight",
+"me_goal": 8,
+"me_pos": [
+5,
+3
+],
+"op_pos": [
+3,
+2
+],
+"me_walls": 8,
+"op_walls": 5,
+"walls": [
+[
+5,
+5,
+"H"
+],
+[
+7,
+2,
+"H"
+],
+[
+4,
+3,
+"V"
+],
+[
+3,
+5,
+"H"
+],
+[
+5,
+3,
+"H"
+],
+[
+3,
+3,
+"H"
+],
+[
+6,
+3,
+"H"
+]
+]
+},
+{
+"source": "V5/fight_144906.json",
+"step": 17,
+"opp": "Orque des Récifs coralliens #CoralSeaker_V06",
+"me_goal": 8,
+"me_pos": [
+5,
+4
+],
+"op_pos": [
+3,
+6
+],
+"me_walls": 9,
+"op_walls": 8,
+"walls": [
+[
+3,
+4,
+"H"
+],
+[
+6,
+2,
+"H"
+],
+[
+6,
+4,
+"H"
+]
+]
+},
+{
+"source": "V5/fight_144992.json",
+"step": 11,
+"opp": "Leviathan des Récifs coralliens #etats-critiques",
+"me_goal": 8,
+"me_pos": [
+3,
+5
+],
+"op_pos": [
+5,
+4
+],
+"me_walls": 9,
+"op_walls": 7,
+"walls": [
+[
+5,
+3,
+"H"
+],
+[
+6,
+5,
+"H"
+],
+[
+6,
+7,
+"H"
+],
+[
+6,
+3,
+"H"
+]
+]
+},
+{
+"source": "V5/fight_145402.json",
+"step": 14,
+"opp": "Calmar Géant des Récifs coralliens #KillerXX11.0",
+"me_goal": 0,
+"me_pos": [
+2,
+4
+],
+"op_pos": [
+5,
+5
+],
+"me_walls": 9,
+"op_walls": 9,
+"walls": [
+[
+8,
+3,
+"H"
+],
+[
+2,
+4,
+"H"
+]
+]
+},
+{
+"source": "V5/fight_145514.json",
+"step": 26,
+"opp": "Poisson-Lanterne des Récifs coralliens #V5_Final",
+"me_goal": 0,
+"me_pos": [
+3,
+7
+],
+"op_pos": [
+3,
+5
+],
+"me_walls": 6,
+"op_walls": 6,
+"walls": [
+[
+3,
+4,
+"H"
+],
+[
+3,
+6,
+"H"
+],
+[
+3,
+8,
+"V"
+],
+[
+4,
+5,
+"V"
+],
+[
+8,
+3,
+"H"
+],
+[
+6,
+2,
+"H"
+],
+[
+3,
+2,
+"H"
+],
+[
+6,
+4,
+"H"
+]
+]
+},
+{
+"source": "V5/fight_145693.json",
+"step": 17,
+"opp": "Orque des Récifs coralliens #CoralSeaker_V06",
+"me_goal": 8,
+"me_pos": [
+5,
+2
+],
+"op_pos": [
+3,
+5
+],
+"me_walls": 9,
+"op_walls": 7,
+"walls": [
+[
+6,
+0,
+"H"
+],
+[
+6,
+2,
+"H"
+],
+[
+3,
+4,
+"H"
+],
+[
+6,
+4,
+"H"
+]
+]
+},
+{
+"source": "V5/fight_145990.json",
+"step": 11,
+"opp": "Leviathan des Récifs coralliens #minimax_h_upgraded",
+"me_goal": 8,
+"me_pos": [
+3,
+5
+],
+"op_pos": [
+5,
+4
+],
+"me_walls": 9,
+"op_walls": 7,
+"walls": [
+[
+6,
+5,
+"H"
+],
+[
+6,
+3,
+"H"
+],
+[
+5,
+3,
+"H"
+],
+[
+6,
+7,
+"H"
+]
+]
+},
+{
+"source": "V5/fight_146074.json",
+"step": 11,
+"opp": "Leviathan des Récifs coralliens #etats-critiques",
+"me_goal": 8,
+"me_pos": [
+3,
+5
+],
+"op_pos": [
+5,
+4
+],
+"me_walls": 9,
+"op_walls": 7,
+"walls": [
+[
+6,
+3,
+"H"
+],
+[
+6,
+7,
+"H"
+],
+[
+5,
+3,
+"H"
+],
+[
+6,
+5,
+"H"
+]
+]
+},
+{
+"source": "v4.1/fight_120885.json",
+"step": 11,
+"opp": "Poisson-Lanterne des Marais #nul_germain",
+"me_goal": 8,
+"me_pos": [
+3,
+4
+],
+"op_pos": [
+5,
+3
+],
+"me_walls": 8,
+"op_walls": 8,
+"walls": [
+[
+6,
+3,
+"H"
+],
+[
+3,
+5,
+"V"
+],
+[
+5,
+2,
+"H"
+],
+[
+5,
+4,
+"H"
+]
+]
+},
+{
+"source": "v4.1/fight_121181.json",
+"step": 19,
+"opp": "Méduse des Océans #NadeyaV4",
+"me_goal": 8,
+"me_pos": [
+6,
+4
+],
+"op_pos": [
+3,
+4
+],
+"me_walls": 6,
+"op_walls": 5,
+"walls": [
+[
+7,
+2,
+"H"
+],
+[
+3,
+5,
+"H"
+],
+[
+7,
+4,
+"H"
+],
+[
+3,
+7,
+"H"
+],
+[
+7,
+0,
+"H"
+],
+[
+3,
+3,
+"H"
+],
+[
+5,
+5,
+"V"
+],
+[
+3,
+4,
+"V"
+],
+[
+6,
+3,
+"H"
+]
+]
+},
+{
+"source": "v4.1/fight_121520.json",
+"step": 13,
+"opp": "Thon des Abysses #V5_2",
+"me_goal": 8,
+"me_pos": [
+5,
+4
+],
+"op_pos": [
+3,
+4
+],
+"me_walls": 9,
+"op_walls": 7,
+"walls": [
+[
+8,
+3,
+"H"
+],
+[
+6,
+4,
+"H"
+],
+[
+4,
+4,
+"V"
+],
+[
+3,
+4,
+"H"
+]
+]
+},
+{
+"source": "v4.1/fight_122061.json",
+"step": 24,
+"opp": "Crabe géant des Récifs coralliens #test_v4b",
+"me_goal": 0,
+"me_pos": [
+6,
+4
+],
+"op_pos": [
+0,
+3
+],
+"me_walls": 4,
+"op_walls": 7,
+"walls": [
+[
+2,
+5,
+"H"
+],
+[
+2,
+7,
+"H"
+],
+[
+1,
+3,
+"V"
+],
+[
+2,
+3,
+"H"
+],
+[
+6,
+3,
+"H"
+],
+[
+5,
+3,
+"V"
+],
+[
+7,
+2,
+"H"
+],
+[
+6,
+5,
+"H"
+],
+[
+1,
+1,
+"H"
+]
+]
+},
+{
+"source": "v4.1/fight_122345.json",
+"step": 43,
+"opp": "Sardine des Abysses #lilplayer_v2a",
+"me_goal": 8,
+"me_pos": [
+2,
+8
+],
+"op_pos": [
+2,
+5
+],
+"me_walls": 3,
+"op_walls": 1,
+"walls": [
+[
+3,
+2,
+"H"
+],
+[
+6,
+3,
+"H"
+],
+[
+1,
+8,
+"V"
+],
+[
+5,
+2,
+"H"
+],
+[
+6,
+5,
+"H"
+],
+[
+3,
+0,
+"H"
+],
+[
+5,
+7,
+"V"
+],
+[
+3,
+6,
+"H"
+],
+[
+1,
+4,
+"H"
+],
+[
+5,
+3,
+"V"
+],
+[
+3,
+4,
+"V"
+],
+[
+4,
+5,
+"H"
+],
+[
+1,
+4,
+"V"
+],
+[
+3,
+7,
+"V"
+],
+[
+5,
+4,
+"H"
+],
+[
+1,
+7,
+"V"
+]
+]
+},
+{
+"source": "v4.1/fight_122468.json",
+"step": 19,
+"opp": "Seiche des Abysses #chefe",
+"me_goal": 8,
+"me_pos": [
+3,
+5
+],
+"op_pos": [
+5,
+4
+],
+"me_walls": 7,
+"op_walls": 3,
+"walls": [
+[
+5,
+3,
+"H"
+],
+[
+6,
+2,
+"H"
+],
+[
+6,
+4,
+"H"
+],
+[
+5,
+6,
+"V"
+],
+[
+6,
+0,
+"H"
+],
+[
+3,
+2,
+"V"
+],
+[
+3,
+6,
+"V"
+],
+[
+4,
+2,
+"H"
+],
+[
+4,
+5,
+"V"
+],
+[
+1,
+5,
+"V"
+]
+]
+},
+{
+"source": "v4.1/fight_122978.json",
+"step": 21,
+"opp": "Thon des Abysses #V5_2",
+"me_goal": 8,
+"me_pos": [
+5,
+3
+],
+"op_pos": [
+3,
+2
+],
+"me_walls": 8,
+"op_walls": 5,
+"walls": [
+[
+5,
+3,
+"H"
+],
+[
+6,
+0,
+"H"
+],
+[
+3,
+5,
+"H"
+],
+[
+8,
+3,
+"H"
+],
+[
+5,
+5,
+"H"
+],
+[
+6,
+2,
+"H"
+],
+[
+3,
+3,
+"H"
+]
+]
+},
+{
+"source": "v4.1/fight_123099.json",
+"step": 14,
+"opp": "Anguille des Abysses #RUFUSv3+a lil sum",
+"me_goal": 0,
+"me_pos": [
+4,
+3
+],
+"op_pos": [
+1,
+5
+],
+"me_walls": 8,
+"op_walls": 7,
+"walls": [
+[
+3,
+5,
+"H"
+],
+[
+3,
+3,
+"H"
+],
+[
+5,
+3,
+"V"
+],
+[
+3,
+3,
+"V"
+],
+[
+3,
+4,
+"V"
+]
+]
+},
+{
+"source": "v4.1/fight_123205.json",
+"step": 8,
+"opp": "Anguille des Océans #ZEV2",
+"me_goal": 0,
+"me_pos": [
+6,
+4
+],
+"op_pos": [
+2,
+5
+],
+"me_walls": 8,
+"op_walls": 9,
+"walls": [
+[
+5,
+4,
+"V"
+],
+[
+3,
+5,
+"H"
+],
+[
+3,
+3,
+"H"
+]
+]
+},
+{
+"source": "v4.1/fight_123461.json",
+"step": 12,
+"opp": "Kraken des Récifs coralliens #agent_v5",
+"me_goal": 0,
+"me_pos": [
+7,
+3
+],
+"op_pos": [
+2,
+4
+],
+"me_walls": 8,
+"op_walls": 6,
+"walls": [
+[
+6,
+4,
+"H"
+],
+[
+6,
+5,
+"V"
+],
+[
+6,
+0,
+"H"
+],
+[
+3,
+3,
+"H"
+],
+[
+1,
+5,
+"V"
+],
+[
+6,
+2,
+"H"
+]
+]
+},
+{
+"source": "v4.1/fight_123756.json",
+"step": 44,
+"opp": "Pieuvre des Océans #Equipe48-v4.0.0",
+"me_goal": 0,
+"me_pos": [
+6,
+2
+],
+"op_pos": [
+1,
+1
+],
+"me_walls": 2,
+"op_walls": 8,
+"walls": [
+[
+1,
+4,
+"H"
+],
+[
+7,
+0,
+"H"
+],
+[
+3,
+5,
+"H"
+],
+[
+5,
+2,
+"H"
+],
+[
+1,
+3,
+"V"
+],
+[
+1,
+6,
+"H"
+],
+[
+5,
+4,
+"V"
+],
+[
+3,
+7,
+"H"
+],
+[
+1,
+2,
+"H"
+],
+[
+3,
+3,
+"H"
+]
+]
+},
+{
+"source": "v4.1/fight_124016.json",
+"step": 12,
+"opp": "Kraken des Récifs coralliens #agent_v5",
+"me_goal": 0,
+"me_pos": [
+7,
+3
+],
+"op_pos": [
+2,
+4
+],
+"me_walls": 8,
+"op_walls": 6,
+"walls": [
+[
+6,
+4,
+"H"
+],
+[
+1,
+5,
+"V"
+],
+[
+6,
+5,
+"V"
+],
+[
+3,
+3,
+"H"
+],
+[
+6,
+2,
+"H"
+],
+[
+6,
+0,
+"H"
+]
+]
+},
+{
+"source": "v4.1/fight_124110.json",
+"step": 18,
+"opp": "Cachalot des Marais #MonsieurFuté_V4",
+"me_goal": 0,
+"me_pos": [
+5,
+6
+],
+"op_pos": [
+1,
+4
+],
+"me_walls": 6,
+"op_walls": 6,
+"walls": [
+[
+1,
+3,
+"V"
+],
+[
+5,
+4,
+"H"
+],
+[
+5,
+4,
+"V"
+],
+[
+5,
+6,
+"V"
+],
+[
+3,
+4,
+"V"
+],
+[
+3,
+5,
+"H"
+],
+[
+3,
+7,
+"H"
+],
+[
+3,
+3,
+"H"
+]
+]
+},
+{
+"source": "v4.1/fight_124222.json",
+"step": 36,
+"opp": "Poisson-Lanterne des Récifs coralliens #VFinal_test4",
+"me_goal": 0,
+"me_pos": [
+4,
+1
+],
+"op_pos": [
+4,
+8
+],
+"me_walls": 1,
+"op_walls": 8,
+"walls": [
+[
+0,
+3,
+"V"
+],
+[
+3,
+7,
+"H"
+],
+[
+2,
+5,
+"H"
+],
+[
+5,
+7,
+"H"
+],
+[
+5,
+5,
+"H"
+],
+[
+5,
+3,
+"H"
+],
+[
+2,
+3,
+"H"
+],
+[
+4,
+6,
+"H"
+],
+[
+2,
+6,
+"V"
+],
+[
+2,
+1,
+"V"
+],
+[
+2,
+1,
+"H"
+]
+]
+},
+{
+"source": "v4.1/fight_124550.json",
+"step": 12,
+"opp": "Kraken des Récifs coralliens #agent_v5",
+"me_goal": 0,
+"me_pos": [
+7,
+3
+],
+"op_pos": [
+2,
+4
+],
+"me_walls": 8,
+"op_walls": 6,
+"walls": [
+[
+3,
+3,
+"H"
+],
+[
+1,
+5,
+"V"
+],
+[
+6,
+5,
+"V"
+],
+[
+6,
+2,
+"H"
+],
+[
+6,
+4,
+"H"
+],
+[
+6,
+0,
+"H"
+]
+]
+},
+{
+"source": "v4.1/fight_124838.json",
+"step": 16,
+"opp": "Cachalot des Récifs coralliens #quikMiMa7w",
+"me_goal": 0,
+"me_pos": [
+6,
+4
+],
+"op_pos": [
+1,
+4
+],
+"me_walls": 6,
+"op_walls": 7,
+"walls": [
+[
+3,
+5,
+"H"
+],
+[
+7,
+4,
+"H"
+],
+[
+0,
+5,
+"V"
+],
+[
+1,
+3,
+"V"
+],
+[
+3,
+7,
+"H"
+],
+[
+5,
+4,
+"V"
+],
+[
+3,
+3,
+"H"
+]
+]
+},
+{
+"source": "v4.1/fight_125323.json",
+"step": 57,
+"opp": "Leviathan Tranchées #AJ_Bot",
+"me_goal": 8,
+"me_pos": [
+4,
+4
+],
+"op_pos": [
+6,
+4
+],
+"me_walls": 1,
+"op_walls": 5,
+"walls": [
+[
+8,
+7,
+"H"
+],
+[
+8,
+3,
+"H"
+],
+[
+6,
+6,
+"H"
+],
+[
+5,
+5,
+"H"
+],
+[
+8,
+5,
+"H"
+],
+[
+4,
+7,
+"V"
+],
+[
+5,
+5,
+"V"
+],
+[
+3,
+5,
+"H"
+],
+[
+4,
+8,
+"V"
+],
+[
+6,
+3,
+"V"
+],
+[
+4,
+3,
+"V"
+],
+[
+3,
+7,
+"H"
+],
+[
+3,
+3,
+"H"
+],
+[
+3,
+5,
+"V"
+]
+]
+},
+{
+"source": "v4.1/fight_125437.json",
+"step": 11,
+"opp": "Tortue de mer des Marais #Fighter",
+"me_goal": 8,
+"me_pos": [
+2,
+4
+],
+"op_pos": [
+5,
+4
+],
+"me_walls": 9,
+"op_walls": 7,
+"walls": [
+[
+6,
+3,
+"H"
+],
+[
+1,
+4,
+"V"
+],
+[
+5,
+4,
+"H"
+],
+[
+3,
+4,
+"V"
+]
+]
+},
+{
+"source": "v4.1/fight_125631.json",
+"step": 16,
+"opp": "Cachalot des Récifs coralliens #quikMiMa7w",
+"me_goal": 0,
+"me_pos": [
+6,
+4
+],
+"op_pos": [
+1,
+4
+],
+"me_walls": 6,
+"op_walls": 7,
+"walls": [
+[
+1,
+3,
+"V"
+],
+[
+7,
+4,
+"H"
+],
+[
+3,
+7,
+"H"
+],
+[
+3,
+3,
+"H"
+],
+[
+5,
+4,
+"V"
+],
+[
+0,
+5,
+"V"
+],
+[
+3,
+5,
+"H"
+]
+]
+},
+{
+"source": "v4.1/fight_125712.json",
+"step": 38,
+"opp": "Mégalodon des Caraïbes #The Radiance 3 Pus ??",
+"me_goal": 0,
+"me_pos": [
+5,
+1
+],
+"op_pos": [
+3,
+2
+],
+"me_walls": 1,
+"op_walls": 8,
+"walls": [
+[
+1,
+3,
+"V"
+],
+[
+7,
+2,
+"H"
+],
+[
+3,
+7,
+"H"
+],
+[
+3,
+5,
+"H"
+],
+[
+1,
+2,
+"H"
+],
+[
+3,
+3,
+"H"
+],
+[
+7,
+4,
+"H"
+],
+[
+2,
+1,
+"H"
+],
+[
+7,
+0,
+"H"
+],
+[
+4,
+0,
+"H"
+],
+[
+0,
+5,
+"V"
+]
+]
+},
+{
+"source": "v4.1/fight_125837.json",
+"step": 22,
+"opp": "Pieuvre Tranchées #SmartGuy_Enhanced",
+"me_goal": 0,
+"me_pos": [
+5,
+6
+],
+"op_pos": [
+2,
+8
+],
+"me_walls": 6,
+"op_walls": 7,
+"walls": [
+[
+3,
+5,
+"H"
+],
+[
+2,
+6,
+"H"
+],
+[
+6,
+6,
+"H"
+],
+[
+5,
+4,
+"V"
+],
+[
+3,
+7,
+"H"
+],
+[
+3,
+4,
+"V"
+],
+[
+3,
+3,
+"H"
+]
+]
+},
+{
+"source": "v4.1/fight_125854.json",
+"step": 15,
+"opp": "Cachalot des Abysses #MinimaxV5",
+"me_goal": 8,
+"me_pos": [
+4,
+3
+],
+"op_pos": [
+3,
+4
+],
+"me_walls": 8,
+"op_walls": 6,
+"walls": [
+[
+3,
+5,
+"H"
+],
+[
+8,
+3,
+"H"
+],
+[
+5,
+5,
+"H"
+],
+[
+5,
+3,
+"H"
+],
+[
+3,
+3,
+"H"
+],
+[
+5,
+7,
+"H"
+]
+]
+},
+{
+"source": "v4.1/fight_126574.json",
+"step": 11,
+"opp": "Tortue de mer des Marais #Fighter",
+"me_goal": 8,
+"me_pos": [
+2,
+4
+],
+"op_pos": [
+5,
+4
+],
+"me_walls": 9,
+"op_walls": 7,
+"walls": [
+[
+5,
+3,
+"H"
+],
+[
+3,
+5,
+"V"
+],
+[
+6,
+4,
+"H"
+],
+[
+6,
+2,
+"H"
+]
+]
+},
+{
+"source": "v4.1/fight_126736.json",
+"step": 17,
+"opp": "Barracuda des Caraïbes #Maxime vachier Lagrave V4",
+"me_goal": 8,
+"me_pos": [
+2,
+5
+],
+"op_pos": [
+5,
+6
+],
+"me_walls": 7,
+"op_walls": 8,
+"walls": [
+[
+3,
+4,
+"V"
+],
+[
+5,
+3,
+"H"
+],
+[
+4,
+5,
+"H"
+],
+[
+6,
+4,
+"H"
+],
+[
+4,
+5,
+"V"
+]
+]
+},
+{
+"source": "v4.1/fight_127267.json",
+"step": 38,
+"opp": "Mégalodon des Caraïbes #The Radiance 2",
+"me_goal": 0,
+"me_pos": [
+4,
+2
+],
+"op_pos": [
+3,
+1
+],
+"me_walls": 1,
+"op_walls": 7,
+"walls": [
+[
+0,
+5,
+"V"
+],
+[
+7,
+2,
+"H"
+],
+[
+3,
+5,
+"H"
+],
+[
+1,
+2,
+"H"
+],
+[
+7,
+4,
+"H"
+],
+[
+2,
+1,
+"H"
+],
+[
+3,
+7,
+"H"
+],
+[
+7,
+0,
+"H"
+],
+[
+4,
+0,
+"H"
+],
+[
+3,
+3,
+"H"
+],
+[
+1,
+3,
+"V"
+],
+[
+4,
+2,
+"H"
+]
+]
+},
+{
+"source": "v4.1/fight_127548.json",
+"step": 28,
+"opp": "Hippocampe des Marais #StopCryingV2",
+"me_goal": 0,
+"me_pos": [
+5,
+6
+],
+"op_pos": [
+1,
+6
+],
+"me_walls": 3,
+"op_walls": 5,
+"walls": [
+[
+1,
+2,
+"H"
+],
+[
+3,
+5,
+"H"
+],
+[
+1,
+3,
+"V"
+],
+[
+3,
+7,
+"H"
+],
+[
+1,
+4,
+"H"
+],
+[
+3,
+3,
+"V"
+],
+[
+3,
+3,
+"H"
+],
+[
+4,
+6,
+"V"
+],
+[
+5,
+3,
+"V"
+],
+[
+6,
+7,
+"H"
+],
+[
+1,
+6,
+"H"
+],
+[
+6,
+5,
+"H"
+]
+]
+},
+{
+"source": "v4.1/fight_127611.json",
+"step": 30,
+"opp": "Pieuvre Tranchées #SmartGuy_Enhanced",
+"me_goal": 0,
+"me_pos": [
+4,
+6
+],
+"op_pos": [
+2,
+8
+],
+"me_walls": 3,
+"op_walls": 5,
+"walls": [
+[
+3,
+5,
+"H"
+],
+[
+2,
+6,
+"H"
+],
+[
+3,
+7,
+"H"
+],
+[
+5,
+4,
+"V"
+],
+[
+3,
+3,
+"H"
+],
+[
+1,
+3,
+"V"
+],
+[
+7,
+5,
+"H"
+],
+[
+7,
+7,
+"H"
+],
+[
+2,
+4,
+"H"
+],
+[
+3,
+4,
+"V"
+],
+[
+6,
+6,
+"H"
+],
+[
+6,
+4,
+"H"
+]
+]
+},
+{
+"source": "v4.1/fight_127941.json",
+"step": 16,
+"opp": "Cachalot des Récifs coralliens #quikMiMa7w",
+"me_goal": 0,
+"me_pos": [
+6,
+4
+],
+"op_pos": [
+1,
+4
+],
+"me_walls": 6,
+"op_walls": 7,
+"walls": [
+[
+5,
+4,
+"V"
+],
+[
+3,
+5,
+"H"
+],
+[
+7,
+4,
+"H"
+],
+[
+1,
+3,
+"V"
+],
+[
+0,
+5,
+"V"
+],
+[
+3,
+7,
+"H"
+],
+[
+3,
+3,
+"H"
+]
+]
+},
+{
+"source": "v4.1/fight_128016.json",
+"step": 28,
+"opp": "Thon des Caraïbes #Thon_V4",
+"me_goal": 0,
+"me_pos": [
+5,
+4
+],
+"op_pos": [
+1,
+5
+],
+"me_walls": 1,
+"op_walls": 4,
+"walls": [
+[
+1,
+3,
+"H"
+],
+[
+8,
+4,
+"H"
+],
+[
+8,
+0,
+"H"
+],
+[
+6,
+3,
+"H"
+],
+[
+3,
+5,
+"V"
+],
+[
+5,
+3,
+"H"
+],
+[
+6,
+5,
+"H"
+],
+[
+3,
+5,
+"H"
+],
+[
+3,
+7,
+"H"
+],
+[
+4,
+7,
+"V"
+],
+[
+1,
+5,
+"H"
+],
+[
+3,
+3,
+"H"
+],
+[
+1,
+3,
+"V"
+],
+[
+8,
+2,
+"H"
+],
+[
+5,
+3,
+"V"
+]
+]
+},
+{
+"source": "v4.1/fight_128267.json",
+"step": 13,
+"opp": "Tortue de mer des Marais #Peacekeeper",
+"me_goal": 8,
+"me_pos": [
+3,
+4
+],
+"op_pos": [
+5,
+5
+],
+"me_walls": 7,
+"op_walls": 7,
+"walls": [
+[
+7,
+4,
+"H"
+],
+[
+5,
+6,
+"V"
+],
+[
+5,
+3,
+"H"
+],
+[
+5,
+5,
+"H"
+],
+[
+7,
+2,
+"H"
+],
+[
+3,
+6,
+"V"
+]
+]
+},
+{
+"source": "v4.1/fight_128346.json",
+"step": 32,
+"opp": "Mégalodon des Océans #SeaWolfAgent",
+"me_goal": 0,
+"me_pos": [
+4,
+3
+],
+"op_pos": [
+4,
+7
+],
+"me_walls": 1,
+"op_walls": 7,
+"walls": [
+[
+5,
+5,
+"V"
+],
+[
+2,
+5,
+"H"
+],
+[
+4,
+6,
+"H"
+],
+[
+5,
+7,
+"H"
+],
+[
+2,
+2,
+"V"
+],
+[
+4,
+6,
+"V"
+],
+[
+2,
+3,
+"H"
+],
+[
+2,
+6,
+"V"
+],
+[
+2,
+1,
+"H"
+],
+[
+0,
+3,
+"V"
+],
+[
+7,
+5,
+"H"
+],
+[
+7,
+7,
+"H"
+]
+]
+},
+{
+"source": "v4.1/fight_128511.json",
+"step": 28,
+"opp": "Thon des Caraïbes #Thon_V4",
+"me_goal": 0,
+"me_pos": [
+5,
+4
+],
+"op_pos": [
+1,
+5
+],
+"me_walls": 1,
+"op_walls": 4,
+"walls": [
+[
+3,
+5,
+"V"
+],
+[
+8,
+2,
+"H"
+],
+[
+1,
+3,
+"H"
+],
+[
+8,
+4,
+"H"
+],
+[
+4,
+7,
+"V"
+],
+[
+8,
+0,
+"H"
+],
+[
+6,
+3,
+"H"
+],
+[
+1,
+3,
+"V"
+],
+[
+5,
+3,
+"H"
+],
+[
+6,
+5,
+"H"
+],
+[
+3,
+5,
+"H"
+],
+[
+3,
+7,
+"H"
+],
+[
+5,
+3,
+"V"
+],
+[
+1,
+5,
+"H"
+],
+[
+3,
+3,
+"H"
+]
+]
+},
+{
+"source": "v4.1/fight_128875.json",
+"step": 30,
+"opp": "Cachalot des Récifs coralliens #quikMiMa7w",
+"me_goal": 0,
+"me_pos": [
+5,
+3
+],
+"op_pos": [
+3,
+3
+],
+"me_walls": 1,
+"op_walls": 7,
+"walls": [
+[
+2,
+5,
+"H"
+],
+[
+4,
+3,
+"H"
+],
+[
+3,
+2,
+"V"
+],
+[
+2,
+7,
+"H"
+],
+[
+2,
+7,
+"V"
+],
+[
+6,
+2,
+"H"
+],
+[
+2,
+3,
+"H"
+],
+[
+3,
+2,
+"H"
+],
+[
+3,
+4,
+"H"
+],
+[
+6,
+0,
+"H"
+],
+[
+4,
+5,
+"H"
+],
+[
+1,
+3,
+"V"
+]
+]
+},
+{
+"source": "v4.1/fight_129259.json",
+"step": 46,
+"opp": "Cachalot de l'Atlantide #Estúpido_Estrellas",
+"me_goal": 0,
+"me_pos": [
+5,
+3
+],
+"op_pos": [
+5,
+4
+],
+"me_walls": 1,
+"op_walls": 6,
+"walls": [
+[
+7,
+1,
+"H"
+],
+[
+2,
+8,
+"V"
+],
+[
+7,
+7,
+"H"
+],
+[
+1,
+0,
+"H"
+],
+[
+1,
+7,
+"H"
+],
+[
+7,
+3,
+"H"
+],
+[
+2,
+5,
+"H"
+],
+[
+2,
+6,
+"V"
+],
+[
+0,
+3,
+"V"
+],
+[
+2,
+3,
+"H"
+],
+[
+2,
+1,
+"H"
+],
+[
+3,
+6,
+"H"
+],
+[
+7,
+5,
+"H"
+]
+]
+},
+{
+"source": "v4.1/fight_129673.json",
+"step": 24,
+"opp": "Cachalot des Récifs coralliens #quikMiMa7w",
+"me_goal": 0,
+"me_pos": [
+5,
+2
+],
+"op_pos": [
+3,
+6
+],
+"me_walls": 3,
+"op_walls": 7,
+"walls": [
+[
+1,
+3,
+"V"
+],
+[
+4,
+5,
+"H"
+],
+[
+5,
+5,
+"V"
+],
+[
+2,
+5,
+"H"
+],
+[
+2,
+7,
+"V"
+],
+[
+3,
+4,
+"H"
+],
+[
+5,
+3,
+"H"
+],
+[
+3,
+2,
+"H"
+],
+[
+2,
+3,
+"H"
+],
+[
+3,
+0,
+"H"
+]
+]
+},
+{
+"source": "v4.1/fight_130303.json",
+"step": 17,
+"opp": "Barracuda des Caraïbes #Maxime vachier Lagrave V4",
+"me_goal": 8,
+"me_pos": [
+2,
+3
+],
+"op_pos": [
+5,
+2
+],
+"me_walls": 7,
+"op_walls": 8,
+"walls": [
+[
+3,
+5,
+"V"
+],
+[
+4,
+4,
+"V"
+],
+[
+6,
+3,
+"H"
+],
+[
+5,
+4,
+"H"
+],
+[
+4,
+2,
+"H"
+]
+]
+},
+{
+"source": "v4.1/fight_130769.json",
+"step": 38,
+"opp": "Mégalodon des Caraïbes #The Radiance 3 Pus ??",
+"me_goal": 0,
+"me_pos": [
+5,
+1
+],
+"op_pos": [
+3,
+2
+],
+"me_walls": 1,
+"op_walls": 8,
+"walls": [
+[
+1,
+3,
+"V"
+],
+[
+3,
+5,
+"H"
+],
+[
+0,
+5,
+"V"
+],
+[
+7,
+2,
+"H"
+],
+[
+3,
+7,
+"H"
+],
+[
+1,
+2,
+"H"
+],
+[
+2,
+1,
+"H"
+],
+[
+3,
+3,
+"H"
+],
+[
+7,
+4,
+"H"
+],
+[
+7,
+0,
+"H"
+],
+[
+4,
+0,
+"H"
+]
+]
+},
+{
+"source": "v4.1/fight_131076.json",
+"step": 18,
+"opp": "Cachalot des Marais #MonsieurFuté_V4",
+"me_goal": 0,
+"me_pos": [
+5,
+6
+],
+"op_pos": [
+1,
+4
+],
+"me_walls": 6,
+"op_walls": 6,
+"walls": [
+[
+3,
+5,
+"H"
+],
+[
+3,
+7,
+"H"
+],
+[
+5,
+4,
+"V"
+],
+[
+1,
+3,
+"V"
+],
+[
+3,
+3,
+"H"
+],
+[
+5,
+6,
+"V"
+],
+[
+5,
+4,
+"H"
+],
+[
+3,
+4,
+"V"
+]
+]
+},
+{
+"source": "v4.1/fight_131269.json",
+"step": 28,
+"opp": "Hippocampe des Marais #StopCryingV2",
+"me_goal": 0,
+"me_pos": [
+5,
+6
+],
+"op_pos": [
+1,
+6
+],
+"me_walls": 3,
+"op_walls": 5,
+"walls": [
+[
+4,
+6,
+"V"
+],
+[
+1,
+6,
+"H"
+],
+[
+6,
+5,
+"H"
+],
+[
+3,
+5,
+"H"
+],
+[
+1,
+2,
+"H"
+],
+[
+1,
+4,
+"H"
+],
+[
+3,
+3,
+"V"
+],
+[
+3,
+7,
+"H"
+],
+[
+3,
+3,
+"H"
+],
+[
+1,
+3,
+"V"
+],
+[
+5,
+3,
+"V"
+],
+[
+6,
+7,
+"H"
+]
+]
+},
+{
+"source": "v4.1/fight_131618.json",
+"step": 18,
+"opp": "Cachalot des Marais #MonsieurFuté_V4",
+"me_goal": 0,
+"me_pos": [
+5,
+6
+],
+"op_pos": [
+1,
+4
+],
+"me_walls": 6,
+"op_walls": 6,
+"walls": [
+[
+5,
+4,
+"V"
+],
+[
+3,
+7,
+"H"
+],
+[
+5,
+6,
+"V"
+],
+[
+1,
+3,
+"V"
+],
+[
+3,
+3,
+"H"
+],
+[
+5,
+4,
+"H"
+],
+[
+3,
+4,
+"V"
+],
+[
+3,
+5,
+"H"
+]
+]
+},
+{
+"source": "v4.1/fight_131804.json",
+"step": 17,
+"opp": "Sardine des Océans #Vizzini_V4.2",
+"me_goal": 8,
+"me_pos": [
+3,
+3
+],
+"op_pos": [
+5,
+2
+],
+"me_walls": 6,
+"op_walls": 6,
+"walls": [
+[
+5,
+2,
+"H"
+],
+[
+5,
+0,
+"H"
+],
+[
+5,
+5,
+"V"
+],
+[
+6,
+3,
+"H"
+],
+[
+5,
+2,
+"V"
+],
+[
+3,
+5,
+"V"
+],
+[
+5,
+4,
+"H"
+],
+[
+1,
+5,
+"V"
+]
+]
+},
+{
+"source": "v4.1/fight_131933.json",
+"step": 44,
+"opp": "Pieuvre des Océans #Equipe48-v5.0.0",
+"me_goal": 0,
+"me_pos": [
+5,
+6
+],
+"op_pos": [
+6,
+4
+],
+"me_walls": 1,
+"op_walls": 2,
+"walls": [
+[
+4,
+2,
+"V"
+],
+[
+4,
+3,
+"V"
+],
+[
+3,
+5,
+"H"
+],
+[
+3,
+7,
+"H"
+],
+[
+7,
+3,
+"H"
+],
+[
+0,
+4,
+"V"
+],
+[
+2,
+2,
+"H"
+],
+[
+7,
+3,
+"V"
+],
+[
+6,
+3,
+"H"
+],
+[
+8,
+1,
+"H"
+],
+[
+6,
+2,
+"V"
+],
+[
+2,
+3,
+"V"
+],
+[
+2,
+6,
+"H"
+],
+[
+7,
+5,
+"H"
+],
+[
+3,
+3,
+"H"
+],
+[
+7,
+7,
+"H"
+],
+[
+2,
+4,
+"H"
+]
+]
+},
+{
+"source": "v4.1/fight_132196.json",
+"step": 26,
+"opp": "Murène des Océans #test_concours",
+"me_goal": 0,
+"me_pos": [
+4,
+4
+],
+"op_pos": [
+1,
+7
+],
+"me_walls": 3,
+"op_walls": 3,
+"walls": [
+[
+7,
+5,
+"H"
+],
+[
+0,
+3,
+"V"
+],
+[
+2,
+3,
+"V"
+],
+[
+2,
+5,
+"H"
+],
+[
+4,
+6,
+"H"
+],
+[
+5,
+7,
+"H"
+],
+[
+6,
+6,
+"H"
+],
+[
+5,
+3,
+"H"
+],
+[
+2,
+7,
+"V"
+],
+[
+2,
+3,
+"H"
+],
+[
+6,
+7,
+"V"
+],
+[
+4,
+6,
+"V"
+],
+[
+1,
+6,
+"H"
+],
+[
+1,
+1,
+"H"
+]
+]
+},
+{
+"source": "v4.1/fight_132736.json",
+"step": 36,
+"opp": "Serpent de l'Atlantide #Agent_V5_light",
+"me_goal": 0,
+"me_pos": [
+5,
+3
+],
+"op_pos": [
+4,
+7
+],
+"me_walls": 2,
+"op_walls": 7,
+"walls": [
+[
+4,
+4,
+"H"
+],
+[
+5,
+5,
+"H"
+],
+[
+2,
+5,
+"H"
+],
+[
+4,
+4,
+"V"
+],
+[
+4,
+6,
+"H"
+],
+[
+5,
+7,
+"H"
+],
+[
+2,
+8,
+"V"
+],
+[
+2,
+3,
+"H"
+],
+[
+6,
+3,
+"H"
+],
+[
+2,
+6,
+"V"
+],
+[
+0,
+3,
+"V"
+]
+]
+},
+{
+"source": "v4.1/fight_133109.json",
+"step": 14,
+"opp": "Anguille des Abysses #robotKilledTheWorkingMan",
+"me_goal": 0,
+"me_pos": [
+4,
+5
+],
+"op_pos": [
+1,
+5
+],
+"me_walls": 8,
+"op_walls": 5,
+"walls": [
+[
+2,
+5,
+"H"
+],
+[
+1,
+5,
+"H"
+],
+[
+6,
+3,
+"H"
+],
+[
+3,
+5,
+"V"
+],
+[
+1,
+7,
+"H"
+],
+[
+2,
+3,
+"H"
+],
+[
+5,
+5,
+"V"
+]
+]
+},
+{
+"source": "v4.1/fight_133321.json",
+"step": 44,
+"opp": "Leviathan des Caraïbes #Lubrik_final",
+"me_goal": 0,
+"me_pos": [
+4,
+3
+],
+"op_pos": [
+4,
+6
+],
+"me_walls": 1,
+"op_walls": 8,
+"walls": [
+[
+5,
+5,
+"H"
+],
+[
+2,
+8,
+"V"
+],
+[
+4,
+6,
+"H"
+],
+[
+2,
+3,
+"H"
+],
+[
+5,
+7,
+"H"
+],
+[
+5,
+3,
+"H"
+],
+[
+2,
+6,
+"V"
+],
+[
+0,
+3,
+"V"
+],
+[
+2,
+4,
+"V"
+],
+[
+4,
+2,
+"H"
+],
+[
+2,
+5,
+"H"
+]
+]
+},
+{
+"source": "v4.1/fight_133495.json",
+"step": 34,
+"opp": "Dauphin des Marais #Agent_V5C",
+"me_goal": 0,
+"me_pos": [
+5,
+3
+],
+"op_pos": [
+1,
+7
+],
+"me_walls": 1,
+"op_walls": 5,
+"walls": [
+[
+4,
+6,
+"H"
+],
+[
+2,
+3,
+"H"
+],
+[
+3,
+2,
+"H"
+],
+[
+2,
+8,
+"V"
+],
+[
+4,
+6,
+"V"
+],
+[
+6,
+4,
+"H"
+],
+[
+3,
+0,
+"H"
+],
+[
+2,
+6,
+"V"
+],
+[
+7,
+5,
+"H"
+],
+[
+0,
+3,
+"V"
+],
+[
+7,
+7,
+"H"
+],
+[
+2,
+5,
+"H"
+],
+[
+2,
+4,
+"V"
+],
+[
+5,
+7,
+"H"
+]
+]
+},
+{
+"source": "v4.1/fight_133944.json",
+"step": 44,
+"opp": "Cachalot de l'Atlantide #Estúpido_Estrellas",
+"me_goal": 0,
+"me_pos": [
+5,
+8
+],
+"op_pos": [
+5,
+4
+],
+"me_walls": 1,
+"op_walls": 7,
+"walls": [
+[
+2,
+3,
+"H"
+],
+[
+2,
+8,
+"V"
+],
+[
+3,
+6,
+"H"
+],
+[
+2,
+1,
+"H"
+],
+[
+2,
+6,
+"V"
+],
+[
+7,
+5,
+"H"
+],
+[
+1,
+7,
+"H"
+],
+[
+0,
+3,
+"V"
+],
+[
+7,
+1,
+"H"
+],
+[
+7,
+7,
+"H"
+],
+[
+7,
+3,
+"H"
+],
+[
+2,
+5,
+"H"
+]
+]
+},
+{
+"source": "v4.1/fight_134417.json",
+"step": 46,
+"opp": "Méduse des Caraïbes #v4.3",
+"me_goal": 0,
+"me_pos": [
+5,
+5
+],
+"op_pos": [
+0,
+0
+],
+"me_walls": 1,
+"op_walls": 9,
+"walls": [
+[
+3,
+7,
+"H"
+],
+[
+1,
+3,
+"V"
+],
+[
+3,
+3,
+"H"
+],
+[
+2,
+4,
+"H"
+],
+[
+3,
+5,
+"H"
+],
+[
+5,
+2,
+"H"
+],
+[
+8,
+0,
+"H"
+],
+[
+1,
+1,
+"H"
+],
+[
+0,
+4,
+"V"
+],
+[
+2,
+6,
+"H"
+]
+]
+},
+{
+"source": "v4.1/fight_135319.json",
+"step": 20,
+"opp": "Anguille des Abysses #robotKilledTheWorkingMan",
+"me_goal": 0,
+"me_pos": [
+6,
+5
+],
+"op_pos": [
+2,
+4
+],
+"me_walls": 5,
+"op_walls": 6,
+"walls": [
+[
+5,
+3,
+"V"
+],
+[
+1,
+7,
+"H"
+],
+[
+3,
+3,
+"V"
+],
+[
+0,
+4,
+"V"
+],
+[
+3,
+5,
+"H"
+],
+[
+5,
+5,
+"V"
+],
+[
+3,
+7,
+"H"
+],
+[
+1,
+3,
+"V"
+],
+[
+3,
+3,
+"H"
+]
+]
+},
+{
+"source": "v4.1/fight_135426.json",
+"step": 36,
+"opp": "Mégalodon des Caraïbes #The Radiance 3 Pus ??",
+"me_goal": 0,
+"me_pos": [
+4,
+3
+],
+"op_pos": [
+4,
+4
+],
+"me_walls": 1,
+"op_walls": 9,
+"walls": [
+[
+7,
+2,
+"H"
+],
+[
+1,
+2,
+"H"
+],
+[
+3,
+5,
+"H"
+],
+[
+3,
+3,
+"H"
+],
+[
+0,
+5,
+"V"
+],
+[
+7,
+4,
+"H"
+],
+[
+3,
+7,
+"H"
+],
+[
+7,
+0,
+"H"
+],
+[
+7,
+6,
+"H"
+],
+[
+1,
+3,
+"V"
+]
+]
+},
+{
+"source": "v4.1/fight_136008.json",
+"step": 16,
+"opp": "Tortue de mer des Marais #Eggwoh",
+"me_goal": 0,
+"me_pos": [
+5,
+4
+],
+"op_pos": [
+2,
+5
+],
+"me_walls": 5,
+"op_walls": 5,
+"walls": [
+[
+5,
+4,
+"H"
+],
+[
+3,
+3,
+"H"
+],
+[
+5,
+2,
+"H"
+],
+[
+7,
+4,
+"V"
+],
+[
+3,
+5,
+"H"
+],
+[
+3,
+7,
+"H"
+],
+[
+1,
+5,
+"V"
+],
+[
+5,
+4,
+"V"
+],
+[
+0,
+6,
+"V"
+],
+[
+4,
+6,
+"V"
+]
+]
+},
+{
+"source": "v4.1/fight_136704.json",
+"step": 14,
+"opp": "Anguille des Abysses #robotKilledTheWorkingMan",
+"me_goal": 0,
+"me_pos": [
+5,
+6
+],
+"op_pos": [
+1,
+5
+],
+"me_walls": 8,
+"op_walls": 5,
+"walls": [
+[
+1,
+7,
+"H"
+],
+[
+4,
+3,
+"V"
+],
+[
+1,
+5,
+"H"
+],
+[
+2,
+3,
+"V"
+],
+[
+2,
+5,
+"H"
+],
+[
+2,
+3,
+"H"
+],
+[
+6,
+3,
+"H"
+]
+]
+},
+{
+"source": "v4.1/fight_137299.json",
+"step": 22,
+"opp": "Anguille des Abysses #robotKilledTheWorkingMan",
+"me_goal": 0,
+"me_pos": [
+6,
+4
+],
+"op_pos": [
+1,
+5
+],
+"me_walls": 5,
+"op_walls": 3,
+"walls": [
+[
+4,
+2,
+"V"
+],
+[
+3,
+3,
+"H"
+],
+[
+3,
+4,
+"V"
+],
+[
+6,
+2,
+"V"
+],
+[
+4,
+7,
+"H"
+],
+[
+8,
+3,
+"H"
+],
+[
+1,
+6,
+"V"
+],
+[
+5,
+2,
+"H"
+],
+[
+8,
+1,
+"H"
+],
+[
+3,
+5,
+"H"
+],
+[
+1,
+3,
+"V"
+],
+[
+3,
+7,
+"H"
+]
+]
+},
+{
+"source": "v4.1/fight_137504.json",
+"step": 19,
+"opp": "Pieuvre Tranchées #OmniMan_V2",
+"me_goal": 8,
+"me_pos": [
+2,
+5
+],
+"op_pos": [
+5,
+7
+],
+"me_walls": 6,
+"op_walls": 6,
+"walls": [
+[
+6,
+4,
+"H"
+],
+[
+4,
+3,
+"V"
+],
+[
+3,
+6,
+"H"
+],
+[
+6,
+0,
+"H"
+],
+[
+5,
+3,
+"H"
+],
+[
+5,
+5,
+"H"
+],
+[
+6,
+6,
+"H"
+],
+[
+6,
+2,
+"H"
+]
+]
+},
+{
+"source": "v4.1/fight_137702.json",
+"step": 19,
+"opp": "Sardine des Océans #Vizzini_V4.2",
+"me_goal": 8,
+"me_pos": [
+2,
+4
+],
+"op_pos": [
+5,
+4
+],
+"me_walls": 7,
+"op_walls": 7,
+"walls": [
+[
+4,
+5,
+"H"
+],
+[
+6,
+3,
+"H"
+],
+[
+4,
+3,
+"V"
+],
+[
+4,
+2,
+"H"
+],
+[
+6,
+5,
+"H"
+],
+[
+5,
+4,
+"H"
+]
+]
+},
+{
+"source": "v4.1/fight_137834.json",
+"step": 14,
+"opp": "Anguille des Abysses #robotKilledTheWorkingMan",
+"me_goal": 0,
+"me_pos": [
+4,
+5
+],
+"op_pos": [
+1,
+5
+],
+"me_walls": 8,
+"op_walls": 5,
+"walls": [
+[
+2,
+3,
+"H"
+],
+[
+3,
+5,
+"V"
+],
+[
+2,
+5,
+"H"
+],
+[
+1,
+5,
+"H"
+],
+[
+6,
+3,
+"H"
+],
+[
+5,
+5,
+"V"
+],
+[
+1,
+7,
+"H"
+]
+]
+},
+{
+"source": "v4.1/fight_138140.json",
+"step": 42,
+"opp": "Requin des Abysses #TimeMaster",
+"me_goal": 0,
+"me_pos": [
+6,
+4
+],
+"op_pos": [
+2,
+2
+],
+"me_walls": 1,
+"op_walls": 5,
+"walls": [
+[
+3,
+7,
+"H"
+],
+[
+3,
+1,
+"V"
+],
+[
+1,
+5,
+"H"
+],
+[
+3,
+3,
+"H"
+],
+[
+8,
+2,
+"H"
+],
+[
+3,
+0,
+"H"
+],
+[
+1,
+3,
+"V"
+],
+[
+8,
+0,
+"H"
+],
+[
+5,
+3,
+"V"
+],
+[
+5,
+1,
+"H"
+],
+[
+5,
+3,
+"H"
+],
+[
+6,
+0,
+"H"
+],
+[
+1,
+2,
+"H"
+],
+[
+3,
+5,
+"H"
+]
+]
+},
+{
+"source": "v4.1/fight_138663.json",
+"step": 23,
+"opp": "Tortue de mer des Caraïbes #test_v5_prudence",
+"me_goal": 8,
+"me_pos": [
+5,
+5
+],
+"op_pos": [
+2,
+6
+],
+"me_walls": 7,
+"op_walls": 5,
+"walls": [
+[
+2,
+5,
+"H"
+],
+[
+3,
+2,
+"H"
+],
+[
+5,
+2,
+"H"
+],
+[
+3,
+4,
+"H"
+],
+[
+6,
+5,
+"H"
+],
+[
+5,
+5,
+"V"
+],
+[
+7,
+4,
+"H"
+],
+[
+5,
+4,
+"H"
+]
+]
+},
+{
+"source": "v4.1/fight_138709.json",
+"step": 36,
+"opp": "Poisson-Lanterne de l'Atlantide #V2_Enhance_ssj1",
+"me_goal": 0,
+"me_pos": [
+4,
+3
+],
+"op_pos": [
+5,
+6
+],
+"me_walls": 1,
+"op_walls": 7,
+"walls": [
+[
+5,
+5,
+"V"
+],
+[
+2,
+5,
+"H"
+],
+[
+5,
+7,
+"H"
+],
+[
+2,
+3,
+"H"
+],
+[
+4,
+6,
+"H"
+],
+[
+4,
+6,
+"V"
+],
+[
+2,
+6,
+"V"
+],
+[
+2,
+1,
+"H"
+],
+[
+0,
+3,
+"V"
+],
+[
+7,
+5,
+"H"
+],
+[
+1,
+0,
+"H"
+],
+[
+7,
+7,
+"H"
+]
+]
+},
+{
+"source": "v4.1/fight_138923.json",
+"step": 22,
+"opp": "Raie Manta des Abysses #TransWall-E 2",
+"me_goal": 0,
+"me_pos": [
+4,
+5
+],
+"op_pos": [
+2,
+7
+],
+"me_walls": 4,
+"op_walls": 8,
+"walls": [
+[
+5,
+7,
+"H"
+],
+[
+2,
+7,
+"H"
+],
+[
+4,
+4,
+"V"
+],
+[
+4,
+6,
+"H"
+],
+[
+2,
+3,
+"H"
+],
+[
+2,
+6,
+"V"
+],
+[
+0,
+3,
+"V"
+],
+[
+2,
+5,
+"H"
+]
+]
+},
+{
+"source": "v4.1/fight_139180.json",
+"step": 27,
+"opp": "Raie Manta des Récifs coralliens #V5_2_Eq99",
+"me_goal": 8,
+"me_pos": [
+0,
+7
+],
+"op_pos": [
+8,
+6
+],
+"me_walls": 4,
+"op_walls": 4,
+"walls": [
+[
+1,
+4,
+"V"
+],
+[
+8,
+3,
+"H"
+],
+[
+2,
+7,
+"H"
+],
+[
+6,
+2,
+"H"
+],
+[
+8,
+6,
+"H"
+],
+[
+7,
+3,
+"V"
+],
+[
+6,
+4,
+"H"
+],
+[
+1,
+6,
+"H"
+],
+[
+3,
+4,
+"H"
+],
+[
+6,
+6,
+"V"
+],
+[
+6,
+0,
+"H"
+],
+[
+1,
+6,
+"V"
+]
+]
+},
+{
+"source": "v4.1/fight_139265.json",
+"step": 14,
+"opp": "Calmar Géant des Récifs coralliens #KillerXX11.0",
+"me_goal": 0,
+"me_pos": [
+4,
+5
+],
+"op_pos": [
+1,
+5
+],
+"me_walls": 8,
+"op_walls": 7,
+"walls": [
+[
+5,
+4,
+"V"
+],
+[
+3,
+5,
+"H"
+],
+[
+3,
+7,
+"H"
+],
+[
+3,
+4,
+"V"
+],
+[
+3,
+3,
+"H"
+]
+]
+},
+{
+"source": "v4.1/fight_139765.json",
+"step": 14,
+"opp": "Calmar Géant des Récifs coralliens #KillerXX11.0",
+"me_goal": 0,
+"me_pos": [
+4,
+5
+],
+"op_pos": [
+1,
+5
+],
+"me_walls": 8,
+"op_walls": 7,
+"walls": [
+[
+3,
+7,
+"H"
+],
+[
+3,
+3,
+"H"
+],
+[
+3,
+4,
+"V"
+],
+[
+3,
+5,
+"H"
+],
+[
+5,
+4,
+"V"
+]
+]
+},
+{
+"source": "v4.1/fight_139993.json",
+"step": 30,
+"opp": "Poisson-Lanterne de l'Atlantide #V2_Enhance_ssj1",
+"me_goal": 0,
+"me_pos": [
+6,
+4
+],
+"op_pos": [
+0,
+1
+],
+"me_walls": 3,
+"op_walls": 6,
+"walls": [
+[
+1,
+2,
+"H"
+],
+[
+1,
+5,
+"H"
+],
+[
+3,
+3,
+"H"
+],
+[
+3,
+5,
+"H"
+],
+[
+7,
+3,
+"V"
+],
+[
+5,
+1,
+"H"
+],
+[
+1,
+3,
+"V"
+],
+[
+5,
+3,
+"H"
+],
+[
+6,
+0,
+"H"
+],
+[
+5,
+3,
+"V"
+],
+[
+3,
+7,
+"H"
+]
+]
+},
+{
+"source": "v4.1/fight_140093.json",
+"step": 20,
+"opp": "Mégalodon Tranchées #Wall-E_V5",
+"me_goal": 0,
+"me_pos": [
+8,
+4
+],
+"op_pos": [
+0,
+3
+],
+"me_walls": 6,
+"op_walls": 5,
+"walls": [
+[
+6,
+3,
+"H"
+],
+[
+6,
+4,
+"V"
+],
+[
+3,
+7,
+"H"
+],
+[
+6,
+5,
+"H"
+],
+[
+3,
+5,
+"H"
+],
+[
+3,
+3,
+"H"
+],
+[
+3,
+1,
+"H"
+],
+[
+1,
+4,
+"V"
+],
+[
+1,
+0,
+"H"
+]
+]
+},
+{
+"source": "v4.1/fight_140419.json",
+"step": 32,
+"opp": "Nessie des Récifs coralliens #V5",
+"me_goal": 0,
+"me_pos": [
+2,
+0
+],
+"op_pos": [
+3,
+0
+],
+"me_walls": 2,
+"op_walls": 8,
+"walls": [
+[
+2,
+3,
+"H"
+],
+[
+3,
+5,
+"H"
+],
+[
+2,
+1,
+"H"
+],
+[
+3,
+3,
+"H"
+],
+[
+3,
+1,
+"H"
+],
+[
+3,
+7,
+"H"
+],
+[
+7,
+0,
+"H"
+],
+[
+0,
+3,
+"V"
+],
+[
+1,
+7,
+"H"
+],
+[
+2,
+5,
+"H"
+]
+]
+},
+{
+"source": "v4.1/fight_140510.json",
+"step": 34,
+"opp": "Poisson-Lanterne Tranchées #Cross_1",
+"me_goal": 0,
+"me_pos": [
+2,
+4
+],
+"op_pos": [
+2,
+2
+],
+"me_walls": 1,
+"op_walls": 7,
+"walls": [
+[
+2,
+3,
+"H"
+],
+[
+2,
+4,
+"V"
+],
+[
+7,
+2,
+"H"
+],
+[
+7,
+0,
+"H"
+],
+[
+2,
+5,
+"H"
+],
+[
+4,
+4,
+"H"
+],
+[
+5,
+5,
+"H"
+],
+[
+5,
+1,
+"H"
+],
+[
+5,
+7,
+"H"
+],
+[
+0,
+3,
+"V"
+],
+[
+1,
+1,
+"H"
+],
+[
+5,
+3,
+"H"
+]
+]
+},
+{
+"source": "v4.1/fight_141253.json",
+"step": 36,
+"opp": "Cachalot des Marais #MonsieurFuté_V4",
+"me_goal": 0,
+"me_pos": [
+4,
+4
+],
+"op_pos": [
+3,
+1
+],
+"me_walls": 3,
+"op_walls": 6,
+"walls": [
+[
+2,
+2,
+"V"
+],
+[
+5,
+5,
+"H"
+],
+[
+2,
+5,
+"H"
+],
+[
+5,
+1,
+"H"
+],
+[
+5,
+7,
+"H"
+],
+[
+5,
+3,
+"H"
+],
+[
+0,
+3,
+"V"
+],
+[
+2,
+3,
+"H"
+],
+[
+2,
+1,
+"H"
+],
+[
+3,
+6,
+"H"
+],
+[
+1,
+7,
+"V"
+]
+]
+},
+{
+"source": "v4.1/fight_141368.json",
+"step": 36,
+"opp": "Serpent de l'Atlantide #Agent_V5_light",
+"me_goal": 0,
+"me_pos": [
+6,
+4
+],
+"op_pos": [
+4,
+6
+],
+"me_walls": 2,
+"op_walls": 8,
+"walls": [
+[
+4,
+6,
+"H"
+],
+[
+5,
+7,
+"H"
+],
+[
+4,
+4,
+"V"
+],
+[
+2,
+8,
+"V"
+],
+[
+2,
+3,
+"H"
+],
+[
+2,
+6,
+"V"
+],
+[
+0,
+3,
+"V"
+],
+[
+4,
+4,
+"H"
+],
+[
+5,
+5,
+"H"
+],
+[
+2,
+5,
+"H"
+]
+]
+},
+{
+"source": "v4.1/fight_141855.json",
+"step": 54,
+"opp": "Nessie des Récifs coralliens #v5_overnight",
+"me_goal": 0,
+"me_pos": [
+7,
+6
+],
+"op_pos": [
+2,
+1
+],
+"me_walls": 2,
+"op_walls": 4,
+"walls": [
+[
+7,
+5,
+"V"
+],
+[
+6,
+2,
+"H"
+],
+[
+5,
+4,
+"V"
+],
+[
+1,
+3,
+"V"
+],
+[
+3,
+5,
+"H"
+],
+[
+6,
+4,
+"H"
+],
+[
+1,
+6,
+"H"
+],
+[
+6,
+6,
+"V"
+],
+[
+1,
+4,
+"H"
+],
+[
+3,
+7,
+"H"
+],
+[
+1,
+2,
+"H"
+],
+[
+5,
+2,
+"V"
+],
+[
+3,
+3,
+"H"
+],
+[
+7,
+0,
+"H"
+]
+]
+},
+{
+"source": "v4.1/fight_143037.json",
+"step": 32,
+"opp": "Nessie des Récifs coralliens #V5",
+"me_goal": 0,
+"me_pos": [
+2,
+0
+],
+"op_pos": [
+3,
+0
+],
+"me_walls": 2,
+"op_walls": 8,
+"walls": [
+[
+2,
+3,
+"H"
+],
+[
+3,
+5,
+"H"
+],
+[
+2,
+1,
+"H"
+],
+[
+3,
+1,
+"H"
+],
+[
+3,
+7,
+"H"
+],
+[
+4,
+0,
+"H"
+],
+[
+3,
+3,
+"H"
+],
+[
+0,
+3,
+"V"
+],
+[
+1,
+7,
+"H"
+],
+[
+2,
+5,
+"H"
+]
+]
+},
+{
+"source": "v4.1/fight_144022.json",
+"step": 38,
+"opp": "Mégalodon des Caraïbes #The Radiance 3 Pus ??",
+"me_goal": 0,
+"me_pos": [
+3,
+1
+],
+"op_pos": [
+4,
+7
+],
+"me_walls": 1,
+"op_walls": 8,
+"walls": [
+[
+4,
+6,
+"H"
+],
+[
+0,
+3,
+"V"
+],
+[
+5,
+7,
+"H"
+],
+[
+5,
+3,
+"H"
+],
+[
+2,
+3,
+"H"
+],
+[
+2,
+1,
+"H"
+],
+[
+2,
+1,
+"V"
+],
+[
+3,
+7,
+"H"
+],
+[
+5,
+5,
+"H"
+],
+[
+2,
+6,
+"V"
+],
+[
+2,
+5,
+"H"
+]
+]
+},
+{
+"source": "v4.1/fight_144277.json",
+"step": 24,
+"opp": "Serpent de l'Atlantide #Agent_v5",
+"me_goal": 0,
+"me_pos": [
+4,
+6
+],
+"op_pos": [
+1,
+4
+],
+"me_walls": 4,
+"op_walls": 5,
+"walls": [
+[
+3,
+3,
+"H"
+],
+[
+1,
+3,
+"V"
+],
+[
+1,
+3,
+"H"
+],
+[
+4,
+6,
+"V"
+],
+[
+4,
+6,
+"H"
+],
+[
+5,
+3,
+"V"
+],
+[
+6,
+5,
+"H"
+],
+[
+3,
+5,
+"H"
+],
+[
+1,
+1,
+"H"
+],
+[
+3,
+7,
+"H"
+],
+[
+3,
+3,
+"V"
+]
+]
+},
+{
+"source": "v4.1/fight_144337.json",
+"step": 25,
+"opp": "Kraken des Récifs coralliens #agent_v5.3",
+"me_goal": 8,
+"me_pos": [
+2,
+2
+],
+"op_pos": [
+7,
+3
+],
+"me_walls": 4,
+"op_walls": 5,
+"walls": [
+[
+1,
+5,
+"V"
+],
+[
+5,
+4,
+"H"
+],
+[
+5,
+5,
+"V"
+],
+[
+7,
+3,
+"V"
+],
+[
+5,
+0,
+"H"
+],
+[
+6,
+3,
+"H"
+],
+[
+5,
+2,
+"V"
+],
+[
+5,
+2,
+"H"
+],
+[
+3,
+5,
+"V"
+],
+[
+6,
+4,
+"V"
+],
+[
+3,
+6,
+"H"
+]
+]
+},
+{
+"source": "v4.1/fight_144584.json",
+"step": 36,
+"opp": "Cachalot des Récifs coralliens #quikMiMa7w",
+"me_goal": 0,
+"me_pos": [
+5,
+2
+],
+"op_pos": [
+2,
+1
+],
+"me_walls": 1,
+"op_walls": 7,
+"walls": [
+[
+1,
+3,
+"V"
+],
+[
+3,
+5,
+"H"
+],
+[
+7,
+2,
+"H"
+],
+[
+3,
+7,
+"H"
+],
+[
+1,
+2,
+"H"
+],
+[
+0,
+5,
+"V"
+],
+[
+3,
+3,
+"H"
+],
+[
+7,
+4,
+"H"
+],
+[
+2,
+1,
+"H"
+],
+[
+7,
+0,
+"H"
+],
+[
+2,
+1,
+"V"
+],
+[
+4,
+1,
+"V"
+]
+]
+},
+{
+"source": "v4.1/fight_145137.json",
+"step": 18,
+"opp": "Cachalot des Marais #MonsieurFuté_V5_Final",
+"me_goal": 0,
+"me_pos": [
+6,
+5
+],
+"op_pos": [
+2,
+4
+],
+"me_walls": 6,
+"op_walls": 7,
+"walls": [
+[
+3,
+3,
+"H"
+],
+[
+5,
+3,
+"V"
+],
+[
+3,
+7,
+"H"
+],
+[
+7,
+5,
+"H"
+],
+[
+1,
+3,
+"V"
+],
+[
+3,
+5,
+"H"
+],
+[
+3,
+3,
+"V"
+]
+]
+},
+{
+"source": "v4.1/fight_145231.json",
+"step": 25,
+"opp": "Kraken des Récifs coralliens #agent_v5.3",
+"me_goal": 8,
+"me_pos": [
+2,
+2
+],
+"op_pos": [
+7,
+3
+],
+"me_walls": 4,
+"op_walls": 5,
+"walls": [
+[
+5,
+5,
+"V"
+],
+[
+3,
+6,
+"H"
+],
+[
+5,
+2,
+"V"
+],
+[
+5,
+2,
+"H"
+],
+[
+6,
+4,
+"V"
+],
+[
+3,
+5,
+"V"
+],
+[
+5,
+4,
+"H"
+],
+[
+1,
+5,
+"V"
+],
+[
+5,
+0,
+"H"
+],
+[
+6,
+3,
+"H"
+],
+[
+7,
+3,
+"V"
+]
+]
+},
+{
+"source": "v4.1/fight_145686.json",
+"step": 42,
+"opp": "Calmar Géant des Récifs coralliens #KillerXX11.0",
+"me_goal": 0,
+"me_pos": [
+4,
+3
+],
+"op_pos": [
+5,
+1
+],
+"me_walls": 2,
+"op_walls": 3,
+"walls": [
+[
+7,
+1,
+"H"
+],
+[
+7,
+7,
+"H"
+],
+[
+7,
+3,
+"H"
+],
+[
+2,
+5,
+"H"
+],
+[
+1,
+3,
+"V"
+],
+[
+0,
+6,
+"V"
+],
+[
+8,
+2,
+"H"
+],
+[
+8,
+0,
+"H"
+],
+[
+2,
+3,
+"H"
+],
+[
+3,
+2,
+"H"
+],
+[
+6,
+5,
+"V"
+],
+[
+1,
+1,
+"H"
+],
+[
+2,
+6,
+"V"
+],
+[
+3,
+0,
+"H"
+],
+[
+7,
+5,
+"H"
+]
+]
+}
+]

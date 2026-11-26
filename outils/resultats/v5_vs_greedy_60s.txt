@@ -1,0 +1,5 @@
+{'seed': 701, 'a_white': False, 'res': 1.0, 'plies': 22, 'reason': '', 'a_left': 56.0, 'b_left': 57.9, 'a_max': 1.52, 'b_max': 0.51}
+{'seed': 700, 'a_white': True, 'res': 1.0, 'plies': 21, 'reason': '', 'a_left': 53.8, 'b_left': 58.1, 'a_max': 1.69, 'b_max': 0.42}
+{'seed': 703, 'a_white': False, 'res': 1.0, 'plies': 22, 'reason': '', 'a_left': 52.0, 'b_left': 57.5, 'a_max': 1.57, 'b_max': 0.48}
+{'seed': 702, 'a_white': True, 'res': 1.0, 'plies': 23, 'reason': '', 'a_left': 49.1, 'b_left': 57.6, 'a_max': 2.53, 'b_max': 0.47}
+A score: 4.0 / 4

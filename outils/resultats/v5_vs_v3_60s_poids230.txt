@@ -1,0 +1,17 @@
+{'seed': 301, 'a_white': False, 'res': 1.0, 'plies': 78, 'reason': '', 'a_left': 44.8, 'b_left': 26.8, 'a_max': 1.42, 'b_max': 2.13}
+{'seed': 302, 'a_white': True, 'res': 0.0, 'plies': 58, 'reason': '', 'a_left': 43.7, 'b_left': 29.1, 'a_max': 2.33, 'b_max': 2.11}
+{'seed': 303, 'a_white': False, 'res': 1.0, 'plies': 68, 'reason': '', 'a_left': 45.3, 'b_left': 24.4, 'a_max': 2.53, 'b_max': 2.13}
+{'seed': 300, 'a_white': True, 'res': 1.0, 'plies': 81, 'reason': '', 'a_left': 39.7, 'b_left': 18.5, 'a_max': 1.8, 'b_max': 2.12}
+{'seed': 304, 'a_white': True, 'res': 0.5, 'plies': 404, 'reason': '', 'a_left': 43.9, 'b_left': 31.9, 'a_max': 2.53, 'b_max': 2.11}
+{'seed': 307, 'a_white': False, 'res': 0.0, 'plies': 45, 'reason': '', 'a_left': 42.9, 'b_left': 33.7, 'a_max': 2.0, 'b_max': 2.12}
+{'seed': 305, 'a_white': False, 'res': 1.0, 'plies': 72, 'reason': '', 'a_left': 43.8, 'b_left': 21.2, 'a_max': 1.95, 'b_max': 2.15}
+{'seed': 306, 'a_white': True, 'res': 1.0, 'plies': 91, 'reason': '', 'a_left': 36.0, 'b_left': 18.1, 'a_max': 1.57, 'b_max': 2.13}
+{'seed': 308, 'a_white': True, 'res': 1.0, 'plies': 69, 'reason': '', 'a_left': 42.7, 'b_left': 25.5, 'a_max': 2.01, 'b_max': 2.12}
+{'seed': 309, 'a_white': False, 'res': 1.0, 'plies': 70, 'reason': '', 'a_left': 44.2, 'b_left': 31.0, 'a_max': 2.53, 'b_max': 2.13}
+{'seed': 310, 'a_white': True, 'res': 1.0, 'plies': 75, 'reason': '', 'a_left': 30.4, 'b_left': 18.2, 'a_max': 2.18, 'b_max': 2.14}
+{'seed': 311, 'a_white': False, 'res': 1.0, 'plies': 74, 'reason': '', 'a_left': 34.4, 'b_left': 16.5, 'a_max': 2.22, 'b_max': 2.12}
+{'seed': 312, 'a_white': True, 'res': 1.0, 'plies': 63, 'reason': '', 'a_left': 42.4, 'b_left': 29.0, 'a_max': 1.73, 'b_max': 2.12}
+{'seed': 313, 'a_white': False, 'res': 0.0, 'plies': 71, 'reason': '', 'a_left': 43.1, 'b_left': 29.1, 'a_max': 2.16, 'b_max': 2.26}
+{'seed': 314, 'a_white': True, 'res': 0.5, 'plies': 404, 'reason': '', 'a_left': 33.3, 'b_left': 13.9, 'a_max': 2.54, 'b_max': 2.12}
+{'seed': 315, 'a_white': False, 'res': 1.0, 'plies': 94, 'reason': '', 'a_left': 38.3, 'b_left': 19.2, 'a_max': 1.99, 'b_max': 2.14}
+A score: 12.0 / 16

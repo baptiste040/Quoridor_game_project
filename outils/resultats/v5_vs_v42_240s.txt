@@ -1,0 +1,17 @@
+{'seed': 1706, 'a_white': True, 'res': 0.0, 'plies': 50, 'reason': '', 'a_left': 215.6, 'b_left': 154.0, 'a_max': 4.81, 'b_max': 8.25}
+{'seed': 1701, 'a_white': False, 'res': 0.0, 'plies': 73, 'reason': '', 'a_left': 205.6, 'b_left': 146.3, 'a_max': 4.43, 'b_max': 8.25}
+{'seed': 1703, 'a_white': False, 'res': 0.0, 'plies': 55, 'reason': '', 'a_left': 213.5, 'b_left': 135.8, 'a_max': 3.55, 'b_max': 8.25}
+{'seed': 1702, 'a_white': True, 'res': 0.0, 'plies': 76, 'reason': '', 'a_left': 208.8, 'b_left': 128.4, 'a_max': 2.6, 'b_max': 8.26}
+{'seed': 1705, 'a_white': False, 'res': 0.5, 'plies': 404, 'reason': '', 'a_left': 191.1, 'b_left': 95.3, 'a_max': 4.55, 'b_max': 8.25}
+{'seed': 1700, 'a_white': True, 'res': 1.0, 'plies': 85, 'reason': '', 'a_left': 191.0, 'b_left': 86.1, 'a_max': 3.86, 'b_max': 8.25}
+{'seed': 1707, 'a_white': False, 'res': 0.0, 'plies': 85, 'reason': '', 'a_left': 185.5, 'b_left': 82.1, 'a_max': 5.09, 'b_max': 8.25}
+{'seed': 1704, 'a_white': True, 'res': 1.0, 'plies': 83, 'reason': '', 'a_left': 180.8, 'b_left': 83.7, 'a_max': 4.82, 'b_max': 8.25}
+{'seed': 1709, 'a_white': False, 'res': 1.0, 'plies': 82, 'reason': '', 'a_left': 202.8, 'b_left': 112.3, 'a_max': 4.06, 'b_max': 8.25}
+{'seed': 1708, 'a_white': True, 'res': 1.0, 'plies': 77, 'reason': '', 'a_left': 194.3, 'b_left': 100.0, 'a_max': 4.69, 'b_max': 8.25}
+{'seed': 1711, 'a_white': False, 'res': 1.0, 'plies': 78, 'reason': '', 'a_left': 196.3, 'b_left': 104.8, 'a_max': 3.57, 'b_max': 8.26}
+{'seed': 1710, 'a_white': True, 'res': 1.0, 'plies': 81, 'reason': '', 'a_left': 189.8, 'b_left': 86.4, 'a_max': 2.8, 'b_max': 8.26}
+{'seed': 1712, 'a_white': True, 'res': 1.0, 'plies': 65, 'reason': '', 'a_left': 206.4, 'b_left': 117.5, 'a_max': 3.14, 'b_max': 8.27}
+{'seed': 1713, 'a_white': False, 'res': 0.0, 'plies': 73, 'reason': '', 'a_left': 199.8, 'b_left': 125.7, 'a_max': 4.82, 'b_max': 8.26}
+{'seed': 1714, 'a_white': True, 'res': 1.0, 'plies': 71, 'reason': '', 'a_left': 196.3, 'b_left': 103.3, 'a_max': 4.31, 'b_max': 8.26}
+{'seed': 1715, 'a_white': False, 'res': 1.0, 'plies': 98, 'reason': '', 'a_left': 180.2, 'b_left': 95.8, 'a_max': 3.28, 'b_max': 8.26}
+A score: 9.5 / 16

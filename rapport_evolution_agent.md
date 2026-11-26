@@ -1,0 +1,14 @@
+# Évolution de l'agent
+
+**V1 : minimax alpha-bêta.** Le minimax de départ, limité à la profondeur 2, devient un alpha-bêta avec tri des coups et approfondissement itératif. On regarde donc plus loin dans le même temps. L'heuristique est `10·(distance adverse − distance propre) + (murs propres − murs adverses)`. Seuls les murs qui touchent un plus court chemin sont explorés, et le budget de temps est recalculé à chaque tour.
+
+**V2 : extension tactique et ouverture.** Quand un joueur est à deux coups ou moins de l'arrivée, la recherche est prolongée d'un niveau, pour ne pas s'arrêter juste avant une victoire ou une menace. Pendant les trois premiers tours, l'agent avance sans poser de murs inutiles.
+
+**V3 : réécriture du moteur.** La V2 passait par le moteur du jeu à chaque nœud et plafonnait à 2 ou 3 demi-coups de profondeur. La V3 utilise sa propre représentation, vérifiée contre le moteur officiel sur environ 6 600 positions : murs en bits et distances en cache. La recherche devient un negamax PVS avec table de transposition et coups killers. Un mur n'est retenu que s'il coupe tous les plus courts chemins adverses. Résultat : 6 à 15 demi-coups de profondeur, et 6 à 0 contre la V2.
+
+**V4 : robustesse.** Les murs candidats sont classés par gain net et par pression sur les chemins adverses. L'agent détecte les allers-retours A-B-A de son pion et les interdit à la racine. Le temps est mieux protégé : plafond par coup et vérification de l'échéance jusque dans la génération des murs. Sans cette détection, 5 parties sur 16 entre la V5 et la V4.2 finissaient en boucle. Sur 286 parties jouées sur Abyss, la v4.1 n'a jamais dépassé son temps.
+
+**V5 : évaluation apprise.** Doubler le temps de la V3 ne la rendait pas plus forte (5,5 / 12) : la limite venait de l'heuristique réglée à la main. La V5 apprend ses poids par régression logistique sur 455 parties, à la manière de Logistello. Précision de prédiction du vainqueur : 69 % contre 56 % auparavant. Score : 72 % contre la V3 et 57 % contre la V4.2. Les versions suivantes ont corrigé ce que les parties d'Abyss ont révélé :
+
+- **V5.1.** Quand l'adversaire n'a plus de murs, les nôtres ne valent que s'ils sont posés avant son arrivée. Cela corrige une défaite où l'agent avait perdu avec 4 murs jamais posés.
+- **V5.2.** Analyse des 1 358 parties d'Abyss. Sur Abyss, la V5 gardait ses murs, se laissait enfermer par des barrages et n'utilisait qu'environ 140 s sur 900. Son évaluation jugeait favorables 39 % des positions où elle avait au moins 6 pas de retard. La V5.2 apprend ses poids sur les parties d'Abyss, avec des murs à rendements décroissants. Elle ajoute des murs défensifs contre les barrages et utilise mieux son temps (340 à 470 s par partie). En local, elle gagne 61 % de ses parties contre la V5 et 65 % contre la V4.2.

@@ -1,0 +1,3 @@
+{'seed': 901, 'a_white': False, 'res': 1.0, 'plies': 62, 'reason': '', 'a_left': 768.3, 'b_left': 518.6, 'a_max': 18.02, 'b_max': 31.52}
+{'seed': 900, 'a_white': True, 'res': 1.0, 'plies': 71, 'reason': '', 'a_left': 711.8, 'b_left': 406.9, 'a_max': 14.65, 'b_max': 31.52}
+A score: 2.0 / 2
